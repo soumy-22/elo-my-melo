@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preload" href="fonts/segoeui.ttf" as="font" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="old-images/circle-trans.png">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width">
+<title> Search Results Page </title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Soumya Roy">
+
+<style id="applicationStylesheet" type="text/css">
+
+	:root 
+	{
+		--web-view-ids: Web_1920__1;
+	}
+
+	* 
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+
+	#Web_1920__1 
+	{
+		position: absolute;
+		width: var(--set-mainwidth);
+        height: var(--set-mainheight);
+		border: 0px white solid;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	#top-check
+	{
+		position: absolute;
+		top: 0%;
+		left: 20%;
+		right: 20%;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: 100px;
+		visibility: visible;
+		z-index: -999;
+	}
+
+    @font-face
+    {
+        src: url("fonts/segoeui.ttf");
+        font-family: cus-segoe;
+    }
+
+    @font-face
+    {
+        src: url("fonts/arial.ttf");
+        font-family: cus-arial;
+    }
+
+    @font-face
+    {
+        src: url("fonts/arial-round.ttf");
+        font-family: cus-arial-round;
+    }
+
+    @font-face
+    {
+        src: url("fonts/Roboto-Regular.ttf");
+        font-family: cus-roboto;
+    }
+
+    @font-face
+    {
+        src: url("fonts/Lato-Regular.ttf");
+        font-family: cus-lato;
+    }
+
+	#search-box
+    {
+        position: absolute;
+        overflow: visible;
+    }
+
+    #elomymelo
+    {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(var(--set-mainwidth)*0.2);
+        width: calc(var(--set-mainwidth)*0.6);
+        height: calc(var(--set-mainwidth)*0.2); 
+        font-family: cus-arial-round, cus-arial, sans-serif;
+        border-left: 4px white solid;
+        padding-left: calc(var(--set-mainwidth)*0.017);
+        padding-top: calc(var(--set-mainwidth)*0.010);
+        /*
+        margin-top: calc(var(--set-mainheight)*0.3);
+        margin-bottom: calc(var(--set-mainheight)*0.3);
+        */
+        visibility: hidden;
+        overflow: visible;
+        opacity: 0.7000;
+    }
+
+    #elo
+    {
+        color: rgba(28,117,121,0.80); 
+        font-size: calc(var(--set-mainwidth)*0.12);
+    }
+
+    #my
+    {
+        color: rgba(255,119,119,0.95); 
+        font-size: calc(var(--set-mainwidth)*0.05);
+    }
+
+    #melo
+    {
+        color: rgba(28,117,121,0.80); 
+        font-size: calc(var(--set-mainwidth)*0.12);
+    }
+
+    body 
+    {
+        background-image: linear-gradient(to left, transparent, transparent, #98AEC4, transparent, #98AEC4, transparent, transparent);
+        background-repeat: no-repeat;
+        background-position: top center; 
+        background-attachment: fixed;
+        background-color: white;
+        background-size: 85% 5%;
+        animation: moove 0.4s;
+        animation-fill-mode: forwards;
+    }
+
+    @media only screen and (max-width: 940px) and (orientation: portrait)
+    {
+    body 
+    {
+        background-size: 85% 2%;
+        animation: mooveme 0.4s;
+    }
+    }
+
+    @keyframes moove
+    {
+    	from
+    	{
+    		background-size: 85% 5%;
+    	}
+    	to
+    	{
+    		background-size: 45% 5%;
+    	}
+    }
+
+    @keyframes mooveme
+    {
+        from
+        {
+            background-size: 85% 2%;
+        }
+        to
+        {
+            background-size: 45% 2%;
+        }
+    }
+	
+	#Search_the_site 
+	{
+		left: 2580px;
+		top: 564px;
+		position: absolute;
+		overflow: visible;
+		width: 300px;
+		white-space: nowrap;
+		text-align: left;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(115,115,115,0.749);
+	}
+	#Search 
+	{
+		width: 630px;
+		height: 80px;
+        opacity: 0.75;
+        font-size: 46.5px;
+        background: transparent;
+        font-family: cus-arial, arial;
+        padding-left: 34px;
+	}
+	input 
+	{
+		padding-right: 50px;
+		border: none;
+		outline: none;
+        border-radius: 25px;
+		color: rgba(72,72,72,1);
+	}
+
+    .gsc-adBlock
+    {
+        display: none !important;
+    }
+    .cse_block_container
+    {
+        display: none !important;
+    }
+    #adBlock
+    {
+        display: none !important;
+    }
+    .gs-web-image-box
+    {
+        display: none !important;
+    }
+    .gsc-control-cse .gsc-table-result
+    {
+        font-size: 18px !important;
+    }
+    .gs-result .gs-title
+    {
+        font-size: 22px !important;
+    }
+    .gs-snippet
+	{
+		font-size: 18px;
+	}
+	.gs-title a
+	{
+		font-size: 18px !important;
+	}
+	.gsc-url-top, .gsc-url-bottom 
+	{
+        font-size: 18px;
+    }
+    .gsc-control-cse .gs-result .gs-title * 
+    {
+        font-size: 22px !important;
+    }
+	.gs-webResult 
+    {
+        border: 1px solid #eee;
+        padding: 20px;
+        padding-left: 22px !important;
+    }
+    .gsc-webResult.gsc-result
+    {
+    	padding-top: 8px !important;
+        border: 1px white solid !important;
+    	padding-bottom: 0px !important;
+    }
+    #___gcse_0
+    {
+    	visibility: hidden;
+    }
+    .gsc-results-wrapper-overlay
+    {
+        left: calc(var(--set-mainwidth)*0.15) !important;
+        padding-right: 16px !important;
+        top: calc(var(--set-mainheight)*0.05) !important;
+        width: calc(var(--set-mainwidth)*0.7) !important;
+        height: calc(var(--set-mainheight)*0.9) !important;        
+    }
+
+</style>
+
+<script async src="https://cse.google.com/cse.js?cx=78ce050c9ff05b402"></script>
+
+<script type="text/javascript">
+	
+   setInterval(function()
+   
+   { 	   
+   	   document.getElementById("Web_1920__1").style.visibility = "hidden";
+   	   document.getElementById("top-check").style.visibility = "hidden";
+   	   document.getElementById("elomymelo").style.visibility = "visible";
+   	   document.body.style.backgroundImage = "none";
+
+   }, 292);
+
+   setInterval(function()
+   
+   { 	   
+   	   if (window.matchMedia("(min-width: 215px)").matches) 
+       {
+           const mainwidth = window.innerWidth * 1.0;
+           const mainheight = window.innerHeight * 1.0;
+           document.getElementById("Web_1920__1").style.setProperty('--set-mainwidth', mainwidth + "px");
+           document.getElementById("Web_1920__1").style.setProperty('--set-mainheight', mainheight + "px");
+           document.getElementById("search-box").style.setProperty('--set-mainwidth', mainwidth + "px");
+           document.getElementById("search-box").style.setProperty('--set-mainheight', mainheight + "px");
+       }
+
+   }, 120);  
+
+</script>
+
+</head>
+
+<body>
+
+<div id="search-box">
+<div class="gcse-searchresults-only"></div>
+</div>
+
+<div id="Web_1920__1">
+
+	<div id="top-check"></div>
+    <div id="elomymelo">
+        <a style="text-decoration: none;" href="index.html">
+        <span id="elo">elo</span><span id="my"> MY </span><span id="melo">melo</span>
+        </a>
+    </div>
+
+	<form action="" method="get" role="search">
+	<div id="Search_the_site">
+		<input type="text" name="q" id="Search" placeholder="Type to search ...">
+	</div>
+	</form>
+
+</div>
+</body>
+</html>
