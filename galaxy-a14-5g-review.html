@@ -5049,6 +5049,11 @@ function updateLogo()
            document.getElementById("Web_1920__1").style.overflow = "visible";
        }
 
+    if (window.matchMedia("(min-width: 615px)").matches) 
+    { document.querySelectorAll(".last-extend").forEach(function(el) 
+    { el.style.display = "none"; el.remove(); }); } 
+    if (window.matchMedia("(max-width: 615px)").matches) { detectCharacter(); } 
+
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
     if(isios) {
     document.querySelectorAll(".display-ad-phone").forEach(function(el) { el.style.display = "none"; });
@@ -5184,7 +5189,7 @@ function detectCharacter()
         // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
 
-        var lastCharacter = paraTag.textContent.trim().slice(-1);
+        // var lastCharacter = paraTag.textContent.trim().slice(-1);
         var spanElement = document.createElement('span');
         paraTag.appendChild(spanElement);
 

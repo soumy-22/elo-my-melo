@@ -5104,6 +5104,11 @@ function updateLogo()
     // Call to update all elements at once
     getMoreAttributes();  
 
+    if (window.matchMedia("(min-width: 615px)").matches) 
+    { document.querySelectorAll(".last-extend").forEach(function(el) 
+    { el.style.display = "none"; el.remove(); }); } 
+    if (window.matchMedia("(max-width: 615px)").matches) { detectCharacter(); } 
+
     // some IOS changes
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
     if(isios) {
@@ -5229,6 +5234,7 @@ function detectCharacter()
     }
 }
 // setTimeout(detectCharacter, 2000); 
+// check el.remove() before mutation observer code, added later 
 
 </script>
 
