@@ -2385,7 +2385,7 @@
         position: absolute;
 		left: 503px;
 		top: 12px;
-		width: 1500px;
+		width: 1520px;
 		height: 120px;
 		text-align: left;
 		font-family: cus-roboto-medium, 'Roboto', cus-roboto, sans-serif;
@@ -3302,9 +3302,9 @@ function scrolldown()
 }
 setTimeout(() => { document.querySelector(".articles-container").scrollTo(0, 0); }, 200);
 
-
-   var imageslidecounter = 1;
-   setInterval(function()
+   var imageslidecounter = 1; var autocontrol; 
+   function autoslider() {
+   autocontrol = setInterval(function()
    {
    	   document.getElementById('radio' + imageslidecounter).checked = true;
    	   imageslidecounter++;
@@ -3313,29 +3313,33 @@ setTimeout(() => { document.querySelector(".articles-container").scrollTo(0, 0);
    	   	   imageslidecounter = 1;
    	   }
 
-   }, 5000);
-
+   }, 5000); } autoslider(); 
 
 function prevbtn()
 {
-	document.getElementById('radio' + imageslidecounter).checked = true;
+	clearInterval(autocontrol);
+	// document.getElementById('radio' + imageslidecounter).checked = true;
    	   imageslidecounter--;
    	   if (imageslidecounter < 1) 
    	   {
    	   	   imageslidecounter = 4;
    	   }
+   	document.getElementById('radio' + imageslidecounter).checked = true;
+   	autoslider();
 }
 
 function nextbtn()
 {
+	clearInterval(autocontrol);
 	document.getElementById('radio' + imageslidecounter).checked = true;
    	   imageslidecounter++;
    	   if (imageslidecounter > 4) 
    	   {
    	   	   imageslidecounter = 1;
    	   }
+   	// document.getElementById('radio' + imageslidecounter).checked = true;
+   	autoslider();
 }
-
 
 </script>
 
@@ -3995,7 +3999,7 @@ function updateLogo()
 	
 	<a href="soundcore motion plus review.html" style="text-decoration: none;">
 	<div id="Anker_soundcore_motion_Bluetoo">
-		<span> Anker soundcore motion+ bluetooth speaker review </span>
+		<span> Anker soundcore motion+ bluetooth speaker detailed review </span>
 	</div>
 	</a>
 	<a href="how-to-link-payoneer-with-paypal.html" style="text-decoration: none;">
@@ -4080,6 +4084,38 @@ function updateLogo()
 
    <div class="articles-common-lt-style">
 
+	<a href="motion-300-vs-bose-flex.html">
+	<img class="latest-art-pic-common" src="https://docs.elomymelo.com/scaled-down/m-300-low.jpg" style="object-position: center; object-fit: cover">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="motion-300-vs-bose-flex.html"> Soundcore Motion 300 vs Bose SoundLink Flex </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Motion 300 has decent bass but becomes bass-light and way louder than Flex at higher volumes. Bose holds onto its bass by the cost of loudness. This makes the Bose more pleasant to listen to at higher <a href="motion-300-vs-bose-flex.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="soundcore-space-one-vs-sony-wh-ch720n.html">
+	<img class="latest-art-pic-common" src="https://docs.elomymelo.com/images/space-one-main.png" style="object-position: center; object-fit: cover">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="soundcore-space-one-vs-sony-wh-ch720n.html"> Soundcore Space One vs Sony wh-ch720n </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		In this detailed comparison, Sony wh-ch720n has a more mature sound. But the Space One has better Noise Cancellation. The ambient mode is more natural on the Sony. Soundcore looks <a href="soundcore-space-one-vs-sony-wh-ch720n.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
 	<a href="pixel-fold-vs-galaxy-fold-4.html">
 	<img class="latest-art-pic-common" src="https://docs.elomymelo.com/images/pixel-fold-latest.jpg">
     </a>
@@ -4158,6 +4194,10 @@ function updateLogo()
 
    </div><br>
 
+   <div id="more-info-after">
+   	   <span> To explore more articles and reviews, please use the navigation menus. The navigation I created on my website is easy, simple and clean to offer you a better user experience. </span>
+   </div><br>
+
    <div class="articles-common-lt-style">
 
 	<a href="nillkin frosted case review for nord.html">
@@ -4188,10 +4228,6 @@ function updateLogo()
 		Motion+ has an excellent design and build that can really help with the sound dispersion and nice stereo separation. I have played with the eq bands quite a lot and they are real eq <a href="soundcore motion plus review.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
 	</div>
 
-   </div><br>
-            
-   <div id="more-info-after">
-   	   <span> To explore more articles and reviews, please use the navigation menus. The navigation I created on my website is easy, simple and clean to offer you a better user experience. </span>
    </div><br>
 
    <div class="articles-common-lt-style">
@@ -4411,34 +4447,33 @@ function updateLogo()
 
             <div class="top-dsgn" style="left: 27px; transform: rotate(33deg)"></div><div class="top-dsgn" style="right: 27px; transform: rotate(147deg)"></div>
 
-            <div class="hot-dvcs-hdr" style="left: 20%; width: 60%; top: 124px; height: 20px; background: #EAEAEA; border-left: 6px rgba(112,112,112,0.7) solid; border-right: 6px rgba(112,112,112,0.7) solid">
+            <div class="hot-dvcs-hdr" style="left: 20%; width: 60%; top: 124px; height: 20px; background: #EAEAEA; border-left: 15px rgba(113,208,245,1) solid; border-right: 15px rgba(113,208,245,1) solid"> 
             <span class="hot-dvcs-hdr-span" style="top: -53px; padding: 31px 65px 29px 70px"> HOT DEVICES </span>
             </div>
 
-            <div class="hot-dvcs-hdr" style="top: 309px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(112,112,112,0.5), white)">
+            <div class="hot-dvcs-hdr" style="top: 309px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(255,119,119,1), white)">
             <span class="hot-dvcs-hdr-span" style="font-size: 48px; border: 4px rgba(255,119,119,0.35) solid; top: -46px"> Smartphones </span>
             </div>
 
             <div class="hot-dvcs-hdr" style="top: 393px; width: 100%; height: auto; border: 0px grey solid; height: 358px">
 
         	<div class="hot-dvcs-hdr expmore">
-        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/google_pixel_6-11037.php" target="_blank" rel="noopener noreferrer"> Pixel 6 
-        	</a></span> 
-        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.gsmarena.com/oneplus_nord_2_5g-10960.php" target="_blank" rel="noopener noreferrer"> OnePlus Nord 2 </a></span>
+        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/google_pixel_8-12546.php" target="_blank" rel="noopener noreferrer"> Pixel 8 </a></span> 
+        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.gsmarena.com/oneplus_nord_3-12135.php" target="_blank" rel="noopener noreferrer"> OnePlus Nord 3 </a></span>
             </div>
 
             <div class="hot-dvcs-hdr expmore" style="top: 130px">
-            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/samsung_galaxy_a52s_5g-11039.php" target="_blank" rel="noopener noreferrer"> Galaxy A52s </a></span>         	
-        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.gsmarena.com/apple_iphone_13_pro-11102.php" target="_blank" rel="noopener noreferrer"> iPhone 13 Pro </a></span>
+            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/samsung_galaxy_a54-12070.php" target="_blank" rel="noopener noreferrer"> Galaxy A54 </a></span>         	
+        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.gsmarena.com/apple_iphone_15_pro-12557.php" target="_blank" rel="noopener noreferrer"> iPhone 15 Pro </a></span>
             </div>
 
             <div class="hot-dvcs-hdr expmore" style="top: 250px">
-            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/xiaomi_redmi_note_11-11181.php" target="_blank" rel="noopener noreferrer"> Redmi Note 11 </a></span>
+            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/nothing_phone_(2)-12386.php" target="_blank" rel="noopener noreferrer"> Nothing Phone 2 </a></span>
             </div>
 
             </div>
 
-            <div class="hot-dvcs-hdr" style="top: 855px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(112,112,112,0.8), white)">
+            <div class="hot-dvcs-hdr" style="top: 855px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(236,96,202,1), white)">
             <span class="hot-dvcs-hdr-span" style="font-size: 48px; border: 4px rgba(236,96,202,0.36) solid; top: -46px"> Portable Speakers </span>
             </div>
 
@@ -4455,32 +4490,30 @@ function updateLogo()
             </div>
 
         	<div class="hot-dvcs-hdr expmore" style="top: 250px">
-        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://www.sony-asia.com/electronics/wireless-speakers/srs-xb33" target="_blank" rel="noopener noreferrer"> Sony srs-XB33 </a></span>
+        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://www.sony.com/et/electronics/portable-speakers/srs-xb33" target="_blank" rel="noopener noreferrer"> Sony srs-XB33 </a></span>
             </div>
 
             </div>
 
-            <div class="hot-dvcs-hdr" style="top: 1401px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(112,112,112,0.5), white)">
+            <div class="hot-dvcs-hdr" style="top: 1401px; left: 6%; height: 20px; background: linear-gradient(to right, white, rgba(235,152,78,1), white)">
             <span class="hot-dvcs-hdr-span" style="font-size: 48px; border: 4px rgba(235,152,78,0.36) solid; top: -46px"> TWS Earbuds </span>
             </div>
 
             <div class="hot-dvcs-hdr" style="top: 1486px; width: 100%; height: auto; border: 0px grey solid; height: 358px">
 
             <div class="hot-dvcs-hdr expmore">
-            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.apple.com/airpods-pro/" target="_blank" rel="noopener noreferrer"> Airpods Pro </a>
-        	</span> 
+            <span class="hot-dvcs-hdr-span spnmore"><a href="https://www.apple.com/airpods-pro/" target="_blank" rel="noopener noreferrer"> Airpods Pro </a></span> 
         	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://store.google.com/product/pixel_buds_a_series?hl=en-US" target="_blank" rel="noopener noreferrer"> Pixel Buds </a></span>
             </div>
         	
         	<div class="hot-dvcs-hdr expmore" style="top: 130px">
-        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://us.soundcore.com/products/a3952011" target="_blank" rel="noopener noreferrer"> Liberty 3 Pro 
-        	</a></span> 
-        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.apac.jabra.com/bluetooth-headsets/jabra-elite-3##100-91410000-40" target="_blank" rel="noopener noreferrer"> Jabra Elite 3 </a></span>
+        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://us.soundcore.com/products/liberty-4-nc-a3947z61" target="_blank" rel="noopener noreferrer"> Liberty 4 NC </a></span> 
+        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.apac.jabra.com/bluetooth-headsets/jabra-elite-10" target="_blank" rel="noopener noreferrer"> Jabra Elite 10 </a></span>
             </div>
         	
         	<div class="hot-dvcs-hdr expmore" style="top: 250px">
-        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://www.gsmarena.com/lypertek_tevi_review-news-47000.php" target="_blank" rel="noopener noreferrer"> Tevi </a></span>
-        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.soundguys.com/sennheiser-momentum-true-wireless-2-review-40848/" target="_blank" rel="noopener noreferrer"> Momentum </a></span>
+        	<span class="hot-dvcs-hdr-span spnmore"><a href="https://intl.nothing.tech/products/ear-2" target="_blank" rel="noopener noreferrer"> Ear 2 </a></span> 
+        	<span class="hot-dvcs-hdr-span spnmore02"><a href="https://www.sennheiser-hearing.com/en-US/p/momentum-true-wireless-3/" target="_blank" rel="noopener noreferrer"> Momentum </a></span>
             </div>
 
             </div>
