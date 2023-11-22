@@ -4960,13 +4960,13 @@ function toppicksout()
 
    setInterval(function()
    {     
-       const adheighttwo = document.getElementById("ads-style-feed-res-phone").clientHeight;
+       const adheighttwo = document.getElementById("ads-style-display-res-phone").clientHeight;
        const adheightfour = document.getElementById("ads-style-feed-res-phone-2").clientHeight;
        const adheightthree = document.getElementById("ads-style-display-res-phone-2").clientHeight;
        const adheightsix = document.getElementById("ads-style-display-res-phone-4").clientHeight;
        const adheightseven = document.getElementById("ads-style-feed-res-phone-3").clientHeight;
 
-       document.getElementById("ads-style-feed-res-phone").style.setProperty('--set-margin', adheighttwo + "px");
+       document.getElementById("ads-style-display-res-phone").style.setProperty('--set-margin', adheighttwo + "px");
        document.getElementById("ads-style-feed-res-phone-2").style.setProperty('--set-margin', adheightfour + "px");
        document.getElementById("ads-style-display-res-phone-2").style.setProperty('--set-margin', adheightthree + "px");
        document.getElementById("ads-style-display-res-phone-4").style.setProperty('--set-margin', adheightsix + "px");
@@ -4984,7 +4984,7 @@ function toppicksout()
    {   
        document.getElementById("ads-style-display-res").style.transform = "scale(2.25, 2.25)";
        document.getElementById("ads-style-display-res").style.left = "617px";
-       document.getElementById("ads-style-feed-res-phone").style.transform = "scale(4.34, 4.34)";
+       document.getElementById("ads-style-display-res-phone").style.transform = "scale(7.10, 7.10)";
        document.getElementById("ads-style-display-res-2").style.transform = "scale(2.25, 2.25)";
        document.getElementById("ads-style-display-res-2").style.left = "617px";
        document.getElementById("ads-style-display-res-3").style.transform = "scale(2.25, 2.25)";
@@ -5063,7 +5063,7 @@ function updateLogo()
     document.getElementById("ads-br-2").style.display = "block"; document.getElementById("ads-br-4").style.display = "block"; document.getElementById("ads-br-6").style.display = "block"; document.getElementById("ads-br-8").style.display = "block"; document.getElementById("ads-br-10").style.display = "block"; }
 
     // mutation observer code
-    const checkme2 = document.getElementById("ins-feed-phone-1");
+    const checkme2 = document.getElementById("ins-dis-phone-1");
     const checkme3 = document.getElementById("ins-dis-phone-2");
     const checkme4 = document.getElementById("ins-dis-one");
     const checkme8 = document.getElementById("ins-dis-two");
@@ -5087,13 +5087,15 @@ function updateLogo()
                     // console.log(attrname);
                     // console.log(attrvalue);
 
-                    if(attrvalue === 'filled' && record.target.id === 'ins-feed-phone-1')
+                    if(attrvalue === 'filled' && record.target.id === 'ins-dis-phone-1')
                     {
-                        document.getElementById("ads-style-feed-res-phone").style.background = "linear-gradient(to top, white, rgba(112,112,112,0.3), rgba(112,112,112,0.3), rgba(112,112,112,0.3))";
+                        document.getElementById("ad-dtls-fthree").style.display = "none";
+                        document.getElementById("ads-style-display-res-phone").style.background = "#4D4D4D";
+                        document.getElementById("ads-style-display-res-phone").style.border = "3px transparent solid";
                     }
-                    if(attrvalue === 'unfilled' && record.target.id === 'ins-feed-phone-1')
+                    if(attrvalue === 'unfilled' && record.target.id === 'ins-dis-phone-1')
                     {
-                        document.getElementById("ads-style-feed-res-phone").style.display = "none";
+                        document.getElementById("ads-style-display-res-phone").style.display = "none";
                         document.getElementById("ads-br-4").style.display = "block";
                     }
                     if(attrvalue === 'filled' && record.target.id === 'ins-feed-phone-2')
@@ -5881,21 +5883,22 @@ setTimeout(detectCharacter, 2000);
                  <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
 
              </div>
-             <div class="feed-ad-phone" id="ads-style-feed-res-phone">
+             <div class="display-ad-phone" id="ads-style-display-res-phone">
 
-                 <div class="ad-details-5"> <span> AD </span> </div>
+                <div class="ad-details-4" id="ad-dtls-fthree"> <span class="ad-details-4-main"> <span class="ad-details-4-style-1">Google Ads</span> <br> THESE G-ADS ARE SAFE AND INFORMATIVE - PLEASE <br> <span class="ad-details-4-style-2">Disable Ad BlockeR</span> </span> </div>
                  
-                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3654432220074510"
-                 crossorigin="anonymous"></script>
-                 <ins class="adsbygoogle"
-                      id="ins-feed-phone-1" 
-                      style="display:block"
-                      data-ad-format="fluid"
-                      data-ad-layout-key="-5c+c0-2e-5v+wq"
-                      data-ad-client="ca-pub-3654432220074510"
-                      data-ad-slot="7222082881">                         
-                 </ins>
-                 <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3654432220074510"
+                crossorigin="anonymous"></script>
+                <!-- Display horizontal -->
+                <ins class="adsbygoogle"
+                     id="ins-dis-phone-1" 
+                     style="display:block"
+                     data-ad-client="ca-pub-3654432220074510"
+                     data-ad-slot="6958590511"
+                     data-ad-format="fluid"
+                     data-full-width-responsive="true">                         
+                </ins>
+                <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
 
             </div>
             <br id="ads-br-4"> 
