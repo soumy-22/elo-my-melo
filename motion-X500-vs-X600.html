@@ -4958,9 +4958,10 @@ function updateLogo()
     getMoreAttributes();  
 
     if (window.matchMedia("(min-width: 615px)").matches) 
-    { document.querySelectorAll(".last-extend").forEach(function(el) 
-    { el.style.display = "none"; el.remove(); }); } 
-    if (window.matchMedia("(max-width: 615px)").matches) { detectCharacter(); } 
+    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
+    if (window.matchMedia("(max-width: 615px)").matches) 
+    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
+    setTimeout(detectCharacter, 2000); } 
 
     // some IOS changes
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
@@ -5045,7 +5046,7 @@ function detectCharacter()
         // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
 
-        var lastCharacter = paraTag.textContent.trim().slice(-1);
+        // var lastCharacter = paraTag.textContent.trim().slice(-1);
         var spanElement = document.createElement('span');
         paraTag.appendChild(spanElement);
 
@@ -5067,8 +5068,7 @@ function detectCharacter()
 
             // change some properties of each span element in loop
             spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block";
-            
+            spanElement.style.display = "inline-block"; 
         }
         if(leftCoordinate > comparewidthtwo)
         {
@@ -5084,7 +5084,7 @@ function detectCharacter()
         } });
     }
 }
-setTimeout(detectCharacter, 2000); 
+// setTimeout(detectCharacter, 2000); 
 
 </script>
 
