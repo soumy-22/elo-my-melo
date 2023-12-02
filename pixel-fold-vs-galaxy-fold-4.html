@@ -5194,7 +5194,7 @@ function detectCharacter()
         // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
 
-        var lastCharacter = paraTag.textContent.trim().slice(-1);
+        // var lastCharacter = paraTag.textContent.trim().slice(-1);
         var spanElement = document.createElement('span');
         paraTag.appendChild(spanElement);
 
@@ -5216,8 +5216,7 @@ function detectCharacter()
 
             // change some properties of each span element in loop
             spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block";
-            
+            spanElement.style.display = "inline-block";   
         }
         if(leftCoordinate > comparewidthtwo)
         {

@@ -4975,9 +4975,10 @@ function updateLogo()
     getMoreAttributes();  
 
     if (window.matchMedia("(min-width: 615px)").matches) 
-    { document.querySelectorAll(".last-extend").forEach(function(el) 
-    { el.style.display = "none"; el.remove(); }); } 
-    if (window.matchMedia("(max-width: 615px)").matches) { detectCharacter(); } 
+    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
+    if (window.matchMedia("(max-width: 615px)").matches) 
+    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
+    setTimeout(detectCharacter, 2000); } 
 
     // some IOS changes
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
@@ -5060,7 +5061,7 @@ function detectCharacter()
         // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
 
-        var lastCharacter = paraTag.textContent.trim().slice(-1);
+        // var lastCharacter = paraTag.textContent.trim().slice(-1);
         var spanElement = document.createElement('span');
         paraTag.appendChild(spanElement);
 
@@ -5083,7 +5084,6 @@ function detectCharacter()
             // change some properties of each span element in loop
             spanElement.style.width = calwidth + "px";
             spanElement.style.display = "inline-block";
-            
         }
         if(leftCoordinate > comparewidthtwo)
         {
@@ -5099,7 +5099,7 @@ function detectCharacter()
         } });
     }
 }
-setTimeout(detectCharacter, 2000); 
+// setTimeout(detectCharacter, 2000); 
 
 </script>
 
@@ -5697,7 +5697,7 @@ setTimeout(detectCharacter, 2000);
 		    <span class="sections"> Inside-the-box Comparison </span>
             <br>
             
-            <p>There is not much to write here, saving my energy for later sections. Both speakers come with pretty similar accessories. There is one USB Type-C to Type-C charging cable for the Motion 300, but a USB Type-A to Type-C one for the Flex. It is an updated cable for the Soundcore. A quick start guide is also there on both, but no charger on any package. So pretty minimal and straight&shy;forward - check <a href="https://www.youtube.com/watch?v=qyBh8-JzGcU" target="_blank" rel="nofollow noopener noreferrer">this Flex</a> setup video. You can download manuals for <a href="https://cdn.shopify.com/s/files/1/0516/3761/6830/files/V01_SPK_A3135_UM_20231019.pdf" target="_blank" rel="nofollow noopener noreferrer">Motion 300</a> and <a href="https://assets.bosecreative.com/m/2ed237bab6d422fa/original/866668_QSG_SLFLX-SPEAKERWIRELESS_ml.pdf" target="_blank" rel="nofollow noopener noreferrer">SoundLink Flex</a> using the provided links if you need them.</p> 
+            <p>There is not much to write here, saving my energy for later sections. Both speakers come with pretty similar accessories. There is one USB Type-C to Type-C charging cable for the Motion 300, but a USB Type-A to Type-C one for the Flex. It is an updated cable for the Soundcore. A quick start guide is also there on both, but no charger in any package. So pretty minimal and straight&shy;forward - check <a href="https://www.youtube.com/watch?v=qyBh8-JzGcU" target="_blank" rel="nofollow noopener noreferrer">this Flex</a> setup video. You can download manuals for <a href="https://cdn.shopify.com/s/files/1/0516/3761/6830/files/V01_SPK_A3135_UM_20231019.pdf" target="_blank" rel="nofollow noopener noreferrer">Motion 300</a> and <a href="https://assets.bosecreative.com/m/2ed237bab6d422fa/original/866668_QSG_SLFLX-SPEAKERWIRELESS_ml.pdf" target="_blank" rel="nofollow noopener noreferrer">SoundLink Flex</a> using the provided links if you need them.</p> 
 
 		    <br><br><br>
 		    <span class="sections"> Design & Build Analogy </span>
