@@ -4988,10 +4988,10 @@ function updateLogo()
 
     // mutation observer code
     const checkf1 = document.getElementById("ins-feed-one");
-    const checkf2 = document.getElementById("ins-feed-two");
     const checkf3 = document.getElementById("ins-feed-three");
     const checkd1 = document.getElementById("ins-dis-one");
     const checkd2 = document.getElementById("ins-dis-two");
+    const checkd3 = document.getElementById("ins-dis-three");
     const checkv1 = document.getElementById("ins-dis-v1");
     const observer = new MutationObserver( mutations => 
     { 
@@ -5003,8 +5003,8 @@ function updateLogo()
                   const idname = record.target.id; 
                   const attrname = record.attributeName;
                   const attrvalue = record.target.getAttribute(attrname);
-                  var fids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three']; 
-                  var dids = ['ins-dis-one', 'ins-dis-two']; 
+                  var fids = ['ins-feed-one', 'ins-feed-three']; 
+                  var dids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three']; 
 
                   // console.log(attrname);
                   // console.log(attrvalue);
@@ -5044,10 +5044,10 @@ function updateLogo()
     });
 
     observer.observe(checkf1, { attributes: true, attributeFilter: ['data-ad-status'] });
-    observer.observe(checkf2, { attributes: true, attributeFilter: ['data-ad-status'] });
     observer.observe(checkf3, { attributes: true, attributeFilter: ['data-ad-status'] });
     observer.observe(checkd1, { attributes: true, attributeFilter: ['data-ad-status'] });
     observer.observe(checkd2, { attributes: true, attributeFilter: ['data-ad-status'] });
+    observer.observe(checkd3, { attributes: true, attributeFilter: ['data-ad-status'] });
     observer.observe(checkv1, { attributes: true, attributeFilter: ['data-ad-status'] });
 }
 
@@ -5797,21 +5797,22 @@ function detectCharacter()
             <p>So both of them have bass peaks at around 76 Hz in their frequency responses. But Bose has way less mids than Soundcore. Bose offers a <a href="https://www.headphonesty.com/2017/01/v-shaped-sound-signature-mean/" target="_blank" rel="nofollow noopener noreferrer">V-shaped</a> sound signature, but Motion 300 has a gradual rise toward the high-end. So it is a bright sound signature on the Soundcore. In the frequency response Motion 300 is on standing Xtra Bass mode, which is one of the two defaults. At average listening volume, the Bose sounds good enough with decent bass and clean highs, but missing mids are pretty noticeable.</p> 
 
             <br>
-            <div class="feed-com" id="ads-style-feed-2">
-                 
-                 <div class="ad-details-5"> <span> AD </span> </div>
-                 <div class="ad-details-4"> <span class="ad-details-4-main"> <span class="ad-details-4-style-1">Google Ads</span> <br> These ads are safe, informative and interesting. Turn off ad-blocker for this website. Ad revenue helps to keep the site alive. <br> <span class="ad-details-4-style-2">Please Disable Ad BlockeR</span> </span> </div>
+            <div class="dis-com" id="ads-style-display-3">
 
-                 <ins id="ins-feed-two" 
+                 <div class="ad-details-5"> <span> AD </span> </div>
+                 <div class="ad-details-4"> <span class="ad-details-4-main"> <span class="ad-details-4-style-1">Google Ads</span> <br> THESE G-ADS ARE SAFE AND INFORMATIVE - PLEASE <br> <span class="ad-details-4-style-2">Disable Ad BlockeR</span> </span> </div>
+                 
+                 <!-- Display horizontal -->
+                 <ins id="ins-dis-three" 
                       style="display:block"
-                      data-ad-format="fluid"
-                      data-ad-layout-key="-5c+c0-2e-5v+wq"
                       data-ad-client="ca-pub-3654432220074510"
-                      data-ad-slot="7222082881">                        
+                      data-ad-format="fluid"
+                      data-ad-slot="6958590511"
+                      data-full-width-responsive="true">                         
                  </ins>
 
             </div>
-            <br id="ads-br-f2"> 
+            <br id="ads-br-d3">
 
             <p>For the lack of mids, it sounds pretty clean with nice clarity. On the other hand, Motion 300 also has good bass response but the highs are a bit pushed, which sounds pretty bright sizzly unnatural sometimes. But for a low-level listening, Motion 300 has a pretty balanced sound signature. The sense of <a href="https://www.audiostance.com/what-is-soundstage-and-how-to-improve-yours/" target="_blank" rel="nofollow noopener noreferrer">soundstage</a> is also better for its stereo configuration. So I think having more details in the midrange with nice sparkle and shimmer in the highs, the overall more balanced sound of Motion 300 puts it ahead in low to moderate listening volume.</p> 
 
