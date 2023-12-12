@@ -5056,7 +5056,7 @@ function updateLogo()
     { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
     if (window.matchMedia("(max-width: 615px)").matches) 
     { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
-    setTimeout(detectCharacter, 2000); } 
+    clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); } 
 
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
     if(isios) {
@@ -5189,7 +5189,7 @@ function detectCharacter()
     {
         const divElement = document.getElementById("article-text-div");
         const pTags = divElement.querySelectorAll("p");
-        
+
         // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
 
