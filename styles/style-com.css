@@ -1,0 +1,819 @@
+
+    #phones-style
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+        cursor: default;
+    }
+    #speakers-style
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+        cursor: default;
+    }
+    #earbuds-style
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+        cursor: default;
+    }
+    #accessories-style
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+        cursor: default;
+    }
+    #phone-one
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    #phone-two
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #phone-three
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #phone-four
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+
+    #phone-one:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #phone-two:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #phone-three:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #phone-four:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+
+    #speaker-one:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #speaker-two:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #speaker-three:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #speaker-four:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+
+    #earbud-one:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #earbud-two:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #earbud-three:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #earbud-four:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+
+    #accessory-one:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #accessory-two:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #accessory-three:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+    #accessory-four:hover
+    {
+        border: 6px rgba(113,208,245,0.9) solid;
+    }
+
+    #speaker-one
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    #speaker-two
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #speaker-three
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #speaker-four
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+    #earbud-one
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    #earbud-two
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #earbud-three
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #earbud-four
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+    #accessory-one
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    #accessory-two
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #accessory-three
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #accessory-four
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+
+    #review-one
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.35) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    } 
+    #review-two
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.35) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #review-three
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.35) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #review-four
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.35) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+    #reviews-all
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 4px rgba(112,112,112,0.05) solid;
+        color: rgba(0,0,0,0.5);
+        border-radius: 60px;
+        position: absolute;
+        top: 440px;
+        left: 495px;
+        font-size: 40px;
+    }
+
+    #about-me
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        left: 0px;
+    }
+    #about-site
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 50px;
+        left: 0px;
+    }
+    #privacy-policy
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 68px;
+        left: 0px;
+    }
+    #contact
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px rgba(112,112,112,0.5) solid;
+        border-radius: 60px;
+        position: relative;
+        top: 86px;
+        left: 0px;
+    }
+
+    #menu-pointer
+    {
+        position: absolute; 
+        height: 30px; 
+        width: 30px; 
+        top: 687px; 
+        left: 572px; 
+        border: 0px rgba(28,117,121,0.55) solid; 
+        transform: rotate(45deg); 
+        background-color: rgba(28,117,121,0.55);
+        visibility: hidden;
+    }
+    #menu-pointer-review
+    {
+        position: absolute; 
+        height: 30px; 
+        width: 30px; 
+        top: 687px; 
+        left: 950px; 
+        border: 0px rgba(28,117,121,0.55) solid; 
+        transform: rotate(45deg); 
+        background-color: rgba(28,117,121,0.55);
+        visibility: hidden;
+    }
+    #menu-pointer-about
+    {
+        position: absolute; 
+        height: 30px; 
+        width: 30px; 
+        top: 687px; 
+        left: 1329px; 
+        border: 0px rgba(28,117,121,0.55) solid; 
+        transform: rotate(45deg); 
+        background-color: rgba(28,117,121,0.55);
+        visibility: hidden;
+    }
+
+    .latest_articles
+    {
+        position: absolute;
+        left: 860px;
+        top: 105px;     
+        overflow: visible;
+        border-radius: 72px;
+        border: 0px rgba(235,152,78,0.9) solid;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Lato, cus-lato;
+        font-style: normal;
+        font-weight: normal;
+        padding-left: 94px;
+        padding-right: 80px;
+        padding-top: 36px;
+        padding-bottom: 36px;
+        font-size: 35px;
+        color: rgba(0,0,0,0.651);
+        letter-spacing: 14px;
+        filter: drop-shadow(0px 15px 35px rgba(0,0,0,0.35));
+        background: rgba(255,255,255,1);
+    }
+    .latest-art-pic-common
+    {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        left: 0px;
+        top: 0px;
+        background: rgba(112,112,112,0.3);
+        border-radius: 40px;
+    }   
+    .latest-art-pic-common:hover
+    {
+        border: 6px rgba(112,112,112,0) solid;
+        transition: 0.2s;
+    }
+    .articles-common-lt-style
+    {
+        position: relative;
+        height: 400px;
+        width: 2215px;
+        left: 72px;
+        top: 0px;
+        margin-top: 27px;
+        margin-bottom: 27px;
+        background: transparent;
+        overflow: visible;
+        border: 1px rgba(112,112,112,0.3) solid;
+        border-radius: 40px;
+    }
+    .art-head-common
+    {
+        position: absolute;
+        left: 503px;
+        top: 12px;
+        width: 1500px;
+        height: 120px;
+        text-align: left;
+        font-family: 'Roboto', cus-roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 70px;
+        padding-left: 45px;
+        padding-top: 15px;
+        color: rgba(112,112,112,1);
+        border: 0px grey solid;
+    }
+    .art-description-common
+    {
+        position: absolute;
+        left: 523px;
+        top: 112px;
+        width: 1660px;
+        height: 330px;
+        font-family: 'Roboto', cus-roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 70px;
+        padding-left: 25px;
+        padding-top: 35px;
+        color: rgba(0,0,0,0.57);
+        text-align: left;
+        border: 0px grey solid;
+    }
+    #before-article-01
+    {
+        position: relative;
+        height: 200px;
+        width: 1700px;
+        left: 328px;
+        top: 0px;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        background: transparent;
+        overflow: visible;
+        border: 0px rgba(112,112,112,0.3) solid;
+        border-radius: 20px;
+        z-index: -5;
+    }   
+    #more-info-after
+    {
+        position: relative;
+        width: 2215px;
+        left: 72px;
+        top: 0px;
+        font-size: 46px;
+        font-family: roboto, cus-roboto, sans-serif;
+        color: rgba(0,0,0,0.58);
+        line-height: 72px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 45px;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-top: 46px;
+        margin-bottom: 46px;
+        background: transparent;
+        overflow: visible;
+        border: 6px rgba(113,208,245,0.60) solid;
+        border-radius: 25px;
+    }
+    #more-info-after-2
+    {
+        position: relative;
+        width: 1700px;
+        left: 332px;
+        top: 0px;
+        font-size: 46px;
+        font-family: roboto, cus-roboto, sans-serif;
+        color: rgba(0,0,0,0.58);
+        line-height: 72px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 45px;
+        padding-left: 44px;
+        padding-right: 44px;
+        margin-top: 46px;
+        margin-bottom: 80px;
+        background: transparent;
+        overflow: visible;
+        border: 6px rgba(113,208,245,0.60) solid;
+        border-radius: 25px;
+    }
+
+    #pros-cons
+    {
+        position: relative;
+        left: 10px;
+        height: 816px;
+        width: 2200px;
+        border: 1px rgba(112,112,112,0.450) solid;
+        border-radius: 45px;
+    }
+    #verdict
+    {
+        position: absolute;
+        left: 67px;
+        top: 157px;
+        height: 490px;
+        width: 800px;
+        border: 4px rgba(235,152,78,0.36) solid;
+        border-radius: 35px;
+        font-size: 45px;
+        padding-left: 50px;
+        padding-right: 30px;
+        padding-top: 58px;
+        padding-bottom: 20px;
+        line-height: 72px;
+    }
+    #pros
+    {
+        position: absolute;
+        left: 920px;
+        top: 30px;
+        height: 755px;
+        width: 602px;
+        border: 0px rgba(112,112,112,0.450) solid;
+        border-radius: 35px;
+        line-height: 80px;
+        user-select: none;
+    }
+    #cons
+    {
+        position: absolute;
+        left: 1500px;
+        top: 85px;
+        height: 640px;
+        width: 695px;
+        border: 0px rgba(112,112,112,0.450) solid;
+        border-radius: 35px;
+        line-height: 80px;
+        user-select: none;
+    }
+
+    .inside-article-div
+    {
+        position: relative;
+        left: -56px;
+        top: 96px;
+        width: 2358px;
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        border: 0px rgba(112,112,112,0.502) solid;
+        background: transparent;
+        border-radius: 50px;
+        z-index: 1;
+    }
+
+    .hot-devices-sec a
+    {
+        text-decoration: none; 
+        color: rgba(0,0,0,0.57);
+    }
+    .hot-devices-sec a:hover
+    {
+        color: rgba(0,170,222,1);
+    }
+
+    .header-comment
+    {
+        position: absolute;
+        left: 162px;
+        top: 60px;
+        width: 560px;
+        height: 100px;
+        overflow: visible;
+        border-radius: 72px;
+        border: 1px rgba(235,152,78,0.9) solid;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Roboto, cus-roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 44px;
+        padding-left: 76px;
+        padding-top: 24px;
+        color: rgba(0,0,0,0.575);
+    }
+    #comments
+    {
+        position: absolute;
+        left: 16px;
+        top: 175px;
+        width: 860px;
+        height: 500px;
+        overflow: visible;
+        border-radius: 22px;
+        border: 0px rgba(255,0,0,0.50) solid;
+    }
+    .com-name
+    {
+        position: absolute;
+        left: 27px;
+        top: 20px;
+        width: 810px;
+        height: 120px;
+        overflow: visible;
+        border-radius: 20px;
+        border: 1px rgba(112,112,112,0.8) solid;
+        color: rgba(112,112,112,0.5);
+        font-size: 45px;
+    }
+    .com-comment
+    {
+        position: absolute;
+        left: 27px;
+        top: 170px;
+        width: 810px;
+        height: 310px;
+        overflow: visible;
+        border-radius: 20px;
+        border: 1px rgba(112,112,112,0.8) solid;
+    }
+    
+    #name::placeholder
+    {
+        color: rgba(112,112,112,0.6);
+        text-align: center;
+    }
+    #comment::placeholder
+    {
+        color: rgba(112,112,112,0.6);
+        text-align: center;
+    }
+    #btn-post
+    {
+        position: absolute;
+        left: 148px;
+        top: 515px;
+        width: 560px;
+        height: 100px;
+        overflow: visible;
+        border-radius: 72px;
+        border: 1px rgba(235,152,78,0.9) solid;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Roboto, cus-roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 44px;
+        padding-left: 86px;
+        padding-top: 2px;
+        color: rgba(0,0,0,0.575);
+        background: transparent;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #btn-post:hover
+    {
+        border: 6px rgba(113,208,245,0.80) solid;
+    }
+
+    #thank-you
+    {
+        position: absolute;
+        left: 258px;
+        top: 522px;
+        width: 360px;
+        height: 100px;
+        font-family: Roboto, cus-roboto;
+        font-size: 45px;
+        overflow: visible;
+        border-radius: 72px;
+        border: 6px rgba(255,119,119,0.50) solid;
+        color: rgba(112,112,112,0.85);
+        text-align: center;
+        padding-top: 17px;
+        background-color: rgba(255,255,255,1);
+        z-index: 1;
+        visibility: hidden;
+    }
+    #blank-fields
+    {
+        position: absolute;
+        left: 214px;
+        top: 808px;
+        width: 460px;
+        height: 90px;
+        font-family: Roboto, cus-roboto;
+        font-size: 40px;
+        overflow: visible;
+        border-radius: 72px;
+        border: 4px rgba(112,112,112,0.1) solid;
+        color: rgba(112,112,112,0.90);
+        text-align: center;
+        padding-top: 17px;
+        background-color: rgba(255,255,255,1);
+        z-index: 1;
+        visibility: hidden;
+    }
+
