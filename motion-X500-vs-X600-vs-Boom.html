@@ -342,6 +342,10 @@ window.addEventListener('resize', upme);
            document.getElementById("Web_1920__1").style.width = "2358px";
            document.getElementById("Web_1920__1").style.overflow = "visible";
       }
+      if (window.matchMedia("(max-width: 615px)").matches) 
+      {
+           document.body.style.transform = "none";
+      }
       if (window.matchMedia("(min-width: 615px)").matches && window.matchMedia("(max-width: 1040.99px)").matches && bodyOverflow !== "hidden") 
       {
            document.body.style.transform = "scale(1.0)";
