@@ -222,6 +222,8 @@ function iosnone()
 
 // for other than windows and mac ----
 var isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i)); 
+document.addEventListener('DOMContentLoaded', upme); 
+window.addEventListener('resize', upme); 
 function upme()
 {
     // checks if user is on a desktop device 
@@ -252,8 +254,7 @@ function upme()
         document.getElementById("footer-id").style.display = "none";
     }
 }
-document.addEventListener('DOMContentLoaded', upme); 
-window.addEventListener('resize', upme); 
+if(isdesk) { window.removeEventListener('resize', upme); } 
 
 </script>
 
