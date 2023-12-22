@@ -609,56 +609,6 @@
         border-radius: 25px;
     }
 
-    #pros-cons
-    {
-        position: relative;
-        left: 10px;
-        height: 816px;
-        width: 2200px;
-        border: 1px rgba(112,112,112,0.450) solid;
-        border-radius: 45px;
-    }
-    #verdict
-    {
-        position: absolute;
-        left: 67px;
-        top: 157px;
-        height: 490px;
-        width: 800px;
-        border: 4px rgba(235,152,78,0.36) solid;
-        border-radius: 35px;
-        font-size: 45px;
-        padding-left: 50px;
-        padding-right: 30px;
-        padding-top: 58px;
-        padding-bottom: 20px;
-        line-height: 72px;
-    }
-    #pros
-    {
-        position: absolute;
-        left: 920px;
-        top: 30px;
-        height: 755px;
-        width: 602px;
-        border: 0px rgba(112,112,112,0.450) solid;
-        border-radius: 35px;
-        line-height: 80px;
-        user-select: none;
-    }
-    #cons
-    {
-        position: absolute;
-        left: 1500px;
-        top: 85px;
-        height: 640px;
-        width: 695px;
-        border: 0px rgba(112,112,112,0.450) solid;
-        border-radius: 35px;
-        line-height: 80px;
-        user-select: none;
-    }
-
     .inside-article-div
     {
         position: relative;
