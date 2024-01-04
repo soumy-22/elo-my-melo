@@ -1,5 +1,5 @@
 
-console.log("async-script-com"); 
+// navigation buttons related 
 function changeover()
 {
   document.getElementById("CATEGORIES").style.color = "rgba(0,0,0,1)";

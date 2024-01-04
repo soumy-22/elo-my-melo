@@ -1,5 +1,5 @@
 
-console.log("defer-script-phone"); 
+// console.log("defer-script-phone"); 
 function scrollmethod() 
 {
 	mybutton = document.getElementById("scroll-top-button"); 
@@ -12,40 +12,39 @@ function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 function buttonfxd()
 { 	   
-   	  document.getElementById("Web_1920__1").style.visibility = "visible";
-   	  document.getElementById("top-check").style.visibility = "hidden";
-   	  if (window.matchMedia("(max-width: 615px)").matches) 
-   	  {
+   	document.getElementById("Web_1920__1").style.visibility = "visible";
+   	document.getElementById("top-check").style.visibility = "hidden";
+   	if (window.matchMedia("(max-width: 615px)").matches) 
+   	{
         const mypage = window.innerWidth * 0.12;
         const pagebot = window.innerWidth * 0.167;
         const pageright = window.innerWidth * 0.04;
         document.getElementById("scroll-top-button").style.setProperty('--set-size', mypage + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
-      }
-      if (window.matchMedia("(max-width: 415px)").matches)
-   	  {
+    }
+    if (window.matchMedia("(max-width: 415px)").matches)
+   	{
         const mypage = window.innerWidth * 0.14;
         const pagebot = window.innerWidth * 0.190;
         const pageright = window.innerWidth * 0.04;
         document.getElementById("scroll-top-button").style.setProperty('--set-size', mypage + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
-      }
-      if (window.matchMedia("(max-width: 415px)").matches && window.matchMedia("(max-height: 745px)").matches) 
-   	  {
+    }
+    if (window.matchMedia("(max-width: 415px)").matches && window.matchMedia("(max-height: 745px)").matches) 
+   	{
         const mypage = window.innerWidth * 0.13;
         const pagebot = window.innerWidth * 0.16;
         const pageright = window.innerWidth * 0.04;
         document.getElementById("scroll-top-button").style.setProperty('--set-size', mypage + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
-      }
+    }
 }
 
-    timer1 = setInterval(buttonfxd, 500);
-    setTimeout(() => { clearInterval(timer1); }, 5000);
-    // window.addEventListener('resize', buttonfxd, false);
+    setTimeout(buttonfxd, 1000); setTimeout(buttonfxd, 3000); 
+    // window.addEventListener('resize', buttonfxd, false); 
 
     function adsheights() {  
     // var checkh = window.innerWidth; 

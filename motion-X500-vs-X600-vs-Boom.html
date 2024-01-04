@@ -199,26 +199,16 @@ as="font" crossorigin="anonymous">
 
 <script type="text/javascript">
 
-   var js,
-   fjs = document.getElementsByTagName("head")[0];
-   var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i)); 
-   if(isios) { js = document.createElement("meta");
-   js.httpEquiv = "Content-Security-Policy";
-   js.content = "script-src 'unsafe-inline'"; 
-   fjs.appendChild(js, fjs); }
+    var js,
+    fjs = document.getElementsByTagName("head")[0];
+    var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i)); 
+    if(isios) { js = document.createElement("meta");
+    js.httpEquiv = "Content-Security-Policy";
+    js.content = "script-src 'unsafe-inline'"; 
+    fjs.appendChild(js, fjs); }
 
-document.addEventListener('DOMContentLoaded', iosnone); 
-function iosnone() 
-{
-   console.log("main-dom-loaded"); 
-   // some IOS changes --------------
-   if(isios) { // console.log("hello there"); 
-   document.querySelectorAll(".dis-com").forEach(function(el) { el.style.display = "none"; });
-   document.querySelectorAll(".feed-com").forEach(function(el) { el.style.display = "none"; }); }
-}
-
-   timerch = setInterval(() => { console.log(document.readyState); }, 0); 
-   setTimeout(() => { clearInterval(timerch); }, 10000); 
+    timermain = setInterval(upme, 500); 
+    setTimeout(() => { clearInterval(timermain); }, 5000); 
 
 // for other than windows and mac ----
 var isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i)); 
@@ -226,6 +216,11 @@ document.addEventListener('DOMContentLoaded', upme);
 window.addEventListener('resize', upme); 
 function upme()
 {
+    // some IOS changes --------------
+    if(isios) { // console.log("check-here"); 
+    document.querySelectorAll(".dis-com").forEach(function(el) { el.style.display = "none"; });
+    document.querySelectorAll(".feed-com").forEach(function(el) { el.style.display = "none"; }); } 
+
     // checks if user is on a desktop device 
     if(window.matchMedia("(min-width: 615px)").matches && !isdesk)
     {
@@ -246,9 +241,8 @@ function upme()
         document.getElementById("ads-vertical-two").style.display = "none";
         document.getElementById("hoty-blnk").style.display = "none";
         document.getElementById("top-pos").style.display = "none";
-        console.log("defer-dom-loaded"); 
     } 
-    if (window.matchMedia("(max-width: 615px)").matches) 
+    if(window.matchMedia("(max-width: 615px)").matches) 
     {
         document.getElementById("arts-con-id").style.overflow = "visible";
         document.getElementById("footer-id").style.display = "none";
@@ -285,7 +279,7 @@ if(isdesk) { window.removeEventListener('resize', upme); }
     }
   },
   "datePublished": "2023-12-16T20:35:10+00:00",
-  "dateModified": "2024-01-01T18:10:10+00:00"
+  "dateModified": "2024-01-04T18:20:10+00:00"
 }
 </script>
 

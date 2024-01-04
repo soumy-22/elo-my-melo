@@ -1,5 +1,5 @@
 
-console.log("defer-script-check"); 
+// console.log("defer-script-check"); 
 // setTimeout(updateAdsAttributes, 100);
 function updateAdsAttributes() 
 {
@@ -331,13 +331,13 @@ function detectCharacter()
     }
 }
 
-    timer2 = setInterval(function() {  
+    function heightcheck() { 
     if (window.matchMedia("(min-width: 615px)").matches) { 
     document.getElementById("ads-v1-in").style.minHeight = "612px";
     /* document.getElementById("ads-v2-in").style.minHeight = "262px"; */ } 
     if (window.matchMedia("(max-width: 615px)").matches) { 
-    document.getElementById("ads-v1-in").style.display = "none"; } }, 500); 
+    document.getElementById("ads-v1-in").style.display = "none"; } }
 
-    setTimeout(() => { clearInterval(timer2); }, 5000); 
+    setTimeout(heightcheck, 1000); setTimeout(heightcheck, 3000); 
     // document ends here ---------
 
