@@ -9,11 +9,11 @@
 crossorigin="anonymous">
 <link rel="preload" as="image" href="images/a14-main.jpg" fetchpriority="high">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" 
-as="style" onload="this.rel='stylesheet'">
+as="style" media="screen and (min-width: 615px)" onload="this.rel='stylesheet'">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" 
 as="style" onload="this.rel='stylesheet'">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" 
-as="style" onload="this.rel='stylesheet'">
+as="style" media="screen and (min-width: 615px)" onload="this.rel='stylesheet'">
 <link rel="icon" type="image/png" sizes="32x32" href="old-images/circle-trans.png">
 <link rel="canonical" href="https://elomymelo.com/galaxy-a14-5g-review.html"> 
 <meta name="twitter:card" content="summary_large_image">
@@ -2959,18 +2959,21 @@ as="style" onload="this.rel='stylesheet'">
 	{
         src: url("fonts/segoeui.ttf");
         font-family: cus-segoe;
+        font-display: swap;
 	}
 
 	@font-face
 	{
         src: url("fonts/arial.ttf");
         font-family: cus-arial;
+        font-display: block;
 	}
 
 	@font-face
 	{
         src: url("fonts/arial-round.ttf");
         font-family: cus-arial-round;
+        font-display: swap;
 	}
 
 	@font-face
@@ -2983,12 +2986,14 @@ as="style" onload="this.rel='stylesheet'">
 	{
         src: url("fonts/Roboto-Medium.ttf");
         font-family: cus-roboto-medium;
+        font-display: swap;
 	}
 
 	@font-face
 	{
         src: url("fonts/Roboto-Light.ttf");
         font-family: cus-roboto-light;
+        font-display: swap;
 	}
 
 	@font-face
