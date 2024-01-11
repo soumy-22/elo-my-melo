@@ -3,9 +3,13 @@
 <head> <!-- check me out now --> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://docs.elomymelo.com" crossorigin="anonymous">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" 
+as="style" media="screen and (min-width: 615px)" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" 
+as="style" media="screen and (min-width: 615px)" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" 
+as="style" onload="this.rel='stylesheet'">
 <link rel="icon" type="image/png" sizes="32x32" href="old-images/circle-trans.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Soundcore Motion Boom vs X500 and X600 | champ boom">
@@ -28,8 +32,6 @@
 <link rel="preload" href="styles/style-com.css" as="style" media="screen and (min-width: 615px)">
 <link rel="stylesheet" href="styles/style-com.css" media="print" onload="this.media='all'">
 <link rel="preload" href="fonts/arial-round.ttf" as="font" crossorigin="anonymous">
-<link rel="preload" href="fonts/segoeui.ttf" media="screen and (min-width: 615px)" 
-as="font" crossorigin="anonymous"> 
 
 <style id="applicationStylesheet" type="text/css">
     
@@ -96,31 +98,37 @@ as="font" crossorigin="anonymous">
     {
         src: url("fonts/segoeui.ttf");
         font-family: cus-segoe;
+        font-display: swap;
     }
     @font-face
     {
         src: url("fonts/arial.ttf");
         font-family: cus-arial;
+        font-display: block;
     }
     @font-face
     {
         src: url("fonts/arial-round.ttf");
         font-family: cus-arial-round;
+        font-display: swap;
     }
     @font-face
     {
         src: url("fonts/Roboto-Regular.ttf");
         font-family: cus-roboto;
+        font-display: swap;
     }
     @font-face
     {
         src: url("fonts/Roboto-Medium.ttf");
         font-family: cus-roboto-medium;
+        font-display: swap;
     }
     @font-face
     {
         src: url("fonts/Roboto-Light.ttf");
         font-family: cus-roboto-light;
+        font-display: swap;
     }
     @font-face
     {
@@ -279,7 +287,7 @@ if(isdesk) { window.removeEventListener('resize', upme); }
     }
   },
   "datePublished": "2023-12-16T20:35:10+00:00",
-  "dateModified": "2024-01-04T18:20:10+00:00"
+  "dateModified": "2024-01-11T23:40:10+00:00"
 }
 </script>
 
