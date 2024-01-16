@@ -531,6 +531,25 @@ br
     margin-left: 160px; 
     border-radius: 45px;
 }
+.art-images.two
+{
+    height: 1415px; 
+}
+.art-images.three
+{
+    height: 2500px; 
+}
+.img-style-two
+{
+    width: 42%; 
+    height: 1300px; 
+    margin-top: 60px; 
+    margin-bottom: 50px; 
+    margin-left: 160px;
+    border: 1px rgba(112,112,112,0.4) solid; 
+    border-radius: 45px; 
+    position: relative;
+}
 #art-image-six
 {
     width: 1887px; 
@@ -812,7 +831,7 @@ br
     width: 566px;
     white-space: nowrap;
     text-align: left;
-    font-family: Lato, cus-lato;
+    font-family: Lato, cus-lato, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
@@ -828,7 +847,7 @@ br
     width: 536px;
     white-space: nowrap;
     text-align: left;
-    font-family: Lato, cus-lato;
+    font-family: Lato, cus-lato, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;

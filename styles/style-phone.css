@@ -380,7 +380,7 @@
     {
     	position: relative;
     	color: rgba(146,155,212,1); 
-    	font-family: cus-roboto-medium, cus-roboto-round, 'Roboto', cus-roboto; 
+    	font-family: cus-roboto-medium, cus-roboto, sans-serif; 
     	font-weight: normal;
     	font-size: 122px; 
     	border: 0px grey solid;
@@ -675,6 +675,24 @@
         border-radius: 45px; 
         position: relative;
         opacity: 0.9;
+    }
+    .art-images.two
+    {
+        height: 1616px; 
+    }
+    .art-images.three
+    {
+        height: 2858px; 
+    }
+    .img-style-two
+    {
+        width: 48.9%; 
+        height: 1415px; 
+        margin-top: 60px; 
+        margin-bottom: 50px; 
+        border: 1px rgba(112,112,112,0.4) solid; 
+        border-radius: 45px; 
+        position: relative;
     }
     
     #Rectangle_4 {
