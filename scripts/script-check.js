@@ -29,7 +29,7 @@ function updateAdsAttributes()
 
     updateClassOne();
 
-    var ids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three'];
+    var ids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four'];
     function updateAttributes() {
     ids.forEach(function(id) {
     var element = document.getElementById(id);
