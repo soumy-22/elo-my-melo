@@ -712,7 +712,11 @@
     {
         color: rgba(0,0,0,1);
         background: rgba(255,255,255,1);
-    }   
+    }  
+    #scroll-here-tip
+    {
+        display: none;
+    } 
     .footer
 	{
 		display: none;
@@ -1690,6 +1694,60 @@
         color: rgba(0,0,0,0.770);
         background: rgba(121,82,9,0.252);
     }
+
+    #scroll-here-tip
+    {
+        position: absolute;
+        height: 85px;
+        font-size: 40px;
+        font-family: roboto, cus-roboto, sans-serif;
+        top: 7025px;
+        left: 1042px;
+        visibility: hidden;
+        background-color: rgba(0,0,0,0.75);
+        color: rgba(255,255,255,0.85);
+        border: 0px rgba(112,112,112,0.5) solid;
+        border-radius: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 18px;
+        padding-bottom: 15px;
+        z-index: 2;
+    }
+    .scroll-click
+    {
+        position: absolute;
+        top: 7190px;
+        left: 114px;
+        width: 2362px;
+        height: 300px;
+        margin: auto;
+        border: 4px #E4E4E4 solid;
+        border-top: 0px transparent solid;
+        border-radius: 0px 0px 50px 50px;
+        background: linear-gradient(to bottom, transparent 0%, transparent 65%, white 80%, white 100%);
+        -webkit-mask-image: linear-gradient(transparent, black, black);
+        backdrop-filter: blur(10px);
+        transition: opacity 2s;
+        transition-delay: 2s;
+    }
+    .scroll-clk-button
+    {
+        position: relative;
+        bottom: -192px;
+        width: 200px;
+        height: 107px;
+        margin: auto;
+        border: 0px grey solid;
+        background: white;
+        box-shadow: 0px 0px 40px rgba(112,112,112,0.3);
+        border-radius: 100px 100px 0px 0px;
+        color: rgba(33,97,140,0.74);
+        user-select: none;
+        font-size: 110px;
+        cursor: pointer;
+    }
+
     .footer
 	{
 		position: absolute;
@@ -4764,6 +4822,19 @@ function toppicksout()
 	document.getElementById("top-picks-text").style.visibility = "";
 }
 
+function scrolldown()
+{
+    var artcontainer = document.querySelector(".articles-container"); 
+    var containerheight = artcontainer.offsetHeight; var contentheight = artcontainer.scrollHeight; 
+    var currentscroll = artcontainer.scrollTop; var newscroll = currentscroll + 1000; 
+    artcontainer.scrollTo({ top: newscroll, behavior: 'smooth' }); 
+    if (currentscroll + containerheight >= contentheight) { 
+    document.querySelector(".scroll-click").style.opacity = "0"; 
+    setTimeout(() => { document.querySelector(".scroll-click").style.display = "none"; }, 4000); } 
+}
+function scrltipon() { document.getElementById("scroll-here-tip").style.visibility = "visible"; }
+function scrltipout() { document.getElementById("scroll-here-tip").style.visibility = ""; }
+
    setInterval(function()
    {   
        const adheightone = document.getElementById("ads-style-display-res-phone").clientHeight;
@@ -4811,7 +4882,8 @@ window.addEventListener('resize', updateLogo);
 
 function updateLogo() 
 {
-      if (window.matchMedia("(min-width: 615px)").matches) 
+       var isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i));
+       if (window.matchMedia("(min-width: 615px)").matches) 
        {
            const mypage = window.innerWidth;
            document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
@@ -4819,13 +4891,27 @@ function updateLogo()
            document.getElementById("Web_1920__1").style.width = "3554px";
        }
 
-      if (window.matchMedia("(max-width: 615px)").matches) 
+       if (window.matchMedia("(max-width: 615px)").matches) 
        {
            const mypagephone = window.innerWidth;
            document.getElementById("Web_1920__1").style.transform = "scale("+mypagephone/2358+")";
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "2358px";
            document.getElementById("Web_1920__1").style.overflow = "visible";
+           document.getElementById("sc-clk-char").style.display = "none";
+       }
+
+       if (isdesk && window.matchMedia("(min-width: 615px)").matches) 
+       {
+           document.getElementById("sc-clk-char").style.display = "block";
+       }
+       if (!isdesk) 
+       {
+           document.getElementById("sc-clk-char").innerHTML = "▼";
+           document.getElementById("sc-clk-char").style.display = "block";
+           document.getElementById("sc-clk-char").style.fontSize = "70px";
+           document.getElementById("sc-clk-char").style.bottom = "15px";
+           document.getElementById("sc-clk-char").style.left = "66px";
        }
 
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
@@ -6135,7 +6221,14 @@ else
 
   </div>
 
-      <div class="footer">
+  <div class="scroll-click">
+      <div class="scroll-clk-button" onclick="scrolldown()" onmouseover="scrltipon()" onmouseout="scrltipout()">
+         <span id="sc-clk-char" style="position: absolute; display: none; left: 48px; bottom: -9px"> ⏷ </span>
+      </div>
+  </div>
+  <div id="scroll-here-tip"> scroll here on this section </div>
+
+  <div class="footer">
 
   	<div class="ft-01" style="position: absolute; overflow: visible; top: 45px; left: 385px; height: 140px; width: 1600px; border: 0px grey solid; border-radius: 25px;">
 
