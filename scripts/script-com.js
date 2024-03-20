@@ -351,5 +351,17 @@ function toppicksout()
 	document.getElementById("top-picks-text").style.visibility = "";
 }
 
+function scrolldown()
+{
+  var artcontainer = document.querySelector(".articles-container"); 
+  artcontainer.style.overflowY = "scroll"; var containerheight = artcontainer.offsetHeight; 
+  var contentheight = artcontainer.scrollHeight; var currentscroll = artcontainer.scrollTop; 
+  var newscroll = currentscroll + 1000; artcontainer.scrollTo({ top: newscroll, behavior: 'smooth' }); 
+  if (currentscroll + containerheight >= contentheight - 1000) { 
+  document.querySelector(".scroll-clk-button").style.display = "none"; } 
+}
+function scrltipon() { document.querySelector(".scroll-here-tip").style.visibility = "visible"; }
+function scrltipout() { document.querySelector(".scroll-here-tip").style.visibility = ""; }
+
   // document ends here ---------
 
