@@ -501,6 +501,10 @@
         display: none;
     }
 
+    .scroll-clk-button
+    {
+        display: none;
+    }
     .aff-link-text
     {
         display: none;
@@ -511,8 +515,8 @@
     }
     
     #ads-br-f1 {display: none;} #ads-br-f2 {display: none;} #ads-br-f3 {display: none;} 
-    #ads-br-f4 {display: none;} #ads-br-d1 {display: none;} 
-    #ads-br-d2 {display: none;} #ads-br-d3 {display: none;}
+    #ads-br-f4 {display: none;} #ads-br-d1 {display: none;} #ads-br-d2 {display: none;} 
+    #ads-br-d3 {display: none;} #ads-br-d4 {display: none;} 
 
     .ad-details-4
     {
