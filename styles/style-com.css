@@ -623,7 +623,83 @@
         border-radius: 50px;
         z-index: 1;
     }
+    .scroll-here-tip
+    {
+        position: absolute;
+        height: 85px;
+        font-size: 40px;
+        font-family: roboto, cus-roboto, sans-serif;
+        top: 8210px;
+        left: 1695px;
+        visibility: hidden;
+        background-color: rgba(0,0,0,0.75);
+        color: rgba(255,255,255,0.85);
+        border: 0px rgba(112,112,112,0.5) solid;
+        border-radius: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 18px;
+        padding-bottom: 15px;
+        z-index: 2;
+    }
+    .scroll-clk-button
+    {
+        position: absolute;
+        top: 8180px;
+        left: 2252px;
+        width: 150px;
+        height: 140px;
+        background: white;
+        box-shadow: 0px 0px 40px rgba(112,112,112,0.3);
+        border-radius: 25px;
+        color: rgba(33,97,140,0.74);
+        user-select: none;
+        font-size: 90px;
+        cursor: pointer;
+    }
 
+    .hot-dvcs-hdr
+    {
+        position: absolute; 
+        font-size: 45px; 
+        color: rgba(0,0,0,0.62); 
+        font-family: roboto, cus-roboto, sans-serif;
+        text-align: center;
+        border-radius: 20px;
+        width: 88%;
+    }
+    .hot-dvcs-hdr.expmore
+    {
+        top: 10px; width: 100%; height: auto; 
+    }
+    .hot-dvcs-hdr-span
+    {
+        padding: 22px 65px 24px 65px;
+        border: 4px rgba(112,112,112,0.20) solid;
+        position: relative;
+        display: inline-block;
+        border-radius: 80px;
+        background: white;
+    }
+    .hot-dvcs-hdr-span.spnmore
+    {
+        padding: 18px 55px 18px 60px; border: 4px rgba(112,112,112,0.14) solid;
+    }
+    .hot-dvcs-hdr-span.spnmore02
+    {
+        padding: 18px 60px 18px 60px; margin-left: 10px; 
+        border: 4px rgba(112,112,112,0.14) solid;
+    }
+    .top-dsgn
+    {
+        position: absolute;
+        width: 20%;
+        height: 7px;
+        background: linear-gradient(to right, white, #EAEAEA);
+        border-radius: 8px;
+        top: 87px; 
+        display: none;
+    }
     .hot-devices-sec a
     {
         text-decoration: none; 
