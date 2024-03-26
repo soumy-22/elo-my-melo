@@ -4959,7 +4959,7 @@ function toppicksout()
 	document.getElementById("top-picks-text").style.visibility = "";
 }
 
-   setInterval(function()
+   function upheight()
    {     
        const adheighttwo = document.getElementById("ads-style-feed-res-phone").clientHeight;
        const adheightfour = document.getElementById("ads-style-feed-res-phone-2").clientHeight;
@@ -4978,8 +4978,11 @@ function toppicksout()
            document.getElementById("ads-v1-in").style.minHeight = "612px";
            // document.getElementById("ads-v2-in").style.minHeight = "262px";
        }
+   }
 
-   }, 0);
+   timer3 = setInterval(upheight, 0);
+   setTimeout(() => { clearInterval(timer3); }, 5000);
+   setTimeout(() => { setInterval(upheight, 1000); }, 5000); 
 
    timer2 = setInterval(function() 
    {   
