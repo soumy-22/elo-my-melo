@@ -2454,6 +2454,25 @@
         border-radius: 25px;
 	}
 
+    .scroll-here-tip
+    {
+        position: absolute;
+        height: 85px;
+        font-size: 40px;
+        font-family: roboto, cus-roboto, sans-serif;
+        top: 8296px;
+        left: 1695px;
+        visibility: hidden;
+        background-color: rgba(0,0,0,0.75);
+        color: rgba(255,255,255,0.85);
+        border: 0px rgba(112,112,112,0.5) solid;
+        border-radius: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 18px;
+        padding-bottom: 15px;
+        z-index: 2;
+    }
 	.scroll-click
 	{
 		position: absolute;
@@ -3264,9 +3283,11 @@ function scrolldown()
 {
 	document.querySelector(".articles-container").style.overflowY = "scroll";
 	document.querySelector(".articles-container").scrollTo({ top: '860', behavior: 'smooth' });
+	document.querySelector(".scroll-here-tip").style.visibility = "visible";
 	document.querySelector(".scroll-click").style.opacity = "0";
 	setTimeout(() => { document.querySelector(".scroll-click").style.display = "none";
-	document.querySelector(".scroll-clk-button").style.display = "none"; }, 4000);
+	document.querySelector(".scroll-clk-button").style.display = "none";
+	document.querySelector(".scroll-here-tip").style.visibility = ""; }, 4000);
 }
 setTimeout(() => { document.querySelector(".articles-container").scrollTo(0, 0); }, 200);
 
@@ -4290,7 +4311,8 @@ function updateLogo()
    	 <img src="old-images/down-triangle.png" id="sc-clk-char" 
    	 style="position: absolute; left: 40px; bottom: 37px; width: 77px">
   </div>
-  
+  <div class="scroll-here-tip"> scroll here on this section </div>
+
   <div class="footer">
 
   	<div class="ft-01" style="position: absolute; overflow: visible; top: 45px; left: 385px; height: 140px; width: 1600px; border: 0px grey solid; border-radius: 25px;">
