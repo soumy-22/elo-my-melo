@@ -4763,7 +4763,6 @@ window.addEventListener('resize', updateLogo);
 
 function updateLogo() 
 {
-       var isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i));
        if (window.matchMedia("(min-width: 615px)").matches) 
        {
            const mypage = window.innerWidth;
@@ -4779,20 +4778,6 @@ function updateLogo()
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "2358px";
            document.getElementById("Web_1920__1").style.overflow = "visible";
-           document.getElementById("sc-clk-char").style.display = "none";
-       }
-
-       if (isdesk && window.matchMedia("(min-width: 615px)").matches) 
-       {
-           document.getElementById("sc-clk-char").style.display = "block";
-       }
-       if (!isdesk) 
-       {
-           document.getElementById("sc-clk-char").innerHTML = "▼";
-           document.getElementById("sc-clk-char").style.display = "block";
-           document.getElementById("sc-clk-char").style.fontSize = "70px";
-           document.getElementById("sc-clk-char").style.bottom = "15px";
-           document.getElementById("sc-clk-char").style.left = "66px";
        }
 
     // mutation observer code
@@ -5868,7 +5853,8 @@ else
 
   <div class="scroll-click">
       <div class="scroll-clk-button" onclick="scrolldown()" onmouseover="scrltipon()" onmouseout="scrltipout()">
-         <span id="sc-clk-char" style="position: absolute; display: none; left: 48px; bottom: -9px"> ⏷ </span>
+      <img src="old-images/down-triangle.png" id="sc-clk-char" 
+      style="position: absolute; left: 62px; bottom: 20px; width: 77px">
       </div>
   </div>
   <div id="scroll-here-tip"> scroll here on this section </div>
