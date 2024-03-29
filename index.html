@@ -2487,8 +2487,7 @@
 		background: linear-gradient(to bottom, transparent 0%, transparent 65%, white 80%, white 100%);
 		-webkit-mask-image: linear-gradient(transparent, black, black);
 		backdrop-filter: blur(10px);
-		transition: opacity 2s;
-		transition-delay: 2s;
+		transition: opacity 1s;
 	}
 	.scroll-clk-button
 	{
@@ -3281,12 +3280,12 @@ function toppicksout()
 
 function scrolldown()
 {
+	document.querySelector(".scroll-click").style.opacity = "0";
+	document.querySelector(".scroll-here-tip").style.visibility = "visible";
 	document.querySelector(".articles-container").style.overflowY = "scroll";
 	document.querySelector(".articles-container").scrollTo({ top: '860', behavior: 'smooth' });
-	document.querySelector(".scroll-here-tip").style.visibility = "visible";
-	document.querySelector(".scroll-click").style.opacity = "0";
-	setTimeout(() => { document.querySelector(".scroll-click").style.display = "none";
-	document.querySelector(".scroll-clk-button").style.display = "none";
+	setTimeout(() => { document.querySelector(".scroll-click").style.display = "none"; }, 1000);
+	setTimeout(() => { document.querySelector(".scroll-clk-button").style.display = "none";
 	document.querySelector(".scroll-here-tip").style.visibility = ""; }, 4000);
 }
 setTimeout(() => { document.querySelector(".articles-container").scrollTo(0, 0); }, 200);
