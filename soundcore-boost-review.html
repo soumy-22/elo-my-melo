@@ -707,6 +707,10 @@
     {
         display: none;
     }
+    .scroll-clk-button
+    {
+        display: none;
+    }
    
     #section-one
     {
@@ -5032,7 +5036,7 @@ function scrolldown()
 function scrltipon() { document.getElementById("scroll-here-tip").style.visibility = "visible"; }
 function scrltipout() { document.getElementById("scroll-here-tip").style.visibility = ""; }
 
-   setInterval(function() 
+   function upheight() 
    {   
        const adheightone = document.getElementById("ads-style-display-res-phone").clientHeight;
        const adheighttwo = document.getElementById("ads-style-feed-res-phone").clientHeight;
@@ -5043,8 +5047,11 @@ function scrltipout() { document.getElementById("scroll-here-tip").style.visibil
        document.getElementById("ads-style-feed-res-phone").style.setProperty('--set-margin', adheighttwo + "px");
        document.getElementById("ads-style-feed-res-phone-2").style.setProperty('--set-margin', adheightthree + "px");
        document.getElementById("ads-style-display-res-phone-2").style.setProperty('--set-margin', adheightfour + "px");
+   }
 
-   }, 0);
+   timer3 = setInterval(upheight, 0);
+   setTimeout(() => { clearInterval(timer3); }, 5000);
+   setTimeout(() => { setInterval(upheight, 1000); }, 5000); 
 
    setTimeout(function()
    {   
