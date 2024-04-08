@@ -39,13 +39,12 @@
 	#Web_1920__1 
     {
 		position: absolute;
-		width: 3554px;
+		width: 3554px !important;
 		height: auto;
 		border: 0px grey solid;
 		background-color: rgba(112,112,112,0);
 		overflow: visible;
 		visibility: visible;
-        padding-bottom: 918px;
 	}
 	#top-check
 	{
@@ -4422,8 +4421,8 @@ function scrollmethod()
 
     if(window.matchMedia("(min-width: 615px)").matches && !isdesk)
     {
-        document.getElementById("Web_1920__1").style.height = "2216px";
-        document.getElementById("Web_1920__1").style.paddingBottom = "0px";
+        // document.getElementById("Web_1920__1").style.height = "2216px";
+        // document.getElementById("Web_1920__1").style.paddingBottom = "0px";
         document.getElementById("arts-con-id").style.position = "absolute";
         setInterval(function(){ document.getElementById("arts-con-id").style.height = "6712px"; }, 0);
         document.getElementById("arts-con-id").style.overflowX = "hidden";
@@ -5171,6 +5170,7 @@ function updateLogo()
            document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "3554px";
+           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
       }
       if (window.matchMedia("(max-width: 615px)").matches) 
       {
