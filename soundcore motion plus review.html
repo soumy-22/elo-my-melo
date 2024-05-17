@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preload" href="fonts/segoeui.ttf" as="font" crossorigin="anonymous" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -10,10 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" 
+rel="stylesheet"><link rel="preload" href="fonts/segoeui.ttf" as="font" crossorigin="anonymous">
 <link rel="icon" type="image/png" sizes="32x32" href="old-images/circle-trans.png">
 <meta charset="utf-8"/>
 <meta property="og:image" content="https://elomymelo.com/old-images/soundcoremotionplus.jpg">
+<meta itemprop="image" content="https://elomymelo.com/old-images/soundcoremotionplus.jpg">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width">
 <title> Anker Soundcore Motion Plus speaker detailed review </title>
@@ -5250,24 +5251,31 @@ function updateLogo()
 
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+      "@context": "https://schema.org/",
+      "@type": "Review",
+      "itemReviewed": {
         "@type": "Product",
-        "name": "Soundcore Motion+",
-        "description": "This is an excellent mid-sized portable Bluetooth speaker that shines with sound quality. It still outperforms more expensive speakers.",
         "image": "https://elomymelo.com/old-images/soundcoremotionplus.jpg",
-        "review": {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Soumya Roy"
-            },
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "9.2",
-                "bestRating": "10"
-            },
-            "reviewBody": "I love the Soundcore Motion Plus speaker and it makes me happy."
+        "name": "Soundcore Motion+",
+        "offers": {
+          "@type": "Offer",
+          "price": "90.00",
+          "priceCurrency": "USD"
         }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "9.2",
+        "bestRating": "10"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Soumya Roy"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "elomymelo.com"
+      }
     }
     </script>
 
@@ -5823,9 +5831,9 @@ function updateLogo()
 		  <span id="publication-detail-phone"> Tuesday, October 19, 2021 - by <a style="text-decoration: none; color: rgba(255,119,119,0.90);" href="https://www.facebook.com/profile.php?id=100022991028680">Soumya Roy</a> </span>
 		</div>
 		<br>
-		<div class="art-text-div">
+		<div class="art-text-div" itemscope itemtype="http://schema.org/Article">
 
-			<img id="art-image-one" src="old-images/soundcoremotionplus.jpg" srcset="old-images/soundcoremotionplus.jpg 1x" alt="picture of anker soundcore motion plus bluetooth speaker" loading="lazy">
+			<img id="art-image-one" src="old-images/soundcoremotionplus.jpg" alt="picture of anker soundcore motion plus bluetooth speaker" loading="lazy" itemprop="image">
              
              <br>
              
