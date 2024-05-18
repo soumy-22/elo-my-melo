@@ -50,17 +50,6 @@ as="style" onload="this.rel='stylesheet'">
         box-sizing: border-box;
         border: none;
     }
-    #Web_1920__1 
-    {
-        position: absolute;
-        width: 3554px;
-        height: auto;
-        border: 0px grey solid;
-        background-color: rgba(112,112,112,0);
-        overflow: visible;
-        visibility: visible; 
-        padding-bottom: 918px;
-    }
     #top-check
     {
         position: absolute;
@@ -185,6 +174,16 @@ as="style" onload="this.rel='stylesheet'">
 
     @media only screen and (min-width: 615px)
     { 
+    #Web_1920__1 
+    {
+        position: absolute;
+        width: 3554px !important;
+        height: auto;
+        border: 0px grey solid;
+        background-color: rgba(112,112,112,0);
+        overflow: visible;
+        visibility: visible; 
+    }
     #pros-cons
     {
         position: relative;
@@ -245,8 +244,8 @@ function upme()
     // checks if user is on a desktop device 
     if(window.matchMedia("(min-width: 615px)").matches && !isdesk)
     {
-        document.getElementById("Web_1920__1").style.height = "2216px";
-        document.getElementById("Web_1920__1").style.paddingBottom = "0px";
+        // document.getElementById("Web_1920__1").style.height = "2216px";
+        // document.getElementById("Web_1920__1").style.paddingBottom = "0px";
         document.getElementById("arts-con-id").style.position = "absolute";
         timer4 = setInterval(function() { // console.log("meme here"); 
         document.getElementById("arts-con-id").style.height = "7725px"; }, 0);
@@ -354,6 +353,7 @@ if(isdesk) { window.removeEventListener('resize', upme); }
            document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "3554px";
+           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
       }
       if (window.matchMedia("(max-width: 615px)").matches) 
       {
