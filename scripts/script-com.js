@@ -365,12 +365,16 @@ function scrltipout() { document.querySelector(".scroll-here-tip").style.visibil
 
 function outscale()
 {
-     let checkscale;
-     function scaleMe2() { 
-        let ftstyle1, ftstyle2, ftstyle3, ftstyle4;
+     let checkscale, sizedetection;
+     function scaleMe2()
+     {
+        let ftstyle1, ftstyle2, ftstyle3, ftstyle4, ftsize;
         const parentElementNew = document.querySelector('.fc-consent-root');
         const bodyOverflow = window.getComputedStyle(document.body).overflow;
         const footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
+
+        const topButton = document.querySelector('#scroll-top-button');
+        const topArrow = document.querySelector('#Path_1');
 
         if (parentElementNew || bodyOverflow === "hidden") {
             window.scrollTo(0, 0);
@@ -407,6 +411,10 @@ function outscale()
             }
         }
 
+        if (window.matchMedia("(min-width: 615px)").matches) { sizedetection = "desk"; }
+        if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") { buttonfxd(); }
+
+        console.log("interval check");
         const hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
         if (hostElement) {
             if (hostElement.shadowRoot) {
@@ -414,13 +422,16 @@ function outscale()
                 const regBubble = hostElement.shadowRoot.querySelector('.ft-reg-bubble');
                 const regBubbleCloseIcon = hostElement.shadowRoot.querySelector('.ft-reg-bubble-close-icon');
                 const regButton = hostElement.shadowRoot.querySelector('.ft-styless-button');
+                const regMenu = hostElement.shadowRoot.querySelector('.ft-menu');
 
                 // Apply styles
-                if (regMessageInfo) {
+                if (regMessageInfo) 
+                {
                     regMessageInfo.style.setProperty('display', 'none', 'important');
                     ftstyle1 = "reg-message";
                 }
-                if (regBubble) {
+                if (regMenu) { regMenu.style.setProperty('box-shadow', 'none', 'important'); }
+                if (regBubble && ftstyle1 === "reg-message") {
                     regBubble.style.setProperty('bottom', '10px', 'important');
                     regBubble.style.setProperty('padding-left', '20px', 'important');
                     regBubble.style.setProperty('width', '220px', 'important');
@@ -428,6 +439,8 @@ function outscale()
                     ftstyle2 = "reg-bubble";
                 }
                 if (regBubbleCloseIcon) {
+                    regBubbleCloseIcon.onclick = function() {
+                    topButton.style.background = ''; topArrow.style.stroke = ''; }
                     regBubbleCloseIcon.style.setProperty('right', '15px', 'important');
                     regBubbleCloseIcon.style.setProperty('position', 'absolute', 'important');
                     regBubbleCloseIcon.style.setProperty('top', '13px', 'important');
@@ -437,12 +450,18 @@ function outscale()
                     regButton.style.setProperty('border-radius', '55px', 'important');
                     ftstyle4 = "reg-button";
                 }
-                if (window.matchMedia("(min-width: 615px)").matches) { hostElement.shadowRoot.innerHTML = ''; }
+                if (window.matchMedia("(min-width: 615px)").matches) { 
+                    hostElement.shadowRoot.innerHTML = '';
+                    ftsize = "window-resized"; 
+                }
             }
 
-            if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" && ftstyle4 === "reg-button") {
-                clearInterval(ftinterval); window.addEventListener('resize', scaleMe2); 
+            if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" && ftstyle4 === "reg-button") 
+            {
+                topButton.style.background = 'white'; topArrow.style.stroke = '#5c5c5c'; clearInterval(ftinterval); 
+                window.addEventListener('resize', scaleMe2); 
             }
+            if (ftsize === "window-resized") { topButton.style.background = ''; topArrow.style.stroke = ''; }
         }
     }
 
