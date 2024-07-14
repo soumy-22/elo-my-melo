@@ -56,17 +56,18 @@
 	#scroll-top-button
     {
         position: fixed; 
-        bottom: 55px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
+        bottom: var(--set-bottom);
+        right: var(--set-right);
+        width: var(--set-size);
+        height: var(--set-size);
         border-radius: 50%;
         border: 0px rgba(171,229,99,0.45) solid;
         z-index: 999;
-        box-shadow: 0 0 30px rgba(255,119,119,0.75);
+        box-shadow: 0 0 calc(var(--set-right)*1.4) rgba(255,119,119,0.75);
         background: rgba(0,0,0,1);
         display: none;
         animation: fadein 2s;
+        --set-size: 0px;
     }
 
     @keyframes fadein
