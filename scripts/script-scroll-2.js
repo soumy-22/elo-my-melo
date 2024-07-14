@@ -38,7 +38,7 @@
     }
     if (window.matchMedia("(max-width: 615px)").matches) 
     {
-        document.body.style.transform = "none";
+        // document.body.style.transform = "none";
         document.getElementById("footer-id").style.display = "none";
     }
     if (window.matchMedia("(max-width: 615px)").matches && window.matchMedia("(max-height: 496px)").matches) 

@@ -363,5 +363,92 @@ function scrolldown()
 function scrltipon() { document.querySelector(".scroll-here-tip").style.visibility = "visible"; }
 function scrltipout() { document.querySelector(".scroll-here-tip").style.visibility = ""; }
 
-  // document ends here ---------
+function outscale()
+{
+     let checkscale;
+     function scaleMe2() { 
+        let ftstyle1, ftstyle2, ftstyle3, ftstyle4;
+        const parentElementNew = document.querySelector('.fc-consent-root');
+        const bodyOverflow = window.getComputedStyle(document.body).overflow;
+        const footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
+
+        if (parentElementNew || bodyOverflow === "hidden") {
+            window.scrollTo(0, 0);
+            document.body.style.overflow = "hidden";
+            document.body.style.transform = "none";
+            checkscale = "present"; // assigned
+        } 
+        else { document.body.style.overflow = "visible";
+
+            if (checkscale === "present") {
+                if (window.matchMedia("(max-width: 615px)").matches) {
+                    document.body.style.transform = "none"; // for pos-fxd
+                }
+                if (window.matchMedia("(min-width: 615px)").matches && window.matchMedia("(max-width: 1040.99px)").matches) {
+                    document.body.style.transform = "scale(1.0)";
+                }
+                if (window.matchMedia("(min-width: 1041px)").matches && window.matchMedia("(max-width: 1241.99px)").matches) {
+                    document.body.style.transform = "scale(0.920)";
+                }
+                if (window.matchMedia("(min-width: 1242px)").matches && window.matchMedia("(max-width: 1500.99px)").matches) {
+                    document.body.style.transform = "scale(0.860)";
+                }
+                if (window.matchMedia("(min-width: 1501px)").matches) {
+                    document.body.style.transform = "scale(0.80)";
+                }
+            }
+            checkscale = "absent"; document.body.style.transform = "";
+        }
+
+        if (footerDiv) {
+            const secondPTag = footerDiv.querySelector('p:nth-child(2)');
+            if (secondPTag) {
+                secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.';
+            }
+        }
+
+        const hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
+        if (hostElement) {
+            if (hostElement.shadowRoot) {
+                const regMessageInfo = hostElement.shadowRoot.querySelector('.ft-reg-message-info');
+                const regBubble = hostElement.shadowRoot.querySelector('.ft-reg-bubble');
+                const regBubbleCloseIcon = hostElement.shadowRoot.querySelector('.ft-reg-bubble-close-icon');
+                const regButton = hostElement.shadowRoot.querySelector('.ft-styless-button');
+
+                // Apply styles
+                if (regMessageInfo) {
+                    regMessageInfo.style.setProperty('display', 'none', 'important');
+                    ftstyle1 = "reg-message";
+                }
+                if (regBubble) {
+                    regBubble.style.setProperty('bottom', '10px', 'important');
+                    regBubble.style.setProperty('padding-left', '20px', 'important');
+                    regBubble.style.setProperty('width', '220px', 'important');
+                    regBubble.style.setProperty('border-radius', '50px', 'important');
+                    ftstyle2 = "reg-bubble";
+                }
+                if (regBubbleCloseIcon) {
+                    regBubbleCloseIcon.style.setProperty('right', '15px', 'important');
+                    regBubbleCloseIcon.style.setProperty('position', 'absolute', 'important');
+                    regBubbleCloseIcon.style.setProperty('top', '13px', 'important');
+                    ftstyle3 = "reg-icon";
+                }
+                if (regButton) {
+                    regButton.style.setProperty('border-radius', '55px', 'important');
+                    ftstyle4 = "reg-button";
+                }
+                if (window.matchMedia("(min-width: 615px)").matches) { hostElement.shadowRoot.innerHTML = ''; }
+            }
+
+            if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" && ftstyle4 === "reg-button") {
+                clearInterval(ftinterval); window.addEventListener('resize', scaleMe2); 
+            }
+        }
+    }
+
+    const ftinterval = setInterval(scaleMe2, 1000); scaleMe2(); 
+}
+outscale();
+
+// document ends here ---------
 
