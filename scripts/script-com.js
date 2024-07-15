@@ -366,7 +366,8 @@ function scrltipout() { document.querySelector(".scroll-here-tip").style.visibil
 function outscale()
 {
      let checkscale;
-     function scaleMe2() { 
+     function scaleMe2()
+     {
         let ftstyle1, ftstyle2, ftstyle3, ftstyle4;
         const parentElementNew = document.querySelector('.fc-consent-root');
         const bodyOverflow = window.getComputedStyle(document.body).overflow;
@@ -377,7 +378,7 @@ function outscale()
             document.body.style.overflow = "hidden";
             document.body.style.transform = "none";
             checkscale = "present"; // assigned
-        } 
+        }
         else { document.body.style.overflow = "visible";
 
             if (checkscale === "present") {
@@ -407,42 +408,16 @@ function outscale()
             }
         }
 
+        console.log("interval check");
         const hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
         if (hostElement) {
             if (hostElement.shadowRoot) {
-                const regMessageInfo = hostElement.shadowRoot.querySelector('.ft-reg-message-info');
-                const regBubble = hostElement.shadowRoot.querySelector('.ft-reg-bubble');
-                const regBubbleCloseIcon = hostElement.shadowRoot.querySelector('.ft-reg-bubble-close-icon');
-                const regButton = hostElement.shadowRoot.querySelector('.ft-styless-button');
-
-                // Apply styles
-                if (regMessageInfo) {
-                    regMessageInfo.style.setProperty('display', 'none', 'important');
-                    ftstyle1 = "reg-message";
-                }
-                if (regBubble) {
-                    regBubble.style.setProperty('bottom', '10px', 'important');
-                    regBubble.style.setProperty('padding-left', '20px', 'important');
-                    regBubble.style.setProperty('width', '220px', 'important');
-                    regBubble.style.setProperty('border-radius', '50px', 'important');
-                    ftstyle2 = "reg-bubble";
-                }
-                if (regBubbleCloseIcon) {
-                    regBubbleCloseIcon.style.setProperty('right', '15px', 'important');
-                    regBubbleCloseIcon.style.setProperty('position', 'absolute', 'important');
-                    regBubbleCloseIcon.style.setProperty('top', '13px', 'important');
-                    ftstyle3 = "reg-icon";
-                }
-                if (regButton) {
-                    regButton.style.setProperty('border-radius', '55px', 'important');
-                    ftstyle4 = "reg-button";
-                }
-                if (window.matchMedia("(min-width: 615px)").matches) { hostElement.shadowRoot.innerHTML = ''; }
+                hostElement.shadowRoot.innerHTML = '';
+                hostElement.shadowRoot.host.remove();
+                console.log("Removed 111");
             }
-
-            if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" && ftstyle4 === "reg-button") {
-                clearInterval(ftinterval); window.addEventListener('resize', scaleMe2); 
-            }
+            hostElement.remove(); clearInterval(ftinterval);
+            console.log("Removed 222");
         }
     }
 
