@@ -5241,15 +5241,17 @@ function detectCharacter()
       var parentElementNew = document.querySelector('.fc-consent-root');
       var bodyOverflow = window.getComputedStyle(document.body).overflow; 
       var footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
-      var parentElement = document.querySelector('.google-revocation-link-placeholder');
-      if (parentElement) { var childElements = parentElement.querySelectorAll('*');
-      // Loop through the child elements and set display to "none"
-      for (var i = 0; i < childElements.length; i++) 
-      {
-           childElements[i].parentNode.removeChild(childElements[i]);
+      var hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
+      if (hostElement) {
+            if (hostElement.shadowRoot) {
+                hostElement.shadowRoot.innerHTML = '';
+                hostElement.shadowRoot.host.remove();
+                console.log("Removed 111");
+            }
+            hostElement.remove(); clearInterval(ftinterval);
+            console.log("Removed 222");
       }
-           parentElement.parentNode.removeChild(parentElement);
-      }
+      console.log("interval check");
       if (parentElementNew || bodyOverflow === "hidden") 
       { 
            window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
@@ -5291,7 +5293,7 @@ function detectCharacter()
            document.body.style.transform = "scale(0.80)";
       }
   }
-  scaleMe(); setInterval(scaleMe, 1000); 
+  const ftinterval = setInterval(scaleMe, 1000); scaleMe(); 
   window.addEventListener('resize', scaleMe, false); 
 
 </script>
