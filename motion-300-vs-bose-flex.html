@@ -5243,13 +5243,11 @@ function detectCharacter()
       var footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
       var hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
       if (hostElement) {
-            if (hostElement.shadowRoot) {
-                hostElement.shadowRoot.innerHTML = '';
-                hostElement.shadowRoot.host.remove();
-                console.log("Removed 111");
-            }
-            hostElement.remove(); clearInterval(ftinterval);
-            console.log("Removed 222");
+          if (hostElement.shadowRoot) {
+              hostElement.shadowRoot.innerHTML = '';
+              hostElement.shadowRoot.host.remove();
+          }
+          hostElement.remove(); clearInterval(ftinterval);
       }
       console.log("interval check");
       if (parentElementNew || bodyOverflow === "hidden") 
