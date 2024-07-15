@@ -41,6 +41,10 @@ function buttonfxd()
         document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
         document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
     }
+    if (window.matchMedia("(min-width: 615px)").matches) 
+    {
+        document.getElementById("scroll-top-button").style.display = "none";
+    }
 }
 
     setTimeout(buttonfxd, 1000); setTimeout(buttonfxd, 3000); 
