@@ -419,8 +419,9 @@ function outscale()
            {
                const shadowdom = hostElement.shadowRoot;
                const toolbar = shadowdom.getElementById('ft-floating-toolbar'); 
+               const contain = shadowdom.querySelector('.ipr-container'); 
 
-               if (toolbar)
+               if (toolbar || contain)
                {
                    shadowdom.innerHTML = '';
                    shadowdom.host.remove();
@@ -433,10 +434,6 @@ function outscale()
                annosa.style.removeProperty('display');
                annosa.style.setProperty('display', 'none', 'important');
                console.log("Display 222");
-           }
-           else 
-           { 
-               annosa.style.setProperty('display', 'initial', 'important'); 
            }
         }
     }
