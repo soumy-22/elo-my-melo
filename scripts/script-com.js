@@ -409,15 +409,35 @@ function outscale()
         }
 
         console.log("interval check");
-        const hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
-        if (hostElement) {
-            if (hostElement.shadowRoot) {
-                hostElement.shadowRoot.innerHTML = '';
-                hostElement.shadowRoot.host.remove();
-                console.log("Removed 111");
-            }
-            hostElement.remove(); clearInterval(ftinterval);
-            console.log("Removed 222");
+        const annosa = document.getElementById('google-anno-sa');
+        const hostElements = document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
+        hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
+
+        function alldynamic(hostElement, annosa)
+        {
+           if (hostElement.shadowRoot) 
+           {
+               const shadowdom = hostElement.shadowRoot;
+               const toolbar = shadowdom.getElementById('ft-floating-toolbar'); 
+
+               if (toolbar)
+               {
+                   shadowdom.innerHTML = '';
+                   shadowdom.host.remove();
+                   console.log("111");
+               }
+           }
+
+           if (annosa && window.matchMedia("(min-width: 615px)").matches) 
+           {
+               annosa.style.removeProperty('display');
+               annosa.style.setProperty('display', 'none', 'important');
+               console.log("Display 222");
+           }
+           else 
+           { 
+               annosa.style.setProperty('display', 'initial', 'important'); 
+           }
         }
     }
 
