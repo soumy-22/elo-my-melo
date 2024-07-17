@@ -374,9 +374,7 @@ function outscale()
         const footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
 
         if (parentElementNew || bodyOverflow === "hidden") {
-            if (parentElementNew) { window.scrollTo(0, 0); /* for ads */ }
-            document.documentElement.style.removeProperty('scroll-behavior');
-            document.documentElement.style.removeProperty('overflow');
+            if (parentElementNew) { window.scrollTo(0, 0); }
             document.body.style.removeProperty('position');
             document.body.style.removeProperty('width');
             document.body.style.removeProperty('top');
@@ -439,6 +437,11 @@ function outscale()
                annosa.style.removeProperty('display');
                annosa.style.setProperty('display', 'none', 'important');
                console.log("Display 222");
+           }
+           if (annosa && bodyOverflow === "hidden") 
+           {
+               document.body.style.removeProperty('overflow');
+               console.log("Overflow 333");
            }
         }
     }
