@@ -435,11 +435,6 @@ function outscale()
                annosa.style.setProperty('display', 'none', 'important');
                console.log("Display 222");
            }
-           if (annosa && bodyOverflow === "hidden") 
-           {
-               document.body.style.removeProperty('overflow');
-               console.log("Overflow 333");
-           }
         }
     }
 
