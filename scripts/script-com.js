@@ -375,6 +375,8 @@ function outscale()
 
         if (parentElementNew || bodyOverflow === "hidden") {
             if (parentElementNew) { window.scrollTo(0, 0); /* for ads */ }
+            document.documentElement.style.removeProperty('scroll-behavior');
+            document.documentElement.style.removeProperty('overflow');
             document.body.style.removeProperty('position');
             document.body.style.removeProperty('width');
             document.body.style.removeProperty('top');
