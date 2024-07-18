@@ -440,8 +440,8 @@ function outscale()
            {
                const lastele = document.getElementById('after-ft-phone');
                const rect = lastele.getBoundingClientRect(); const topPos = rect.top + window.scrollY; 
+               lastele.style.border = "1px transparent solid"; document.body.style.height = topPos + "px";
                document.body.style.setProperty('overflow', 'visible', 'important');
-               document.body.style.height = topPos + "px";
            }
         }
     }
