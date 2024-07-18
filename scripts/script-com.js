@@ -440,6 +440,7 @@ function outscale()
            {
                const lastele = document.getElementById('after-ft-phone');
                const rect = lastele.getBoundingClientRect(); const topPos = rect.top + window.scrollY; 
+               document.body.style.setProperty('overflow', 'visible', 'important');
                document.body.style.height = topPos + "px";
            }
         }
