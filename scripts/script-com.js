@@ -435,6 +435,11 @@ function outscale()
                annosa.style.setProperty('display', 'none', 'important');
                console.log("Display 222");
            }
+           if (annosa && window.matchMedia("(max-width: 615px)").matches) 
+           {
+               const documentHeight = document.documentElement.scrollHeight;
+               document.body.style.height = documentHeight + "px";
+           }
         }
     }
 
