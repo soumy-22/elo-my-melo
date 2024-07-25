@@ -432,14 +432,14 @@ function outscale()
            if (annosa && window.matchMedia("(min-width: 615px)").matches) 
            {
                annosa.style.removeProperty('display');
+               document.body.style.removeProperty('padding-bottom');
                annosa.style.setProperty('display', 'none', 'important');
-               console.log("Display 222");
            }
            if (annosa && window.matchMedia("(max-width: 615px)").matches) 
            {
                annosa.style.removeProperty('display');
+               document.body.style.removeProperty('padding-bottom');
                annosa.style.setProperty('display', 'none', 'important');
-               console.log("Display 333");
            }
         }
     }
