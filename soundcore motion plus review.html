@@ -5044,6 +5044,8 @@ function scrltipout() { document.getElementById("scroll-here-tip").style.visibil
 
 </script>
 
+<script defer type="text/javascript" src="scripts/script-com-revo.js"></script>
+
 <script type="text/javascript">
 
 document.addEventListener('DOMContentLoaded', updateLogo);
@@ -5389,7 +5391,7 @@ function updateLogo()
            window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
            document.body.style.transform = "none"; 
       }
-      if (!parentElementNew || bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
+      if (!parentElementNew && bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
       if (footerDiv) { var secondPTag = footerDiv.querySelector('p:nth-child(2)');
       if (secondPTag) { secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.'; } // changing the inner text of the p tag of consent message  
       }

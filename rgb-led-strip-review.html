@@ -4897,7 +4897,7 @@ function toppicksout()
 	document.getElementById("top-picks-text").style.visibility = "";
 }
 
-   setInterval(function()
+   function upheight()
    {     
        const adheightone = document.getElementById("ads-style-display-res-phone").clientHeight;
        const adheighttwo = document.getElementById("ads-style-feed-res-phone").clientHeight;
@@ -4906,8 +4906,11 @@ function toppicksout()
        document.getElementById("ads-style-display-res-phone").style.setProperty('--set-margin', adheightone + "px");
        document.getElementById("ads-style-feed-res-phone").style.setProperty('--set-margin', adheighttwo + "px");
        document.getElementById("ads-style-display-res-phone-2").style.setProperty('--set-margin', adheightthree + "px");
-       
-   }, 0);
+   }
+
+   timer3 = setInterval(upheight, 0);
+   setTimeout(() => { clearInterval(timer3); }, 5000);
+   setTimeout(() => { setInterval(upheight, 1000); }, 5000); 
 
    setTimeout(function()
    {   
@@ -4937,6 +4940,8 @@ function toppicksout()
    fjs.appendChild(js, fjs); }
 
 </script>
+
+<script defer type="text/javascript" src="scripts/script-com-revo.js"></script>
 
 <script type="text/javascript">
 
@@ -5131,7 +5136,7 @@ function updateLogo()
            window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
            document.body.style.transform = "none"; 
       }
-      if (!parentElementNew || bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
+      if (!parentElementNew && bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
       if (footerDiv) { var secondPTag = footerDiv.querySelector('p:nth-child(2)');
       if (secondPTag) { secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.'; } // changing the inner text of the p tag of consent message  
       }
