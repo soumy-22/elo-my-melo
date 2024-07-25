@@ -5243,15 +5243,6 @@ function detectCharacter()
       var parentElementNew = document.querySelector('.fc-consent-root');
       var bodyOverflow = window.getComputedStyle(document.body).overflow; 
       var footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
-      var hostElement = document.querySelector('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
-      if (hostElement) {
-          if (hostElement.shadowRoot) {
-              hostElement.shadowRoot.innerHTML = '';
-              hostElement.shadowRoot.host.remove();
-          }
-          hostElement.remove(); clearInterval(ftinterval);
-      }
-      console.log("interval check");
       if (parentElementNew || bodyOverflow === "hidden") 
       { 
            window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
@@ -5293,7 +5284,7 @@ function detectCharacter()
            document.body.style.transform = "scale(0.80)";
       }
   }
-  const ftinterval = setInterval(scaleMe, 1000); scaleMe(); 
+  scaleMe(); setInterval(scaleMe, 1000); 
   window.addEventListener('resize', scaleMe, false); 
 
 </script>
