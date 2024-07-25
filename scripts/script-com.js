@@ -431,17 +431,15 @@ function outscale()
 
            if (annosa && window.matchMedia("(min-width: 615px)").matches) 
            {
-               document.body.style.height = "";
                annosa.style.removeProperty('display');
                annosa.style.setProperty('display', 'none', 'important');
                console.log("Display 222");
            }
            if (annosa && window.matchMedia("(max-width: 615px)").matches) 
            {
-               const lastele = document.getElementById('after-ft-phone');
-               const rect = lastele.getBoundingClientRect(); const topPos = rect.top + window.scrollY; 
-               lastele.style.border = "1px transparent solid"; document.body.style.height = topPos + "px";
-               document.body.style.setProperty('overflow', 'visible', 'important');
+               annosa.style.removeProperty('display');
+               annosa.style.setProperty('display', 'none', 'important');
+               console.log("Display 333");
            }
         }
     }
