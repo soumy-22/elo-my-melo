@@ -522,6 +522,10 @@ function outscale()
                        hostElement.shadowRoot.host.remove();
                        ftsize = "window-resized";
                    }
+                   if (window.matchMedia("(max-width: 340px)").matches) {
+                       shadowdom.innerHTML = '';
+                       shadowdom.host.remove();
+                   }
                    if (mediain && sizedetection === "desk") {
                        shadowdom.innerHTML = '';
                        shadowdom.host.remove();
@@ -634,9 +638,10 @@ function outscale()
 
                if (viewportWidth > (initialWidth + 10) || viewportWidth < (initialWidth - 10)) 
                {
+                   if (mediaout) {
                    document.body.style.height = ""; 
                    document.body.style.transformOrigin = ""; doso(); annosa.remove();
-                   window.removeEventListener('scroll', scrollsa);
+                   window.removeEventListener('scroll', scrollsa); }
                }
            }
 
