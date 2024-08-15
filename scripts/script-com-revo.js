@@ -37,12 +37,11 @@ function scaleMe2()
        if (annosa && mediain && (sizedetection !== "desk")) 
        {
            const annowidth = annosa.clientWidth;
-           const lastele = document.getElementById('after-ft-phone');
+           const lastele = document.getElementById('footer-phone');
            const bodyStyles = window.getComputedStyle(document.body);
            const bodyTop = parseInt(bodyStyles.getPropertyValue('top'), 10) || 0; 
-           const rect = lastele.getBoundingClientRect(); const topPos = rect.top + window.scrollY; 
-           lastele.style.border = "1px transparent solid"; const adjustedTopPos = topPos + Math.abs(bodyTop);
-           document.body.style.removeProperty('padding-bottom');
+           const rect = lastele.getBoundingClientRect(); const topPos = rect.bottom + window.scrollY; 
+           const adjustedTopPos = topPos + Math.abs(bodyTop); document.body.style.removeProperty('padding-bottom');
            document.body.style.height = adjustedTopPos + "px"; 
            const viewportWidth = window.innerWidth;
 
