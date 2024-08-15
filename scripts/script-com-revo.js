@@ -1,12 +1,14 @@
 
 function scaleMe2()
 {
-    console.log("interval check");
+    console.log("interval check"); let sizedetection;
     const annosa = document.getElementById('google-anno-sa');
     const mediain = window.matchMedia("(max-width: 615px)").matches;
     const mediaout = window.matchMedia("(min-width: 615px)").matches;
     const hostElements = document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
     hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
+
+    if (window.matchMedia("(min-width: 615px)").matches) { sizedetection = "desk"; }
 
     function alldynamic(hostElement, annosa)
     {
