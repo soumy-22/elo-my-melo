@@ -3302,6 +3302,40 @@ function scrolldown()
 }
 setTimeout(() => { document.querySelector(".articles-container").scrollTo(0, 0); }, 200);
 
+function scaleMe2()
+{
+    console.log("interval check");
+    const annosa = document.getElementById('google-anno-sa');
+    const hostElements = document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
+    hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
+
+    function alldynamic(hostElement, annosa)
+    {
+       if (hostElement.shadowRoot) 
+       {
+           const shadowdom = hostElement.shadowRoot;
+           const toolbar = shadowdom.getElementById('ft-floating-toolbar'); 
+           const contain = shadowdom.querySelector('.ipr-container'); 
+
+           if (toolbar || contain)
+           {
+               shadowdom.innerHTML = '';
+               shadowdom.host.remove();
+               console.log("removed");
+           }
+       }
+
+       if (annosa) 
+       {
+           annosa.style.removeProperty('display');
+           document.body.style.removeProperty('padding-bottom');
+           annosa.style.setProperty('display', 'none', 'important');
+           annosa.remove(); console.log("annosa removed");
+       }
+    }
+}
+const ftinterval = setInterval(scaleMe2, 1000); scaleMe2(); 
+
    var imageslidecounter = 1; var autocontrol; 
    function autoslider() {
    autocontrol = setInterval(function()
@@ -3342,8 +3376,6 @@ function nextbtn()
 }
 
 </script>
-
-<script defer type="text/javascript" src="scripts/script-com-revo.js"></script>
 
 <script type="text/javascript">
 
