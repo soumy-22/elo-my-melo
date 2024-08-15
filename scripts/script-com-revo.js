@@ -1,7 +1,8 @@
 
+let sizedetection;
 function scaleMe2()
 {
-    console.log("interval check"); let sizedetection;
+    console.log("interval check"); 
     const annosa = document.getElementById('google-anno-sa');
     const mediain = window.matchMedia("(max-width: 615px)").matches;
     const mediaout = window.matchMedia("(min-width: 615px)").matches;
