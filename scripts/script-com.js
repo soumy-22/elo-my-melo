@@ -368,7 +368,7 @@ function outscale()
 {
      let checkscale, sizedetection;
      let fcone = false, fctwo = false;
-     let valTimer1 = false, valTimer2 = false;
+     let valTimer1 = false, valTimer2 = false, valTimer3 = false;
      const viewportWidth = window.innerWidth;
      var initialWidth = viewportWidth;
      function scaleMe2(initialWidth)
@@ -487,7 +487,7 @@ function outscale()
                    const style = document.createElement('style');
                    if (annosa) { style.innerHTML = '#ft-floating-toolbar {'+'bottom: 75px !important;'+'}'; }
                    else { style.innerHTML = '#ft-floating-toolbar {'+'bottom: 50px !important;'+'}'; }
-                   shadowdom.appendChild(style); // style tag shadow 
+                   if (!valTimer3) { shadowdom.appendChild(style); valTimer3 = true; }
 
                    if (regMessageInfo) {
                        regMessageInfo.style.setProperty('display', 'none', 'important');
