@@ -635,10 +635,13 @@ function outscale()
                {
                    if (mediaout) {
                    document.body.style.height = ""; 
-                   document.body.style.transformOrigin = ""; doso(); annosa.remove();
+                   document.body.style.transformOrigin = ""; annosa.remove();
                    window.removeEventListener('scroll', scrollsa); 
                    valTimer2 = false; }
-               }
+
+                   if (mediaout && !fctwo) {
+                   setTimeout(() => { doso(); fctwo = true; }, 1000); }
+               }   else { fctwo = false; } 
            }
 
            if (annosa && mediain && (sizedetection !== "desk")) 
