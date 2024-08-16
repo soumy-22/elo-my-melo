@@ -368,7 +368,7 @@ function outscale()
 {
      let checkscale, sizedetection;
      let fcone = false, fctwo = false;
-     let valTimer1 = false, valTimer2 = false, valTimer3 = false;
+     let valTimer1 = false, valTimer2 = false, valTimer3 = false, valTimer4 = false;
      const viewportWidth = window.innerWidth;
      var initialWidth = viewportWidth;
      function scaleMe2(initialWidth)
@@ -484,10 +484,17 @@ function outscale()
 
                if (toolbar)
                {
-                   const style = document.createElement('style');
-                   if (annosa) { style.innerHTML = '#ft-floating-toolbar {'+'bottom: 75px !important;'+'}'; }
-                   else { style.innerHTML = '#ft-floating-toolbar {'+'bottom: 50px !important;'+'}'; }
-                   if (!valTimer3) { shadowdom.appendChild(style); valTimer3 = true; }
+                   var style = document.createElement('style');
+                   if (annosa) 
+                   {
+                       style.innerHTML = '#ft-floating-toolbar {'+'bottom: 75px !important;'+'}'; 
+                       if (!valTimer4) { shadowdom.appendChild(style); valTimer4 = true; } 
+                   }
+                   else 
+                   {
+                       style.innerHTML = '#ft-floating-toolbar {'+'bottom: 50px !important;'+'}';
+                       if (!valTimer3) { shadowdom.appendChild(style); valTimer3 = true; } 
+                   }
 
                    if (regMessageInfo) {
                        regMessageInfo.style.setProperty('display', 'none', 'important');
