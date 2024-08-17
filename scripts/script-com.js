@@ -569,13 +569,13 @@ function outscale()
            let parent, rectParent, leftPos, parentLeft;
            const viewportHeight = window.innerHeight;
            const viewportWidth = window.innerWidth;
-           const annowidth = annosa.clientWidth;
 
            if (annosa && !mozFox && isdesk && mediaout) 
            {
                if (mediaout && !valTimer2) { 
                window.addEventListener('scroll', scrollsa, false); valTimer2 = true; }
 
+               const annowidth = annosa.clientWidth;
                document.body.style.removeProperty('padding-bottom');
                if (window.matchMedia("(min-width: 615px)").matches && window.matchMedia("(max-width: 1040.99px)").matches) 
                {
