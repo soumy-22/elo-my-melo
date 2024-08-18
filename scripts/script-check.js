@@ -1,6 +1,6 @@
 
-// console.log("defer-script-check"); 
-// setTimeout(updateAdsAttributes, 100);
+let fontload = false;
+console.log("defer-script-check"); 
 function updateAdsAttributes() 
 {
     // Array of IDs
@@ -171,7 +171,8 @@ function updateLogo()
     { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
     if (window.matchMedia("(max-width: 615px)").matches) 
     { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
-    clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); } 
+    clearTimeout(window.resized); window.resized = setTimeout(() => { 
+    if(fontload) { detectCharacter(); } }, 1700); } 
 
     // Array of IDs
     var ids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four']; 
@@ -330,6 +331,12 @@ function detectCharacter()
         } });
     }
 }
+
+    document.fonts.load('1em Roboto').then(function() {
+    fontload = true; console.log('Roboto font has loaded');
+    if (window.matchMedia("(max-width: 615px)").matches) { 
+    setTimeout(detectCharacter, 150); } }).catch(function(error) {
+    console.error('Failed to load Roboto', error); });
 
     function heightcheck() { 
     if (window.matchMedia("(min-width: 615px)").matches) { 
