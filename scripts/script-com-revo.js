@@ -2,7 +2,7 @@
 let sizedetection;
 function scaleMe2()
 {
-    console.log("interval check"); 
+    // console.log("interval check"); 
     const annosa = document.getElementById('google-anno-sa');
     const mediain = window.matchMedia("(max-width: 615px)").matches;
     const mediaout = window.matchMedia("(min-width: 615px)").matches;
@@ -65,7 +65,8 @@ function scaleMe2()
                annosa.style.removeProperty('border-radius');
                annosa.style.setProperty('left', '15px', 'important');
                annosa.style.setProperty('border-radius', '55px', 'important');
-               annosa.remove(); console.log("annosa removed");
+               annosa.remove(); document.body.style.height = ""; 
+               console.log("annosa removed");
            }
        }
 
