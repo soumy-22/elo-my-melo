@@ -6,8 +6,9 @@ function scaleMe2()
     const annosa = document.getElementById('google-anno-sa');
     const mediain = window.matchMedia("(max-width: 615px)").matches;
     const mediaout = window.matchMedia("(min-width: 615px)").matches;
-    const hostElements = document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]');
-    hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
+    const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
+    const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
+    const hostElements = chromeEle.concat(edgeEle); hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
 
     if (window.matchMedia("(min-width: 615px)").matches) { sizedetection = "desk"; }
 
