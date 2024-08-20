@@ -403,10 +403,9 @@ function outscale()
         else 
         { 
             document.body.style.overflow = "visible"; 
-            if (!fcone) { setTimeout(doso, 2500); fcone = true; }
+            if (!fcone) { setTimeout(() => { doso(); fcone = true; tran5.style.visibility = "visible"; }, 2500); }
             tran1.style.visibility = "visible"; tran2.style.visibility = "visible"; tran3.style.visibility = "visible"; 
             if (mediain) { tran4.style.display = "none"; } else { tran4.style.display = "block"; } 
-            tran5.style.visibility = "visible";
 
             if (checkscale === "present") {
                 if (window.matchMedia("(max-width: 615px)").matches) {
@@ -556,12 +555,10 @@ function outscale()
            }
 
            const mediaout = window.matchMedia("(min-width: 615px)").matches;
-           const mozFox = navigator.userAgent.toLowerCase().includes('firefox');
            const isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i));
-           if ((annosa && mozFox && mediaout) || (annosa && !isdesk && mediaout)) { 
-           document.body.style.removeProperty('padding-bottom');
+           if (annosa && !isdesk && mediaout) { document.body.style.removeProperty('padding-bottom');
            document.body.style.height = ""; document.body.style.transformOrigin = "";
-           annosa.remove(); console.log("moz sa removed"); }
+           annosa.remove(); console.log("annosa removed"); }
 
            const blank = document.querySelector('.after-hot-blank');
            const bodyStyles = window.getComputedStyle(document.body);
@@ -572,7 +569,7 @@ function outscale()
            const viewportHeight = window.innerHeight;
            const viewportWidth = window.innerWidth;
 
-           if (annosa && !mozFox && isdesk && mediaout) 
+           if (annosa && isdesk && mediaout) 
            {
                if (mediaout && !valTimer2) { 
                window.addEventListener('scroll', scrollsa, false); valTimer2 = true; }
@@ -584,7 +581,6 @@ function outscale()
                    var topPos = rect.top + window.scrollY; 
                    var adjustedTopPos = topPos + Math.abs(bodyTop); 
                    document.body.style.height = adjustedTopPos + "px"; 
-                   document.body.style.transformOrigin = "50% 0%";
 
                    parent = document.querySelector('.articles-container');
                    rectParent = parent.getBoundingClientRect(); leftPos = rectParent.left;
@@ -592,33 +588,30 @@ function outscale()
                }
                if (window.matchMedia("(min-width: 1041px)").matches && window.matchMedia("(max-width: 1241.99px)").matches) 
                {
-                   document.documentElement.style.height = "0px";
                    var topPos = (rect.top + window.scrollY) * 1.087; 
-                   var adjustedTopPos = topPos + Math.abs(bodyTop); 
-                   document.body.style.height = adjustedTopPos + "px"; 
-                   document.body.style.transformOrigin = "50% 0%";
+                   var adjustedTopPos = topPos + Math.abs(bodyTop); document.body.style.height = adjustedTopPos + "px"; 
+                   document.body.style.marginBottom = -(adjustedTopPos * 0.04) + "px"; 
+                   document.body.style.marginTop = -(adjustedTopPos * 0.04) + "px"; 
 
                    leftPos = viewportWidth * 0.035;
                    parentLeft = ''+leftPos+'px';
                }
                if (window.matchMedia("(min-width: 1242px)").matches && window.matchMedia("(max-width: 1500.99px)").matches) 
                {
-                   document.documentElement.style.height = "0px";
                    var topPos = (rect.top + window.scrollY) * 1.1628; 
-                   var adjustedTopPos = topPos + Math.abs(bodyTop); 
-                   document.body.style.height = adjustedTopPos + "px"; 
-                   document.body.style.transformOrigin = "50% 0%";
+                   var adjustedTopPos = topPos + Math.abs(bodyTop); document.body.style.height = adjustedTopPos + "px"; 
+                   document.body.style.marginBottom = -(adjustedTopPos * 0.07) + "px"; 
+                   document.body.style.marginTop = -(adjustedTopPos * 0.07) + "px"; 
 
                    leftPos = viewportWidth * 0.035;
                    parentLeft = ''+leftPos+'px';
                }
                if (window.matchMedia("(min-width: 1501px)").matches) 
                {
-                   document.documentElement.style.height = "0px";
                    var topPos = (rect.top + window.scrollY) * 1.250; 
-                   var adjustedTopPos = topPos + Math.abs(bodyTop); 
-                   document.body.style.height = adjustedTopPos + "px"; 
-                   document.body.style.transformOrigin = "50% 0%";
+                   var adjustedTopPos = topPos + Math.abs(bodyTop); document.body.style.height = adjustedTopPos + "px"; 
+                   document.body.style.marginBottom = -(adjustedTopPos * 0.1) + "px"; 
+                   document.body.style.marginTop = -(adjustedTopPos * 0.1) + "px"; 
 
                    leftPos = (viewportWidth * 0.035) + 100;
                    parentLeft = ''+leftPos+'px';
@@ -642,8 +635,8 @@ function outscale()
 
                if (viewportWidth > (initialWidth + 10) || viewportWidth < (initialWidth - 10)) 
                {
-                   if (mediaout) {
-                   document.body.style.height = ""; 
+                   if (mediaout) { document.body.style.height = ""; 
+                   document.body.style.marginBottom = ""; document.body.style.marginTop = ""; 
                    document.body.style.transformOrigin = ""; annosa.remove();
                    window.removeEventListener('scroll', scrollsa); 
                    valTimer2 = false; }
@@ -752,11 +745,11 @@ function saScroll()
 
     if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400))) 
     {
-        annosa.style.setProperty('display', 'none', 'important');
+        annosa.style.setProperty('filter', 'opacity(0)', 'important');
     }
     if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400))) 
     {
-        annosa.style.setProperty('display', '', 'important');
+        annosa.style.setProperty('filter', '', 'important');
     }
 }
 
