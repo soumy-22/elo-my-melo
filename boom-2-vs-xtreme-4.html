@@ -467,21 +467,35 @@ if(isdesk) { window.removeEventListener('resize', upme); }
 
   function scaleMe()
   {
-      if (window.matchMedia("(min-width: 615px)").matches) 
+      var mypage = window.innerWidth;
+      const toughEle = document.getElementById("Web_1920__1");
+      const mediaCheck = window.matchMedia("(min-width: 615px)").matches;
+      const bo = window.matchMedia("(max-width: 1040.99px)").matches;
+      if (window.matchMedia("(min-width: 615px)").matches)
       {
-           const mypage = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "3554px";
-           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
+          toughEle.style.transformOrigin = "0 0"; toughEle.style.width = "3554px";
       }
-      if (window.matchMedia("(max-width: 615px)").matches) 
+      if (mediaCheck && bo) { toughEle.style.transform = "scale("+mypage/3554+")"; }
+      if (window.matchMedia("(min-width: 1041px)").matches && window.matchMedia("(max-width: 1241.99px)").matches) 
       {
-           const mypagephone = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypagephone/2358+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "2358px";
-           document.getElementById("Web_1920__1").style.overflow = "visible";
+          var scale1 = ((mypage/3554) * 0.920); var slate1 = mypage * 0.040;
+          toughEle.style.transform = 'translateX('+slate1+'px) scale('+scale1+')';
+      }
+      if (window.matchMedia("(min-width: 1242px)").matches && window.matchMedia("(max-width: 1500.99px)").matches) 
+      {
+          var scale1 = ((mypage/3554) * 0.860); var slate1 = mypage * 0.070;
+          toughEle.style.transform = 'translateX('+slate1+'px) scale('+scale1+')';
+      }
+      if (window.matchMedia("(min-width: 1501px)").matches)
+      {
+          var scale1 = ((mypage/3554) * 0.80); var slate1 = mypage * 0.10;
+          toughEle.style.transform = 'translateX('+slate1+'px) scale('+scale1+')';
+      }
+      if (window.matchMedia("(max-width: 615px)").matches)
+      {
+           toughEle.style.transform = "scale("+mypage/2358+")";
+           toughEle.style.transformOrigin = "0 0"; toughEle.style.width = "2358px";
+           toughEle.style.overflow = "visible"; // for A-mobile
       }
   }
   scaleMe(); window.addEventListener('resize', scaleMe, false); 
