@@ -1,36 +1,4 @@
 
-@media only screen and (min-width: 1500px)
-{
-body 
-{
-    transform: scale(0.800); 
-}
-}
-
-@media only screen and (min-width: 1240px) and (max-width: 1500px)
-{
-body 
-{
-    transform: scale(0.860); 
-}
-}
-
-@media only screen and (min-width: 1040px) and (max-width: 1240px)
-{
-body 
-{
-    transform: scale(0.920); 
-}
-}
-
-@media only screen and (min-width: 615px) and (max-width: 1040px)
-{
-body 
-{
-    transform: scale(1.000); 
-}
-}
-
 @media only screen and (min-width: 615px)
 {
 body 

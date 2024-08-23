@@ -1,36 +1,4 @@
 
-@media only screen and (min-width: 1500px)
-{
-body 
-{
-    transform: scale(0.800); 
-}
-}
-
-@media only screen and (min-width: 1240px) and (max-width: 1500px)
-{
-body 
-{
-    transform: scale(0.860); 
-}
-}
-
-@media only screen and (min-width: 1040px) and (max-width: 1240px)
-{
-body 
-{
-    transform: scale(0.920); 
-}
-}
-
-@media only screen and (min-width: 615px) and (max-width: 1040px)
-{
-body 
-{
-    transform: scale(1.000); 
-}
-}
-
 @media only screen and (min-width: 615px)
 {
 body 
@@ -784,11 +752,11 @@ br
     height: 600px;
     left: 2527px;
     top: 8934px;
-    visibility: hidden;
     border-left: 20px rgba(33,97,140,0.2) solid;
     border-right: 20px rgba(33,97,140,0.2) solid;
     background: linear-gradient(to bottom, rgba(255,255,255,0), white, white, white, white, white, white, white, rgba(255,255,255,0.5), rgba(255,255,255,0));
     border-radius: 0px 0px 20px 20px;
+    display: none;
 }
 #out-cmnt
 {
