@@ -75,7 +75,7 @@
         var toper = document.getElementById("top-pos");
         toper.style.display = "none"; clearTimeout(window.resizedFinished); 
         window.resizedFinished = setTimeout(function() { // late call 
-        toper.style.display = "block"; doso(); }, 500);
+        toper.style.display = "block"; doso(); }, 100);
     }
   }
   window.addEventListener('resize', sizeme); 
