@@ -16,18 +16,22 @@
   function doso()
   {
     // console.log("scroll event here");
+    const ouCo = document.getElementById("out-cmnt");
+    const coCo = window.getComputedStyle(ouCo); const tV = parseFloat(coCo.top);
+    const hV = parseFloat(coCo.height); const cV = tV + hV;
+
     const lopp = document.getElementById("Web_1920__1");
     lopp.style.paddingBottom = "918px"; var scaledHeight = lopp.clientHeight; 
     var actualHeight = document.documentElement.scrollHeight; // no scale done 
     var scaleRatio = scaledHeight/actualHeight; var nowScroll = window.scrollY; 
-    var inner = window.innerHeight; var triggerPoint = 9056/scaleRatio - inner; 
+    var inner = window.innerHeight; var triggerPoint = cV/scaleRatio - inner; 
     var actualBar = inner - document.documentElement.clientHeight; 
     var scaledBar = actualBar * scaleRatio; // scrollbar
 
     const mediaout = window.matchMedia("(min-width: 615px)").matches;
     var scmx = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
     var scbb = scmx - nowScroll; var nunn = scbb * scaleRatio; var cscs = inner * scaleRatio; 
-    var topp = 9056 - cscs - 400 + scaledBar; // top position top-pos
+    var topp = cV - cscs - 400 + scaledBar; // top position top-pos
 
     var tran = scaleRatio * (nowScroll - triggerPoint) - scaledBar;
     const isdesk = navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i); 
