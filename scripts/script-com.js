@@ -367,7 +367,7 @@ function outscale()
 {
      let sizedetection, visHide;
      let fcone = false, fctwo = false;
-     let fctb = false, fctc = false, fctl = false;
+     let fctb = false, fctc = false, fctl = false, fctm = false;
      let valTimer1 = false, valTimer2 = false, valTimer3 = false, valTimer4 = false;
      const viewportWidth = window.innerWidth;
      var initialWidth = viewportWidth;
@@ -473,18 +473,14 @@ function outscale()
                    var rectParentH = parentH.getBoundingClientRect(); var leftPosL = rectParentH.left + 410 - 410;
                    var leftPosH = rectParentH.left + 410; var leftPosS = rectParentH.left + 60;
                    var parentLeftH = ''+leftPosH+'px'; var parentLeftL = ''+leftPosL+'px';
-                   var parentLeftS = ''+leftPosS+'px';
+                   var parentLeftS = ''+leftPosS+'px'; style.id = 'dy-style';
+                   if (!fctm) { shadowdom.appendChild(style); fctm = true; }
+                   var exStyle = shadowdom.getElementById('dy-style');
 
-                   if (annosa && mediain) 
-                   {
-                       style.innerHTML = '#ft-floating-toolbar { bottom: 75px !important; }'; 
-                       if (!valTimer3) { shadowdom.appendChild(style); valTimer3 = true; } 
-                   }
-                   if (!annosa && mediain)
-                   {
-                       style.innerHTML = '#ft-floating-toolbar { bottom: 50px !important; }';
-                       if (!valTimer2) { shadowdom.appendChild(style); valTimer2 = true; } 
-                   }
+                   if (annosa && mediain && !valTimer3) 
+                   { exStyle.innerHTML = '#ft-floating-toolbar { bottom: 75px !important; }'; valTimer3 = true; }
+                   if (!annosa && mediain && !valTimer2)
+                   { exStyle.innerHTML = '#ft-floating-toolbar { bottom: 50px !important; }'; valTimer2 = true; }
 
                    if (regMessageInfo) {
                        regMessageInfo.style.setProperty('display', 'none', 'important');
@@ -518,12 +514,9 @@ function outscale()
                    {
                        regMenu.style.setProperty('box-shadow', '', 'important');
                        regMenu.style.setProperty('background', 'white', 'important');
-                       if (!annosa) { style.innerHTML = '#ft-floating-toolbar { left: '+parentLeftL+' !important; bottom: 10px !important; }'; 
-                       if (!fctl) { shadowdom.appendChild(style); fctl = true; } }
-                       if (annosa && annosa.clientWidth > 100) { style.innerHTML = '#ft-floating-toolbar { left: '+parentLeftH+' !important; bottom: 10px !important; }'; 
-                       if (!fctb) { shadowdom.appendChild(style); fctb = true; fctc = false; } }
-                       if (annosa && annosa.clientWidth < 100) { style.innerHTML = '#ft-floating-toolbar { left: '+parentLeftS+' !important; bottom: 10px !important; }'; 
-                       if (!fctc) { shadowdom.appendChild(style); fctc = true; fctb = false; } }
+                       if (!annosa && !fctl) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftL+' !important; bottom: 11px !important; }'; fctl = true; }
+                       if (annosa && annosa.clientWidth > 100 && !fctb) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftH+' !important; bottom: 11px !important; }'; fctb = true; fctc = false; }
+                       if (annosa && annosa.clientWidth < 100 && !fctc) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftS+' !important; bottom: 11px !important; }'; fctc = true; fctb = false; }
                        regMenu.style.setProperty('border-radius', '65px', 'important');
                        ftsize = "window-resized";
                    }
