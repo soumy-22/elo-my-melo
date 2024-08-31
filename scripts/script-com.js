@@ -514,7 +514,7 @@ function outscale()
                    {
                        regMenu.style.setProperty('box-shadow', '', 'important');
                        regMenu.style.setProperty('background', 'white', 'important');
-                       if (!annosa && !fctl) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftL+' !important; bottom: 11px !important; }'; fctl = true; }
+                       if (!annosa && !fctl) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftL+' !important; bottom: 11px !important; }'; fctl = true; fctb = false; fctc = false; }
                        if (annosa && annosa.clientWidth > 100 && !fctb) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftH+' !important; bottom: 11px !important; }'; fctb = true; fctc = false; fctl = false; }
                        if (annosa && annosa.clientWidth < 100 && !fctc) { exStyle.innerHTML = '#ft-floating-toolbar { left: '+parentLeftS+' !important; bottom: 11px !important; }'; fctc = true; fctb = false; fctl = false; }
                        regMenu.style.setProperty('border-radius', '65px', 'important');
