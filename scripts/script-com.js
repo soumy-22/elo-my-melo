@@ -648,6 +648,9 @@ function outscale()
                }
            }
 
+           if (!annosa && mediain && (sizedetection !== "desk")) {
+           topButton.style.bottom = ""; }
+
            if (annosa && mediain && (sizedetection === "desk")) 
            {
                annosa.style.removeProperty('display');
