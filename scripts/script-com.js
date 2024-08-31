@@ -478,9 +478,15 @@ function outscale()
                    var exStyle = shadowdom.getElementById('dy-style');
 
                    if (annosa && mediain && !valTimer3) 
-                   { exStyle.innerHTML = '#ft-floating-toolbar { bottom: 75px !important; }'; valTimer3 = true; }
-                   if (!annosa && mediain && !valTimer2)
-                   { exStyle.innerHTML = '#ft-floating-toolbar { bottom: 50px !important; }'; valTimer2 = true; }
+                   {
+                       exStyle.innerHTML = '#ft-floating-toolbar { bottom: 75px !important; }'; 
+                       valTimer3 = true; valTimer2 = false; 
+                   }
+                   if (!annosa && mediain && !valTimer2) 
+                   {
+                       exStyle.innerHTML = '#ft-floating-toolbar { bottom: 50px !important; }'; 
+                       valTimer2 = true; valTimer3 = false; 
+                   }
 
                    if (regMessageInfo) {
                        regMessageInfo.style.setProperty('display', 'none', 'important');
