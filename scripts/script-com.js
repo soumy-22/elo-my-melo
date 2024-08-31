@@ -390,6 +390,7 @@ function outscale()
         const tran2 = document.getElementById("ads-vertical-two");
         const tran3 = document.getElementById("hot-dvs-sctn");
         const tran4 = document.getElementById("ads-vertical-one");
+        const tran6 = document.getElementById("footer-id");
         const tran5 = document.getElementById("top-pos");
 
         if (parentElementNew || bodyOverflow === "hidden") 
@@ -403,8 +404,8 @@ function outscale()
             document.body.style.overflow = "visible"; 
             tran1.style.visibility = "visible"; tran2.style.visibility = "visible"; tran3.style.visibility = "visible"; 
             if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 2500); fcone = true; } 
-            if (mediaout && isdesk) { tran4.style.display = "block"; } 
-            if (mediain && isdesk) { tran4.style.display = "none"; } 
+            if (mediaout && isdesk) { tran4.style.display = "block"; tran6.style.display = "block"; } 
+            if (mediain && isdesk) { tran4.style.display = "none"; tran6.style.display = "none"; } 
         }
 
         if (footerDiv) 
