@@ -369,11 +369,11 @@ function outscale()
      let fcone = false, fctwo = false;
      let fctb = false, fctc = false, fctl = false, fctm = false;
      let valTimer1 = false, valTimer2 = false, valTimer3 = false, valTimer4 = false;
-     const viewportWidth = window.innerWidth;
-     var initialWidth = viewportWidth;
+     const viewportWidth = window.innerWidth; var initialWidth = viewportWidth;
+     let ftstyle1, ftstyle2, ftstyle3, ftstyle4, ftsize;
      function scaleMe2(initialWidth)
      {
-        let ftstyle1, ftstyle2, ftstyle3, ftstyle4, ftsize;
+        // detecting the google-consent container 
         const parentElementNew = document.querySelector('.fc-consent-root');
         const bodyOverflow = window.getComputedStyle(document.body).overflow;
         const footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
@@ -544,7 +544,7 @@ function outscale()
                }
 
                if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" 
-               && ftstyle4 === "reg-button" && (sizedetection !== "desk")) { topButton.style.boxShadow = 'none';
+               && ftstyle4 === "reg-button" && (sizedetection !== "desk") && regMessageInfo) { topButton.style.boxShadow = 'none';
                topButton.style.background = 'white'; topArrow.style.stroke = '#5c5c5c'; }
                if (ftsize === "window-resized" && (sizedetection === "desk")) { topButton.style.boxShadow = '';
                topButton.style.background = ''; topArrow.style.stroke = ''; }
@@ -644,13 +644,10 @@ function outscale()
                }
                if (annowidth < 100 && annowidth > 10 && ftstyle1 === "reg-message") 
                {
-                   hostElement.shadowRoot.innerHTML = ''; hostElement.shadowRoot.host.remove();
+                   if (hostElement.shadowRoot) { hostElement.shadowRoot.innerHTML = ''; hostElement.shadowRoot.host.remove(); }
                    if (!valTimer1) { setInterval(afterftclose, 1000); valTimer1 = true; }
                }
            }
-
-           if (!annosa && mediain && (sizedetection !== "desk")) {
-           topButton.style.bottom = ""; }
 
            if (annosa && mediain && (sizedetection === "desk")) 
            {
@@ -668,11 +665,13 @@ function outscale()
         if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400)) 
         && (ftstyle1 !== "reg-message") && (sizedetection !== "desk")) { topButton.style.boxShadow = 'none';
         topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
+        if (!annosa && mediain && (sizedetection !== "desk")) { topButton.style.bottom = ""; }
         if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) 
         && (ftstyle1 !== "reg-message") && (sizedetection !== "desk")) { topButton.style.boxShadow = '';
         topArrow.style.stroke = ''; topButton.style.background = ''; }
     }
-    const ftinterval = setInterval(() => scaleMe2(initialWidth), 1000);
+    const ftinterval = setInterval(() => {
+    scaleMe2(initialWidth); }, 1000);
 }
 outscale();
 
