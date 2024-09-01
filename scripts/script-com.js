@@ -403,7 +403,7 @@ function outscale()
         {
             document.body.style.overflow = "visible"; 
             tran1.style.visibility = "visible"; tran2.style.visibility = "visible"; tran3.style.visibility = "visible"; 
-            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 2500); fcone = true; } 
+            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 2000); fcone = true; } 
             if (mediaout && isdesk) { tran4.style.display = "block"; tran6.style.display = "block"; } 
             if (mediain && isdesk) { tran4.style.display = "none"; tran6.style.display = "none"; } 
         }
@@ -473,7 +473,7 @@ function outscale()
                    var style = document.createElement('style');
                    var parentH = document.querySelector('.articles-container');
                    var rectParentH = parentH.getBoundingClientRect(); var leftPosL = rectParentH.left + 410 - 410;
-                   var leftPosH = rectParentH.left + 410; var leftPosS = rectParentH.left + 60;
+                   var leftPosH = rectParentH.left + 415; var leftPosS = rectParentH.left + 65;
                    var parentLeftH = ''+leftPosH+'px'; var parentLeftL = ''+leftPosL+'px';
                    var parentLeftS = ''+leftPosS+'px'; style.id = 'dy-style';
                    if (!fctm) { shadowdom.appendChild(style); fctm = true; }
@@ -579,7 +579,7 @@ function outscale()
                const firstChild = annosa.firstElementChild; 
                document.body.style.removeProperty('padding-bottom');
                parent = document.querySelector('.articles-container');
-               rectParent = parent.getBoundingClientRect(); leftPos = rectParent.left;
+               rectParent = parent.getBoundingClientRect(); leftPos = rectParent.left + 5;
                parentLeft = ''+leftPos+'px'; // getting left value
                document.body.style.height = adjustTopPos + "px";
                const viewportWidth = window.innerWidth;
