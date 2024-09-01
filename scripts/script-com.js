@@ -653,7 +653,7 @@ function outscale()
         if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400)) 
         && (ftstyle1 !== "reg-message") && (sizedetection !== "desk")) { topButton.style.boxShadow = 'none';
         topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
-        if (!annosa && mediain && (sizedetection !== "desk")) { topButton.style.bottom = ""; }
+        if (!annosa) { topButton.style.bottom = ""; document.body.style.height = ""; }
         if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) 
         && (ftstyle1 !== "reg-message") && (sizedetection !== "desk")) { topButton.style.boxShadow = '';
         topArrow.style.stroke = ''; topButton.style.background = ''; }

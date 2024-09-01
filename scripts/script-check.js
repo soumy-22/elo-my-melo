@@ -276,12 +276,9 @@ function detectCharacter()
     {
         const divElement = document.getElementById("article-text-div");
         const pTags = divElement.querySelectorAll("p");
-        console.log("inside-detect-char"); 
+        // console.log("inside-detect-char"); 
 
-        // Loop through all the p tags and change span element's style using forEach method
         pTags.forEach((paraTag) => {
-
-        // var lastCharacter = paraTag.textContent.trim().slice(-1);
         var spanElement = document.createElement('span');
         paraTag.appendChild(spanElement);
 
@@ -289,10 +286,9 @@ function detectCharacter()
         var leftCoordinate = spanRect.left + window.pageXOffset;
         paraTag.removeChild(spanElement);
 
-        widthinner = window.innerWidth;
-        multiplier = 2358/widthinner;
-        comparewidth = widthinner/2;
-        comparewidthtwo = widthinner - (widthinner * 0.278); 
+        var widthinner = window.innerWidth;
+        var multiplier = 2358/widthinner; var comparewidth = widthinner/2;
+        var comparewidthtwo = widthinner - (widthinner * 0.278); 
 
         if(leftCoordinate < comparewidth)
         {
@@ -302,8 +298,8 @@ function detectCharacter()
             paraTag.appendChild(spanElement);
 
             // change some properties of each span element in loop
-            spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block";  
+            spanElement.style.width = calwidth + "px"; // setting width
+            spanElement.style.display = "inline-block";
         }
         if(leftCoordinate > comparewidthtwo)
         {
@@ -334,5 +330,6 @@ function detectCharacter()
     document.getElementById("ads-v1-in").style.display = "none"; } }
 
     setTimeout(heightcheck, 1000); setTimeout(heightcheck, 3000); 
+
     // document ends here ---------
 
