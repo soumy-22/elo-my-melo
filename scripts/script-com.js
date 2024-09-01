@@ -403,7 +403,7 @@ function outscale()
         {
             document.body.style.overflow = "visible"; 
             tran1.style.visibility = "visible"; tran2.style.visibility = "visible"; tran3.style.visibility = "visible"; 
-            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 1000); fcone = true; } 
+            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 2500); fcone = true; } 
             if (mediaout && isdesk) { tran4.style.display = "block"; tran6.style.display = "block"; } 
             if (mediain && isdesk) { tran4.style.display = "none"; tran6.style.display = "none"; } 
         }
@@ -430,7 +430,7 @@ function outscale()
             topButton.style.boxShadow = 'none'; topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
             if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) && (sizedetection !== "desk")) { 
             topButton.style.boxShadow = ''; topArrow.style.stroke = ''; topButton.style.background = ''; }
-            console.log("after ft close");
+            // console.log("after ft close");
         }
 
         if (window.matchMedia("(min-width: 615px)").matches) { 
@@ -449,7 +449,6 @@ function outscale()
 
         function alldynamic(hostElement, annosa, initialWidth)
         {
-           console.log("alldynamic here");
            if (hostElement.shadowRoot) 
            {
                const shadowdom = hostElement.shadowRoot;
