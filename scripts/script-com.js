@@ -426,10 +426,11 @@ function outscale()
         {
             const documentHeight = document.documentElement.scrollHeight;
             const viewportHeight = window.innerHeight; const scrollPosition = window.scrollY;
-            if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400)) && (sizedetection !== "desk")) { topButton.style.boxShadow = 'none';
-            topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
-            if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) && (sizedetection !== "desk")) { topButton.style.boxShadow = '';
-            topArrow.style.stroke = ''; topButton.style.background = ''; }
+            if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400)) && (sizedetection !== "desk")) { 
+            topButton.style.boxShadow = 'none'; topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
+            if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) && (sizedetection !== "desk")) { 
+            topButton.style.boxShadow = ''; topArrow.style.stroke = ''; topButton.style.background = ''; }
+            console.log("after ft close");
         }
 
         if (window.matchMedia("(min-width: 615px)").matches) { 
@@ -543,9 +544,8 @@ function outscale()
                    }
                }
 
-               if (ftstyle1 === "reg-message" && ftstyle2 === "reg-bubble" && ftstyle3 === "reg-icon" 
-               && ftstyle4 === "reg-button" && (sizedetection !== "desk") && regMessageInfo) { topButton.style.boxShadow = 'none';
-               topButton.style.background = 'white'; topArrow.style.stroke = '#5c5c5c'; }
+               if (ftstyle1 === "reg-message" && (sizedetection !== "desk") && regMessageInfo) {
+               topButton.style.boxShadow = 'none'; topButton.style.background = 'white'; topArrow.style.stroke = '#5c5c5c'; }
                if (ftsize === "window-resized" && (sizedetection === "desk")) { topButton.style.boxShadow = '';
                topButton.style.background = ''; topArrow.style.stroke = ''; }
 
