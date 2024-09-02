@@ -421,10 +421,11 @@ function outscale()
         tran3.style.visibility = "hidden"; tran4.style.display = "none"; 
         tran5.style.visibility = "hidden"; }
 
-        if (window.matchMedia("(min-width: 615px)").matches) { 
+        if (window.matchMedia("(min-width: 615px)").matches) {
         sizedetection = "desk"; topButton.style.display = 'none'; }
-        if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") { 
-        buttonfxd(); topButton.style.boxShadow = ''; topButton.style.background = ''; topArrow.style.stroke = ''; }
+        if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") { shadow = window.innerWidth * 0.05;
+        buttonfxd(); topButton.style.background = ''; topArrow.style.stroke = '';
+        topButton.style.boxShadow = '0px 0px '+shadow+'px #ff7777bf'; }
 
         const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
         const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
