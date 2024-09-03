@@ -70,6 +70,7 @@ function scaleMe2()
            }
        }
 
+       if (!annosa && mediain && sizedetection !== "desk") { document.body.style.height = ""; }
        if ((annosa && mediain && sizedetection === "desk") || (annosa && mediaout)) 
        {
            annosa.style.removeProperty('display');

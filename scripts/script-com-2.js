@@ -417,10 +417,11 @@ function outscale()
             }
         }
 
-        if (window.matchMedia("(min-width: 615px)").matches) { 
+        if (window.matchMedia("(min-width: 615px)").matches) {
         sizedetection = "desk"; topButton.style.display = 'none'; }
-        if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") 
-        { buttonfxd(); topButton.style.boxShadow = ''; topButton.style.background = ''; topArrow.style.stroke = ''; }
+        if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") { var shadow = window.innerWidth * 0.05;
+        buttonfxd(); topButton.style.background = ''; topArrow.style.stroke = '';
+        topButton.style.boxShadow = '0px 0px '+shadow+'px #ff7777bf'; }
 
         // console.log("interval check");
         const annosa = document.getElementById('google-anno-sa');
@@ -498,6 +499,7 @@ function outscale()
            }
         }
 
+        if (!annosa && sizedetection !== "desk") { topButton.style.bottom = ""; document.body.style.height = ""; }
         if (mediain && ((scrollPosition + viewportHeight) > (documentHeight - 400)) && (sizedetection !== "desk")) {
         topButton.style.boxShadow = 'none'; topArrow.style.stroke = '#5c5c5c'; topButton.style.background = 'white'; }
         if (mediain && ((scrollPosition + viewportHeight) < (documentHeight - 400)) && (sizedetection !== "desk")) {
