@@ -70,7 +70,6 @@ function scaleMe2()
            }
        }
 
-       if (!annosa && mediain && sizedetection !== "desk") { document.body.style.height = ""; }
        if ((annosa && mediain && sizedetection === "desk") || (annosa && mediaout)) 
        {
            annosa.style.removeProperty('display');
@@ -80,6 +79,9 @@ function scaleMe2()
            document.body.style.height = ""; 
        }
     }
+
+    // for not annosa cases change body 
+    if (!annosa && sizedetection !== "desk") { document.body.style.height = ""; }
 }
 const ftinterval = setInterval(scaleMe2, 1000); scaleMe2(); 
 
