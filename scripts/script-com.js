@@ -428,8 +428,9 @@ function outscale()
         topButton.style.boxShadow = '0px 0px '+shadow+'px #ff7777bf'; }
 
         const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
+        const safaEle = Array.from(document.querySelectorAll('div[style*="font-feature-settings: initial"][style*="font-kerning: initial"][style*="font-optical-sizing: initial"][style*="font-stretch: initial"]'));
         const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
-        const hostElements = chromeEle.concat(edgeEle); hostElements.forEach(hostElement => { alldynamic(hostElement, annosa, initialWidth); });
+        const hostElements = chromeEle.concat(edgeEle, safaEle); hostElements.forEach(hostElement => { alldynamic(hostElement, annosa, initialWidth); });
 
         const vignettes = document.querySelectorAll('.adsbygoogle.adsbygoogle-noablate');
         vignettes.forEach(vignette => { const inlineDisplay = vignette.style.getPropertyValue('display');
