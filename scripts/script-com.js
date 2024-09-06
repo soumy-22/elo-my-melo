@@ -582,8 +582,10 @@ function outscale()
                firstChild.addEventListener('click', hideA); }
 
                if ((scrollPosition + viewportHeight) > (documentHeight - 60)) {
-               annosa.style.setProperty('filter', 'opacity(0)', 'important'); }
+               annosa.style.setProperty('filter', 'opacity(0)', 'important');
+               annosa.style.setProperty('z-index', '-999999', 'important'); }
                if ((scrollPosition + viewportHeight) < (documentHeight - 60)) {
+               annosa.style.setProperty('z-index', '999999', 'important');
                annosa.style.setProperty('filter', '', 'important'); }
            }
 
@@ -621,16 +623,16 @@ function outscale()
                    annosa.style.removeProperty('width');
                    annosa.style.removeProperty('border-radius');
                    annosa.style.setProperty('width', sawidth, 'important');
-                   annosa.style.setProperty('left', '15px', 'important');
                    annosa.style.setProperty('border-radius', '15px', 'important');
+                   annosa.style.setProperty('left', '15px', 'important');
                }
                if (annowidth < 100 && annowidth > 10) 
                {
+                   topButton.style.bottom = "15px";
                    annosa.style.removeProperty('left');
                    annosa.style.removeProperty('border-radius');
                    annosa.style.setProperty('left', '15px', 'important');
                    annosa.style.setProperty('border-radius', '55px', 'important');
-                   topButton.style.bottom = "15px";
                }
                if (annowidth < 100 && annowidth > 10 && ftstyle1 === "reg-message") 
                {
