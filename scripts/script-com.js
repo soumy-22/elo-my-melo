@@ -520,8 +520,10 @@ function outscale()
                    }
 
                    if ((scrollPosition + viewportHeight) > (documentHeight - 60) && mediaout) {
-                   toolbar.style.setProperty('filter', 'opacity(0)', 'important'); }
+                   toolbar.style.setProperty('filter', 'opacity(0)', 'important');
+                   toolbar.style.setProperty('z-index', '-999999', 'important'); }
                    if ((scrollPosition + viewportHeight) < (documentHeight - 60) && mediaout) {
+                   toolbar.style.setProperty('z-index', '999999', 'important');
                    toolbar.style.setProperty('filter', '', 'important'); }
 
                    if (window.matchMedia("(max-width: 340px)").matches) {
