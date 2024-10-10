@@ -218,37 +218,37 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <video:name>Introduction</video:name>
         <video:startOffset>0</video:startOffset>
         <video:endOffset>52</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=0s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=0s</video:url>
       </video:clip>
       <video:clip>
         <video:name>Sound quality</video:name>
         <video:startOffset>53</video:startOffset>
         <video:endOffset>351</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=53s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=53s</video:url>
       </video:clip>
       <video:clip>
         <video:name>Recommendation</video:name>
         <video:startOffset>352</video:startOffset>
         <video:endOffset>508</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=352s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=352s</video:url>
       </video:clip>
       <video:clip>
         <video:name>Build quality</video:name>
         <video:startOffset>509</video:startOffset>
         <video:endOffset>589</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=509s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=509s</video:url>
       </video:clip>
       <video:clip>
         <video:name>Weird eartips problem</video:name>
         <video:startOffset>590</video:startOffset>
         <video:endOffset>644</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=590s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=590s</video:url>
       </video:clip>
       <video:clip>
         <video:name>Conclusion</video:name>
         <video:startOffset>645</video:startOffset>
         <video:endOffset>718</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=645s</video:url>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=645s</video:url>
       </video:clip>
     </video:video>
 
