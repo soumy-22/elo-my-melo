@@ -34,10 +34,8 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <video:description>OnePlus Nord isn't a true flagship but it is a true all-rounder that is very efficient with its SD765G processor and performs really well till now no matter what application you run on the device. It has a glass and plastic build with a capable camera system that you can modify with the google camera mod for a significant bump up in image quality.</video:description>
     <video:content_loc>https://www.youtube.com/watch?v=4mtq0TB3DE4</video:content_loc>
     <video:player_loc>https://www.youtube.com/embed/4mtq0TB3DE4?si=yp3b0XO5mRohd6VF</video:player_loc>
-    <video:duration>PT6M50S</video:duration>
+    <video:duration>410</video:duration>
     <video:publication_date>2021-01-04T00:00:00+00:00</video:publication_date>
-    <video:view_count>400</video:view_count>
-    <video:genre>Technology</video:genre>
     <video:family_friendly>yes</video:family_friendly>
   </video:video>
 
@@ -208,48 +206,9 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
       <video:description>Those who say these don't have bass, they definitely have decent balanced bass with good sub-bass. Overall bass and mids are balanced, treble is boosted - a bit too sparkly. Sounds pretty good overall.</video:description>
       <video:content_loc>https://www.youtube.com/watch?v=rJB_4m22yI8</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/rJB_4m22yI8?si=vVXoNZN6iIjgL9VC</video:player_loc>
-      <video:duration>PT11M58S</video:duration>
+      <video:duration>718</video:duration>
       <video:publication_date>2024-10-03T08:00:00+00:00</video:publication_date>
-      <video:view_count>200</video:view_count>
-      <video:genre>Technology</video:genre>
       <video:family_friendly>yes</video:family_friendly>
-
-      <video:clip>
-        <video:name>Introduction</video:name>
-        <video:startOffset>0</video:startOffset>
-        <video:endOffset>52</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=0s</video:url>
-      </video:clip>
-      <video:clip>
-        <video:name>Sound quality</video:name>
-        <video:startOffset>53</video:startOffset>
-        <video:endOffset>351</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=53s</video:url>
-      </video:clip>
-      <video:clip>
-        <video:name>Recommendation</video:name>
-        <video:startOffset>352</video:startOffset>
-        <video:endOffset>508</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=352s</video:url>
-      </video:clip>
-      <video:clip>
-        <video:name>Build quality</video:name>
-        <video:startOffset>509</video:startOffset>
-        <video:endOffset>589</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=509s</video:url>
-      </video:clip>
-      <video:clip>
-        <video:name>Weird eartips problem</video:name>
-        <video:startOffset>590</video:startOffset>
-        <video:endOffset>644</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=590s</video:url>
-      </video:clip>
-      <video:clip>
-        <video:name>Conclusion</video:name>
-        <video:startOffset>645</video:startOffset>
-        <video:endOffset>718</video:endOffset>
-        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&amp;t=645s</video:url>
-      </video:clip>
     </video:video>
 
 </url>
