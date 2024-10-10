@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://elomymelo.com/</loc>
@@ -31,6 +28,20 @@
   <loc>https://elomymelo.com/oneplus%20nord%20review.html</loc>
   <lastmod>2024-10-09T13:42:53+00:00</lastmod>
   <priority>0.80</priority>
+
+  <video:video>
+    <video:thumbnail_loc>https://img.youtube.com/vi/4mtq0TB3DE4/maxresdefault.jpg</video:thumbnail_loc>
+    <video:title>OnePlus Nord detailed camera test with g-cam samples</video:title>
+    <video:description>OnePlus Nord isn't a true flagship but it is a true all-rounder that is very efficient with its SD765G processor and performs really well till now no matter what application you run on the device. It has a glass and plastic build with a capable camera system that you can modify with the google camera mod for a significant bump up in image quality.</video:description>
+    <video:content_loc>https://www.youtube.com/watch?v=4mtq0TB3DE4</video:content_loc>
+    <video:player_loc>https://www.youtube.com/embed/4mtq0TB3DE4?si=yp3b0XO5mRohd6VF</video:player_loc>
+    <video:duration>PT6M50S</video:duration>
+    <video:publication_date>2021-01-04T00:00:00+00:00</video:publication_date>
+    <video:view_count>400</video:view_count>
+    <video:genre>Technology</video:genre>
+    <video:family_friendly>yes</video:family_friendly>
+  </video:video>
+
 </url>
 <url>
   <loc>https://elomymelo.com/nothing-phone-1.html</loc>
@@ -190,28 +201,78 @@
 <url>
   <loc>https://elomymelo.com/samsung-AKG-TypeC-earphones-review.html</loc>
   <lastmod>2024-10-09T13:42:54+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
+
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/rJB_4m22yI8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Samsung AKG tuned type-c earphones review | needed to tweak with EQ</video:title>
+      <video:description>Those who say these don't have bass, they definitely have decent balanced bass with good sub-bass. Overall bass and mids are balanced, treble is boosted - a bit too sparkly. Sounds pretty good overall.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=rJB_4m22yI8</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/rJB_4m22yI8?si=vVXoNZN6iIjgL9VC</video:player_loc>
+      <video:duration>PT11M58S</video:duration>
+      <video:publication_date>2024-10-03T08:00:00+00:00</video:publication_date>
+      <video:view_count>200</video:view_count>
+      <video:genre>Technology</video:genre>
+      <video:family_friendly>yes</video:family_friendly>
+
+      <video:clip>
+        <video:name>Introduction</video:name>
+        <video:startOffset>0</video:startOffset>
+        <video:endOffset>52</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=0s</video:url>
+      </video:clip>
+      <video:clip>
+        <video:name>Sound quality</video:name>
+        <video:startOffset>53</video:startOffset>
+        <video:endOffset>351</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=53s</video:url>
+      </video:clip>
+      <video:clip>
+        <video:name>Recommendation</video:name>
+        <video:startOffset>352</video:startOffset>
+        <video:endOffset>508</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=352s</video:url>
+      </video:clip>
+      <video:clip>
+        <video:name>Build quality</video:name>
+        <video:startOffset>509</video:startOffset>
+        <video:endOffset>589</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=509s</video:url>
+      </video:clip>
+      <video:clip>
+        <video:name>Weird eartips problem</video:name>
+        <video:startOffset>590</video:startOffset>
+        <video:endOffset>644</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=590s</video:url>
+      </video:clip>
+      <video:clip>
+        <video:name>Conclusion</video:name>
+        <video:startOffset>645</video:startOffset>
+        <video:endOffset>718</video:endOffset>
+        <video:url>https://www.youtube.com/watch?v=rJB_4m22yI8&t=645s</video:url>
+      </video:clip>
+    </video:video>
+
 </url>
 <url>
   <loc>https://elomymelo.com/realme-10-review.html</loc>
   <lastmod>2024-10-09T13:42:53+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://elomymelo.com/boom-2-plus-vs-blast-vs-boombox-3.html</loc>
   <lastmod>2024-10-09T13:42:53+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://elomymelo.com/boom-2-vs-motion-X600.html</loc>
   <lastmod>2024-10-09T13:42:53+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://elomymelo.com/motion-X500-vs-X600.html</loc>
   <lastmod>2024-10-09T13:42:54+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
-
 
 </urlset>
