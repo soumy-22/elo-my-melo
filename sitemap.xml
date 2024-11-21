@@ -199,6 +199,18 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <loc>https://elomymelo.com/samsung-akg-type-c-earphones-review.html</loc>
   <lastmod>2024-11-16T13:42:54+00:00</lastmod>
   <priority>0.80</priority>
+
+  <video:video>
+    <video:thumbnail_loc>https://img.youtube.com/vi/rJB_4m22yI8/maxresdefault.jpg</video:thumbnail_loc>
+    <video:title>Samsung AKG tuned type-c earphones review | needed to tweak with EQ</video:title>
+    <video:description>Those who say these don't have bass, they definitely have decent balanced bass with good sub-bass. Overall bass and mids are balanced, treble is boosted - a bit too sparkly. Sounds pretty good overall with a lift in the high-end.</video:description>
+    <video:content_loc>https://www.youtube.com/watch?v=rJB_4m22yI8</video:content_loc>
+    <video:player_loc>https://www.youtube.com/embed/rJB_4m22yI8?si=Np4AZ9QsCcwO6jwp</video:player_loc>
+    <video:duration>718</video:duration>
+    <video:publication_date>2024-10-03T08:00:00+00:00</video:publication_date>
+    <video:family_friendly>yes</video:family_friendly>
+  </video:video>
+
 </url>
 <url>
   <loc>https://elomymelo.com/realme-10-review.html</loc>
