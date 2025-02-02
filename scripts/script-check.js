@@ -1,4 +1,5 @@
 
+let deskT = false;
 let fontload = false;
 console.log("defer-script-check"); 
 function updateAdsAttributes() 
@@ -91,7 +92,7 @@ function updateAdsAttributes()
                     fids.forEach(function(id) { 
                     var element = document.getElementById(id); 
                     if(element) { var parentDiv = element.parentNode; } 
-                    if(idname === id && attrvalue === "filled") { parentDiv.style.background = "linear-gradient(to top, white, rgba(112,112,112,0.3), rgba(112,112,112,0.3), rgba(112,112,112,0.3))"; } 
+                    if(idname === id && attrvalue === "filled") { parentDiv.style.background = "linear-gradient(to top, white 20%, #8080808a 50%)"; } 
                     if(idname === id && attrvalue === "unfilled") { parentDiv.style.display = "none"; parentDiv.nextElementSibling.style.display = "block"; } });
 
                     dids.forEach(function(id) { 
@@ -156,11 +157,11 @@ function updateLogo()
     }
 
     if (window.matchMedia("(min-width: 615px)").matches) 
-    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
-    if (window.matchMedia("(max-width: 615px)").matches) 
+    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); deskT = false; } 
+    if (window.matchMedia("(max-width: 615px)").matches && !deskT) 
     { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
-    clearTimeout(window.resized); window.resized = setTimeout(() => { 
-    if(fontload) { detectCharacter(); } }, 1700); } 
+    clearTimeout(window.resized); window.resized = setTimeout(() => { if(fontload) 
+    { detectCharacter(); } }, 1700); deskT = true; } 
 
     // Array of IDs
     var ids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four']; 
@@ -269,57 +270,146 @@ function updateLogo()
     getMoreAttributes(); 
 }   
 updateLogo(); 
+// Call the function 
 
+function insertAndMeasureSpan(paraTag) 
+{
+    const spanElement = document.createElement('span');
+    paraTag.appendChild(spanElement); const spanRect = spanElement.getBoundingClientRect();
+    const leftCoordinate = spanRect.left + window.pageXOffset; spanElement.innerHTML = '\\';
+    spanElement.style.fontSize = '62px'; spanElement.style.letterSpacing = '10px';
+
+    const spanRect2 = spanElement.getBoundingClientRect();
+    const spanWidth = spanRect2.width; paraTag.removeChild(spanElement);
+    return { leftCoordinate, spanWidth };
+}
+
+// Function to handle the first condition (leftCoordinate < comparewidth)
+function handleFirstCondition(paraTag, leftCoordinate, spanWidth, comparewidth, multiplier, widthinner) 
+{
+    const calwidth = (comparewidth - leftCoordinate + (widthinner * 0.1)) * multiplier;
+    const spanElement = document.createElement('span'); spanElement.setAttribute('class', 'last-extend');
+    const charNum = Math.floor(calwidth / (spanWidth * multiplier));
+
+    spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
+    spanElement.innerHTML = '\\'.repeat(charNum); paraTag.appendChild(spanElement);
+}
+
+// Function to handle the second condition for paragraph processing scenarios 
+function handleSecondCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner) 
+{
+    const calwidth = comparewidth * multiplier;
+    const spanElement = document.createElement('span'); spanElement.setAttribute('class', 'last-extend');
+    const charNum = Math.floor(calwidth / (spanWidth * multiplier));
+
+    spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
+    spanElement.innerHTML = '\\'.repeat(charNum); spanElement.style.marginLeft = "0px";
+    paraTag.appendChild(spanElement);
+}
+
+// Function to handle the third additional condition for paragraph processing case 
+function handleThirdCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner) 
+{
+    const calwidth = ((comparewidth + (widthinner * 0.07)) * multiplier);
+    const spanElement = document.createElement('span'); spanElement.setAttribute('class', 'last-extend');
+    const charNum = Math.floor(calwidth / (spanWidth * multiplier));
+
+    spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
+    spanElement.innerHTML = '\\'.repeat(charNum); spanElement.style.marginLeft = "0px";
+    paraTag.appendChild(spanElement);
+}
+
+// Function to parse words in paragraphs in article section 
+function processParagraph(paraTag, filteredPTags, fLCoordinates, sLCoordinates, sPTags, pv1, pv2)
+{
+    const { leftCoordinate, spanWidth } = insertAndMeasureSpan(paraTag);
+    const widthinner = window.innerWidth; const multiplier = 2358 / widthinner;
+    const comparewidth = widthinner / 2; const comparewidthtwo = widthinner - widthinner * 0.278;
+    // console.log("pv1 value for each of the paragraph is = ", pv1);
+
+    if (leftCoordinate < (comparewidth - (widthinner * 0.07))) {
+    handleFirstCondition(paraTag, leftCoordinate, spanWidth, comparewidth, multiplier, widthinner);
+    if (paraTag.id === "thoughts-para") { const lastExtendSpan = paraTag.querySelector("span.last-extend");
+    if (lastExtendSpan) { lastExtendSpan.style.fontSize = "60px"; } } }
+    if (leftCoordinate > (comparewidthtwo + (widthinner * 0.06))) 
+    {
+      const originalHTML = paraTag.innerHTML;
+      const words = paraTag.textContent.trim().split(/\s+/);
+      let lastLeftPos; let lastLineTop = null; let highlightIndex = null; 
+      let wrappedWordIndices = []; // store indices 
+
+      // Iterate backwards from the end of the paragraph
+      for (let i = words.length - 1; i >= 0; i--) 
+      {
+           wrappedWordIndices.push(i); // Store the index of the word to be wrapped
+           paraTag.innerHTML = words.map((word, index) => {
+           if (wrappedWordIndices.includes(index)) {
+           return `<span>${word}</span>`; } else {
+           return word; } }).join(' ');
+
+         // Get the last wrapped span
+         const span = paraTag.querySelector('span:first-child');
+         const rect = span.getBoundingClientRect();
+
+           if (lastLineTop === null) {
+           lastLineTop = rect.top; } else if (rect.top < lastLineTop) {
+           lastLeftPos = rect.right; // console.log("first span ", rect.right);
+           highlightIndex = i; break; }
+      }
+      paraTag.innerHTML = originalHTML;
+
+      if ((lastLeftPos - leftCoordinate) < 0 && 
+      leftCoordinate > ((widthinner * 0.95) - (widthinner * 0.08))) 
+      {
+          if (!pv1) { filteredPTags.push(paraTag); fLCoordinates.push(leftCoordinate); }
+          if ((pv1 && fLCoordinates[filteredPTags.indexOf(paraTag)] !== leftCoordinate) || (pv2 && sLCoordinates[sPTags.indexOf(paraTag)] !== undefined)) {
+          handleThirdCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner); }
+          if ((pv1 && fLCoordinates[filteredPTags.indexOf(paraTag)] === leftCoordinate) || (pv2 && sLCoordinates[sPTags.indexOf(paraTag)] === leftCoordinate)) { paraTag.style.paddingRight = ""; paraTag.classList.remove('mod-para');
+          handleThirdCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner); }
+          if (!pv1) { paraTag.style.paddingRight = "68px"; if (paraTag.id !== "thoughts-para" && paraTag.id !== "intro-para") {
+          paraTag.setAttribute('class', 'mod-para'); } }
+      }
+      if (leftCoordinate > ((widthinner * 0.95) - (widthinner * 0.08)) && (lastLeftPos - leftCoordinate) > 0) {
+      handleThirdCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner);
+      if (paraTag.id === "thoughts-para") { const lastExtendSpan = paraTag.querySelector("span.last-extend"); 
+      if (lastExtendSpan) { lastExtendSpan.style.fontSize = "60px"; } } } // span tag font-size modify
+      if (leftCoordinate < ((widthinner * 0.95) - (widthinner * 0.08)) && 
+      (lastLeftPos - leftCoordinate) < (widthinner * 0.12)) 
+      {
+          if (!pv1) { sPTags.push(paraTag); sLCoordinates.push(leftCoordinate); }
+          if ((pv2 && sLCoordinates[sPTags.indexOf(paraTag)] !== leftCoordinate) || (pv1 && fLCoordinates[filteredPTags.indexOf(paraTag)] !== undefined)) {
+          handleSecondCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner); }
+          if ((pv2 && sLCoordinates[sPTags.indexOf(paraTag)] === leftCoordinate) || (pv1 && fLCoordinates[filteredPTags.indexOf(paraTag)] === leftCoordinate)) { paraTag.style.paddingRight = ""; paraTag.classList.remove('mod-para');
+          handleSecondCondition(paraTag, comparewidth, comparewidthtwo, spanWidth, multiplier, widthinner); }
+          if (!pv1) { paraTag.style.paddingRight = "88px"; if (paraTag.id !== "thoughts-para" && paraTag.id !== "intro-para") {
+          paraTag.setAttribute('class', 'mod-para'); } }
+      }
+    }
+}
+
+// Main function to detect and handle characters
 function detectCharacter() 
 {
     if (window.matchMedia("(max-width: 615px)").matches) 
     {
         const divElement = document.getElementById("article-text-div");
         const pTags = divElement.querySelectorAll("p");
-        // console.log("inside-detect-char"); 
+        const filteredPTags = []; const fLCoordinates = [];
+        const sLCoordinates = []; const sPTags = []; 
+        let pv1 = false; let pv2 = false;
 
-        pTags.forEach((paraTag) => {
-        var spanElement = document.createElement('span');
-        paraTag.appendChild(spanElement);
-
-        var spanRect = spanElement.getBoundingClientRect();
-        var leftCoordinate = spanRect.left + window.pageXOffset;
-        paraTag.removeChild(spanElement);
-
-        var widthinner = window.innerWidth;
-        var multiplier = 2358/widthinner; var comparewidth = widthinner/2;
-        var comparewidthtwo = widthinner - (widthinner * 0.278); 
-
-        if(leftCoordinate < comparewidth)
-        {
-            var calwidth = (comparewidth - leftCoordinate + (widthinner * 0.1)) * multiplier; 
-            var spanElement = document.createElement('span');
-            spanElement.setAttribute("class", "last-extend");
-            paraTag.appendChild(spanElement);
-
-            // change some properties of each span element in loop
-            spanElement.style.width = calwidth + "px"; // setting width
-            spanElement.style.display = "inline-block";
-        }
-        if(leftCoordinate > comparewidthtwo)
-        {
-            var calwidth = comparewidth * multiplier; 
-            var spanElement = document.createElement('span');
-            spanElement.setAttribute("class", "last-extend");
-            paraTag.appendChild(spanElement);
-
-            spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block";
-            spanElement.style.marginLeft = "0px";
-            
-        } });
+        // console.log("inside-detect-char");
+        pTags.forEach((paraTag) => processParagraph(paraTag, filteredPTags, fLCoordinates, sLCoordinates, sPTags, pv1, pv2)); pv1 = true;
+        filteredPTags.forEach((paraTag) => processParagraph(paraTag, filteredPTags, fLCoordinates, sLCoordinates, sPTags, pv1, pv2)); pv2 = true;
+        sPTags.forEach((paraTag) => processParagraph(paraTag, filteredPTags, fLCoordinates, sLCoordinates, sPTags, pv1, pv2));
+        console.log("inside-detect-character");
     }
 }
 
     document.fonts.load('1em Roboto').then(function() {
     fontload = true; console.log('Roboto font has loaded');
     if (window.matchMedia("(max-width: 615px)").matches) { 
-    setTimeout(detectCharacter, 150); } }).catch(function(error) {
+    setTimeout(detectCharacter, 200); } }).catch(function(error) {
     console.error('Failed to load Roboto', error); });
 
     function heightcheck() { 
@@ -330,6 +420,5 @@ function detectCharacter()
     document.getElementById("ads-v1-in").style.display = "none"; } }
 
     setTimeout(heightcheck, 1000); setTimeout(heightcheck, 3000); 
-
     // document ends here ---------
 
