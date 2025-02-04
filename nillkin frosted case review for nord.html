@@ -4658,15 +4658,10 @@ function scrolltotop()
 }
 
 
-   setInterval(function()
-   
-   { 	   
-   	   document.getElementById("Web_1920__1").style.visibility = "visible";
-   	   document.getElementById("top-check").style.visibility = "hidden";
-   	   document.body.style.background = "rgba(255,255,255,1)";
-   	   if (window.matchMedia("(max-width: 615px)").matches) 
-   	   {
-           document.body.style.background = "rgba(0,0,0,1)";
+   function buttonfxd() 
+   {
+       if (window.matchMedia("(max-width: 615px)").matches) 
+       {
            const mypage = window.innerWidth * 0.12;
            const pagebot = window.innerWidth * 0.167;
            const pageright = window.innerWidth * 0.04;
@@ -4675,7 +4670,7 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
        if (window.matchMedia("(max-width: 415px)").matches)
-   	   {
+       {
            const mypage = window.innerWidth * 0.14;
            const pagebot = window.innerWidth * 0.190;
            const pageright = window.innerWidth * 0.04;
@@ -4684,7 +4679,7 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
        if (window.matchMedia("(max-width: 415px)").matches && window.matchMedia("(max-height: 745px)").matches) 
-   	   {
+       {
            const mypage = window.innerWidth * 0.13;
            const pagebot = window.innerWidth * 0.16;
            const pageright = window.innerWidth * 0.04;
@@ -4692,8 +4687,11 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
+   }
 
-   }, 0);
+   timer1 = setInterval(buttonfxd, 1000);
+   setTimeout(() => { clearInterval(timer1); }, 5000);
+   // window.addEventListener('resize', buttonfxd, false);
 
 
   function outsideclick()
