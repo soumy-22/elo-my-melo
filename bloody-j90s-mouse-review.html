@@ -23,43 +23,23 @@
 <meta name="author" content="Soumya Roy">
 
 <style id="applicationStylesheet" type="text/css">
-	.mediaViewInfo {
-		--web-view-name: Web 1920 – 1;
-		--web-view-id: Web_1920__1;
-		--web-scale-to-fit: true;
-		--web-scale-to-fit-type: width;
-        --web-enable-scale-up: true;
-		--web-scale-on-resize: true;
-		--web-center-horizontally: true;
-		--web-enable-deep-linking: true;
-	}
-	:root {
-		--web-view-ids: Web_1920__1;
-	}
-	* {
+
+	*
+    {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 		border: none;
 	}
-	#Web_1920__1 {
+	#Web_1920__1
+    {
 		position: absolute;
 		width: 3554px;
 		height: 2216px;
 		border: 0px grey solid;
 		background-color: rgba(255,255,255,0);
 		overflow: visible;
-		visibility: hidden;
-		--web-view-name: Web 1920 – 1;
-		--web-view-id: Web_1920__1;
-		--web-scale-to-fit: true;
-		--web-scale-to-fit-type: width;
-        --web-enable-scale-up: true;
-		--web-scale-on-resize: true;
-		--web-center-horizontally: true;
-		--web-enable-deep-linking: true;
 	}
-
 	#top-check
 	{
 		position: absolute;
@@ -68,7 +48,7 @@
 		right: 30%;
 		border: 0px grey solid;
 		height: 100px;
-		visibility: visible;
+		display: none;
 		z-index: -999;
 	}
 
@@ -92,13 +72,35 @@
         visibility: hidden !important; 
     }
 
-    @media only screen and (max-width: 940px) and (orientation: portrait)
+    @media only screen and (min-width: 1500px)
     {
     body 
     {
-        background-size: 85% 2%;
-        animation: mooveme 0.4s;
-        animation-fill-mode: forwards;
+        transform: scale(0.800); 
+    }
+    }
+
+    @media only screen and (min-width: 1240px) and (max-width: 1500px)
+    {
+    body 
+    {
+        transform: scale(0.860); 
+    }
+    }
+
+    @media only screen and (min-width: 1040px) and (max-width: 1240px)
+    {
+    body 
+    {
+        transform: scale(0.920); 
+    }
+    }
+
+    @media only screen and (min-width: 615px) and (max-width: 1040px)
+    {
+    body 
+    {
+        transform: scale(1.000); 
     }
     }
 
@@ -106,10 +108,6 @@
     { 
     body 
     {
-        background-image: linear-gradient(to left, transparent, transparent, #98AEC4, transparent, #98AEC4, transparent, transparent);
-        background-repeat: no-repeat;
-        background-position: top center; 
-        background-attachment: fixed;
         background-color: black;
     }   
     #Web_1920__1 
@@ -1350,49 +1348,10 @@
     }
     }
 
-    @media only screen and (max-width: 940px) and (orientation: landscape)
-    {
-    body 
-    {
-        transform: scale(1.0); 
-        background-size: 85% 5%;
-        animation: moove 0.4s;
-        animation-fill-mode: forwards;
-    }
-    }
-
-    @media only screen and (max-width: 940px)
-                       and (max-height: 496px)
-                       and (orientation: landscape)
-    {
-    body 
-    {
-        transform: scale(1.0); 
-        background-size: 85% 8%;
-        animation: moovemee 0.4s;
-        animation-fill-mode: forwards;
-    }
-    }
-
-    @media only screen and (min-width: 940px) and (orientation: landscape)
-    {
-    body 
-    {
-        transform: scale(0.80);
-        background-size: 85% 5%;
-        animation: moove 0.4s;
-        animation-fill-mode: forwards;
-    }
-    }
-
     @media only screen and (min-width: 615px)
     {
     body 
     {
-        background-image: linear-gradient(to left, transparent, transparent, #98AEC4, transparent, #98AEC4, transparent, transparent);
-        background-repeat: no-repeat;
-        background-position: top center; 
-        background-attachment: fixed;
         background-color: white;
     }
     #elomymelo
@@ -2719,33 +2678,6 @@
     #ftr-youtube
     {
     	display: none;
-    }
-    }
-
-    @media only screen and (min-width: 940px) and (orientation: portrait)
-    {
-    body 
-    {
-        transform: scale(0.80);
-        background-size: 85% 2%;
-        animation: mooveme 0.4s;
-        animation-fill-mode: forwards;
-    }
-    }
-
-    @media only screen and (min-width: 1140px) and (max-width: 1340px)
-    {
-    body 
-    {
-        transform: scale(0.860); 
-    }
-    }
-
-    @media only screen and (min-width: 940px) and (max-width: 1140px)
-    {
-    body 
-    {
-        transform: scale(0.920); 
     }
     }
 
@@ -4399,15 +4331,10 @@ function scrolltotop()
 }
 
 
-   setInterval(function()
-   
-   { 	   
-   	   document.getElementById("Web_1920__1").style.visibility = "visible";
-   	   document.getElementById("top-check").style.visibility = "hidden";
-   	   document.body.style.background = "rgba(255,255,255,1)";
-   	   if (window.matchMedia("(max-width: 615px)").matches) 
-   	   {
-           document.body.style.background = "rgba(0,0,0,1)";
+   function buttonfxd() 
+   {
+       if (window.matchMedia("(max-width: 615px)").matches) 
+       {
            const mypage = window.innerWidth * 0.12;
            const pagebot = window.innerWidth * 0.167;
            const pageright = window.innerWidth * 0.04;
@@ -4416,7 +4343,7 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
        if (window.matchMedia("(max-width: 415px)").matches)
-   	   {
+       {
            const mypage = window.innerWidth * 0.14;
            const pagebot = window.innerWidth * 0.190;
            const pageright = window.innerWidth * 0.04;
@@ -4425,7 +4352,7 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
        if (window.matchMedia("(max-width: 415px)").matches && window.matchMedia("(max-height: 745px)").matches) 
-   	   {
+       {
            const mypage = window.innerWidth * 0.13;
            const pagebot = window.innerWidth * 0.16;
            const pageright = window.innerWidth * 0.04;
@@ -4433,8 +4360,11 @@ function scrolltotop()
            document.getElementById("scroll-top-button").style.setProperty('--set-bottom', pagebot + "px");
            document.getElementById("scroll-top-button").style.setProperty('--set-right', pageright + "px");
        }
+   }
 
-   }, 292);
+   timer1 = setInterval(buttonfxd, 1000);
+   setTimeout(() => { clearInterval(timer1); }, 5000);
+   // window.addEventListener('resize', buttonfxd, false);
 
 
   function outsideclick()
@@ -4769,23 +4699,6 @@ window.addEventListener('resize', updateLogo);
 
 function updateLogo() 
 {
-       if (window.matchMedia("(min-width: 615px)").matches) 
-       {
-           const mypage = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "3554px";
-       }
-
-       if (window.matchMedia("(max-width: 615px)").matches) 
-       {
-           const mypagephone = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypagephone/2358+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "2358px";
-           document.getElementById("Web_1920__1").style.overflow = "visible";
-       }
-
     // mutation observer code
     const checkme7 = document.getElementById("ins-dis-v1");
     const observer = new MutationObserver( mutations => 
@@ -4817,35 +4730,6 @@ function updateLogo()
 
     observer.observe(checkme7, { attributes: true, attributeFilter: ['data-ad-status'] });
 }
-
-</script>
-
-<script type="text/javascript">
-
-var isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) && !window.MSStream;
-
-if (isIOS && window.matchMedia("(max-width: 615px)").matches) 
-{
-   console.log('This is an IOS device');
-   setInterval(function()  
-   { 
-       document.body.style.background = "rgba(0,0,0,1)";
-
-   }, 5);
-} 
-if (isIOS && window.matchMedia("(orientation: landscape)").matches) 
-{
-   console.log('This is an IOS device');
-   setInterval(function()  
-   { 
-       document.body.style.background = "rgba(255,255,255,1)";
-
-   }, 5);
-}
-else 
-{
-   console.log('This is Not an IOS device');
-} 
 
 </script>
 
@@ -5044,35 +4928,14 @@ else
 <script type="text/javascript">
 
   function scaleMe()
-  {       
-      // Check if the body element has overflow set to "hidden"
-      var parentElementNew = document.querySelector('.fc-consent-root');
-      var bodyOverflow = window.getComputedStyle(document.body).overflow; 
-      var footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
-      var parentElement = document.querySelector('.google-revocation-link-placeholder');
-      if (parentElement) { var childElements = parentElement.querySelectorAll('*');
-      // Loop through the child elements and set display to "none"
-      for (var i = 0; i < childElements.length; i++) 
-      {
-           childElements[i].parentNode.removeChild(childElements[i]);
-      }
-           parentElement.parentNode.removeChild(parentElement);
-      }
-      if (parentElementNew || bodyOverflow === "hidden") 
-      { 
-           window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
-           document.body.style.transform = "none"; 
-      }
-      if (!parentElementNew && bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
-      if (footerDiv) { var secondPTag = footerDiv.querySelector('p:nth-child(2)');
-      if (secondPTag) { secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.'; } // changing the inner text of the p tag of consent message  
-      }
+  {
       if (window.matchMedia("(min-width: 615px)").matches) 
       {
            const mypage = window.innerWidth;
            document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "3554px";
+           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
       }
       if (window.matchMedia("(max-width: 615px)").matches) 
       {
@@ -5082,29 +4945,8 @@ else
            document.getElementById("Web_1920__1").style.width = "2358px";
            document.getElementById("Web_1920__1").style.overflow = "visible";
       }
-      if (window.matchMedia("(max-width: 615px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "none";
-      }
-      if (window.matchMedia("(min-width: 615px)").matches && window.matchMedia("(max-width: 1040.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(1.0)";
-      }
-      if (window.matchMedia("(min-width: 1041px)").matches && window.matchMedia("(max-width: 1241.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.920)";
-      }
-      if (window.matchMedia("(min-width: 1242px)").matches && window.matchMedia("(max-width: 1500.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.860)";
-      }
-      if (window.matchMedia("(min-width: 1501px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.80)";
-      }
   }
-  scaleMe(); setInterval(scaleMe, 1000); 
-  window.addEventListener('resize', scaleMe, false); 
+  scaleMe(); window.addEventListener('resize', scaleMe, false); 
 
 </script>
 

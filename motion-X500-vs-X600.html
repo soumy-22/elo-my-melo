@@ -70,6 +70,38 @@
         visibility: hidden !important; 
     }
 
+    @media only screen and (min-width: 1500px)
+    {
+    body 
+    {
+        transform: scale(0.800); 
+    }
+    }
+
+    @media only screen and (min-width: 1240px) and (max-width: 1500px)
+    {
+    body 
+    {
+        transform: scale(0.860); 
+    }
+    }
+
+    @media only screen and (min-width: 1040px) and (max-width: 1240px)
+    {
+    body 
+    {
+        transform: scale(0.920); 
+    }
+    }
+
+    @media only screen and (min-width: 615px) and (max-width: 1040px)
+    {
+    body 
+    {
+        transform: scale(1.000); 
+    }
+    }
+
     @media only screen and (max-width: 615px)
     {   
     body 
@@ -4297,7 +4329,7 @@ function scrollmethod()
     }
     if (window.matchMedia("(max-width: 615px)").matches) 
     {
-        document.body.style.transform = "none";
+        // document.body.style.transform = "none";
         document.getElementById("footer-id").style.display = "none";
     }
     if (window.matchMedia("(max-width: 615px)").matches && window.matchMedia("(max-height: 496px)").matches) 
@@ -4829,12 +4861,6 @@ function updateLogo()
 {
       if (window.matchMedia("(min-width: 615px)").matches) 
        {
-           const mypage = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "3554px";
-           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
-
            document.querySelectorAll(".dis-com").forEach(function(el) {
            el.style.left = "617px"; el.style.transform = "scale(2.25, 2.25)"; });
            document.querySelectorAll(".feed-com").forEach(function(el) {
@@ -4844,12 +4870,6 @@ function updateLogo()
 
       if (window.matchMedia("(max-width: 615px)").matches) 
        {
-           const mypagephone = window.innerWidth;
-           document.getElementById("Web_1920__1").style.transform = "scale("+mypagephone/2358+")";
-           document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
-           document.getElementById("Web_1920__1").style.width = "2358px";
-           document.getElementById("Web_1920__1").style.overflow = "visible";
-
            document.querySelectorAll(".dis-com").forEach(function(el) {
            el.style.left = ""; el.style.transform = "scale(7.10, 7.10)"; });
            document.querySelectorAll(".feed-com").forEach(function(el) {
@@ -5139,35 +5159,14 @@ function detectCharacter()
 <script type="text/javascript">
 
   function scaleMe()
-  {       
-      // Check if the body element has overflow set to "hidden"
-      var parentElementNew = document.querySelector('.fc-consent-root');
-      var bodyOverflow = window.getComputedStyle(document.body).overflow; 
-      var footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
-      var parentElement = document.querySelector('.google-revocation-link-placeholder');
-      if (parentElement) { var childElements = parentElement.querySelectorAll('*');
-      // Loop through the child elements and set display to "none"
-      for (var i = 0; i < childElements.length; i++) 
-      {
-           childElements[i].parentNode.removeChild(childElements[i]);
-      }
-           parentElement.parentNode.removeChild(parentElement);
-      }
-      if (parentElementNew || bodyOverflow === "hidden") 
-      { 
-           window.scrollTo(0, 0); document.body.style.overflow = "hidden"; 
-           document.body.style.transform = "none"; 
-      }
-      if (!parentElementNew && bodyOverflow !== "hidden") { document.body.style.overflow = "visible"; } 
-      if (footerDiv) { var secondPTag = footerDiv.querySelector('p:nth-child(2)');
-      if (secondPTag) { secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.'; } // changing the inner text of the p tag of consent message  
-      }
+  {
       if (window.matchMedia("(min-width: 615px)").matches) 
       {
            const mypage = window.innerWidth;
            document.getElementById("Web_1920__1").style.transform = "scale("+mypage/3554+")";
            document.getElementById("Web_1920__1").style.transformOrigin = "0 0";
            document.getElementById("Web_1920__1").style.width = "3554px";
+           document.getElementById("Web_1920__1").style.paddingBottom = "918px";
       }
       if (window.matchMedia("(max-width: 615px)").matches) 
       {
@@ -5177,25 +5176,8 @@ function detectCharacter()
            document.getElementById("Web_1920__1").style.width = "2358px";
            document.getElementById("Web_1920__1").style.overflow = "visible";
       }
-      if (window.matchMedia("(min-width: 615px)").matches && window.matchMedia("(max-width: 1040.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(1.0)";
-      }
-      if (window.matchMedia("(min-width: 1041px)").matches && window.matchMedia("(max-width: 1241.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.920)";
-      }
-      if (window.matchMedia("(min-width: 1242px)").matches && window.matchMedia("(max-width: 1500.99px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.860)";
-      }
-      if (window.matchMedia("(min-width: 1501px)").matches && bodyOverflow !== "hidden") 
-      {
-           document.body.style.transform = "scale(0.80)";
-      }
   }
-  scaleMe(); setInterval(scaleMe, 1000); 
-  window.addEventListener('resize', scaleMe, false); 
+  scaleMe(); window.addEventListener('resize', scaleMe, false); 
 
 </script>
 
