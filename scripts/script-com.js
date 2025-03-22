@@ -79,15 +79,6 @@
     });
   }
 
-  // Trigger script after scrolling 1000px
-  let hasTriggered = false;
-  window.addEventListener('scroll', function() {
-    if (window.scrollY >= 2000 && !hasTriggered) {
-      console.log('Scrolled 2000px, triggering subscription');
-      initPushSubscription();
-      hasTriggered = true; // Ensure it only triggers once
-    }
-  });
 
 // navigation buttons related 
 function changeover()
