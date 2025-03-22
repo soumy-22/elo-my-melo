@@ -12,7 +12,7 @@ function scrollmethod()
     if(notitimer !== null) { clearTimeout(notitimer); }
     notitimer = setTimeout(function() { if(window.scrollY >= 2500 && !hasTriggered && mediain) 
     { initPushSubscription(); hasTriggered = true; console.log('Scrolled 2500px for phone'); } 
-    if(!mediain && !hasTri) { setTimeout(initPushSubscription, 60000); hasTri = true;
+    if(!mediain && !hasTri) { setTimeout(initPushSubscription, 25000); hasTri = true;
     console.log('desk 60s noti call'); } }, 2000);
 }
 function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } 
