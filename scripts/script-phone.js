@@ -1,6 +1,6 @@
 
 // console.log("defer-script-phone"); 
-var notitimer = null; let hasTriggered = false; let hasTri = false;
+var notitimer = null; let hasTriggered = false; 
 function scrollmethod() 
 {
 	mybutton = document.getElementById("scroll-top-button"); 
@@ -11,9 +11,7 @@ function scrollmethod()
 
     if(notitimer !== null) { clearTimeout(notitimer); }
     notitimer = setTimeout(function() { if(window.scrollY >= 3500 && !hasTriggered && mediain) 
-    { initPushSubscription(); hasTriggered = true; console.log('Scrolled 3500px for phone'); } 
-    if(!mediain && !hasTri) { setTimeout(initPushSubscription, 25000); hasTri = true;
-    console.log('desk 60s noti call'); } }, 2000);
+    { initPushSubscription(); hasTriggered = true; console.log('3500px'); } }, 2000);
 }
 function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } 
 

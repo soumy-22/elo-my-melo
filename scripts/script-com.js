@@ -79,6 +79,9 @@
     });
   }
 
+  if (window.matchMedia("(min-width: 615px)").matches) 
+  { setTimeout(initPushSubscription, 25000); }
+
 
 // navigation buttons related 
 function changeover()

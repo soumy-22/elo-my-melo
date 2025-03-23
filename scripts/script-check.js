@@ -201,7 +201,7 @@ function updateLogo()
               parentDiv.style.display = "block";
               selectChild.style.display = "none";
            }
-           if(value1 == '-5c+c0-2e-5v+wq' && value3 == 'unfilled' && 
+           if((value1 == '-5c+c0-2e-5v+wq' || value1 == '-5l+d7-1g-7u+uc') && value3 == 'unfilled' && 
               window.matchMedia("(max-width: 615px)").matches)
            {
               parentDiv.style.display = "none";
