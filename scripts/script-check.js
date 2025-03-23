@@ -190,12 +190,12 @@ function updateLogo()
               var selectNewChild = childDivs[0];
               selectNewChild.style.display = "none";
            }
-           if(value1 == '-5c+c0-2e-5v+wq' && window.matchMedia("(min-width: 615px)").matches)
+           if((value1 == '-5c+c0-2e-5v+wq' || value1 == '-5l+d7-1g-7u+uc') && window.matchMedia("(min-width: 615px)").matches)
            {
               element.style.display = "none";
               parentDiv.style.display = "none";
            }
-           if(value1 == '-5c+c0-2e-5v+wq' && window.matchMedia("(max-width: 615px)").matches && !isios)
+           if((value1 == '-5c+c0-2e-5v+wq' || value1 == '-5l+d7-1g-7u+uc') && window.matchMedia("(max-width: 615px)").matches && !isios)
            {
               element.style.display = "block";
               parentDiv.style.display = "block";
