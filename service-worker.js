@@ -1,3 +1,4 @@
+
 self.addEventListener('install', event => {
   self.skipWaiting(); // Activate immediately after install
 });
@@ -14,10 +15,10 @@ self.addEventListener('push', event => {
 
   // Use custom Flip 7 data as fallback if no valid payload
   const options = {
-    body: data.body || "The design and build is pretty good in my opinion. The default sound signature is a little too bright for my taste, it can cause irritation when listening to some particularly bright songs that have high-frequency instruments. So, if you are going to use the default sound signature",
-    image: data.image || "https://elomymelo.com/images/samsung-akg-main.jpg",
+    body: data.body || "Dive into the ultimate showdown between JBL Flip 7 and Flip 6 with 10 essential highlights that reveal their differences and upgrades. The Flip 6 introduced the iconic big, bold JBL logo, setting a cool, stylish tone, while the Flip 7 builds on this with a similar striking design.",
+    image: data.image || "https://elomymelo.com/story-images/jbl-flip-7v6/flip-7v6-01.jpg",
     icon: data.icon || "https://elomymelo.com/old-images/circle-trans.png",
-    data: { url: data.url || "https://elomymelo.com/samsung-akg-type-c-earphones-review.html" }
+    data: { url: data.url || "https://elomymelo.com/web-stories/flip-7v6-story.html" }
   };
 
   // Trigger update and show notification
@@ -25,7 +26,7 @@ self.addEventListener('push', event => {
     Promise.all([
       self.registration.update(), // Check and install new sw.js in the background
       self.registration.showNotification(
-        data.title || "Samsung AKG Type-C Earphones review | needed to tweak with EQ",
+        data.title || "JBL Flip 7 vs Flip 6 | 10 Essential Highlights",
         options
       )
     ])
@@ -36,3 +37,4 @@ self.addEventListener('notificationclick', event => {
   event.notification.close();
   event.waitUntil(clients.openWindow(event.notification.data.url));
 });
+
