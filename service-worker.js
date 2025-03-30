@@ -18,10 +18,10 @@ self.addEventListener('push', event => {
   }
 
   const options = {
-    body: data.body || "This story compares the JBL Charge 6 and Flip 7 speakers! Explore their IP68 waterproof rating, powerful sound, 7-band EQ, and unique features like the Charge 6's power bank support and Flip 7's Auracast button. Find out which suits you best!",
-    image: data.image || "https://elomymelo.com/story-images/jbl-charge-6vf7/charge-6vf7-01.jpg",
+    body: data.body || "Xtreme 4's 68 Wh battery is the biggest upgrade vs smaller 36 Wh on the X3. Xtreme 3 sounds fuller with more upper bass at lower volumes, but the Xtreme 4 starts to sound fuller at higher volumes. At max volume, the X4 is around 1.5 dB louder on average loudness measurement. This is not a big difference but the X4 is a bit better and less screamy for moderate to higher level listening. I think you should not upgrade",
+    image: data.image || "https://elomymelo.com/docs-images/x4-vs-x3-main.jpg",
     icon: data.icon || "https://elomymelo.com/old-images/circle-trans.png",
-    data: { url: data.url || "https://elomymelo.com/web-stories/charge-6vf7-story.html" },
+    data: { url: data.url || "https://elomymelo.com/jbl-xtreme-4-vs-xtreme-3.html" },
     tag: Date.now().toString() // Unique tag for each noti 
   };
 
@@ -29,7 +29,7 @@ self.addEventListener('push', event => {
     Promise.all([
       self.registration.update(), // Check and install new sw.js in the background
       self.registration.showNotification(
-        data.title || "JBL Charge 6 vs Flip 7 | Comparing top 5 features",
+        data.title || "JBL Xtreme 4 isn't worth upgrading from Xtreme 3",
         options
       )
     ])
