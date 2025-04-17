@@ -291,8 +291,9 @@ function handleFirstCondition(paraTag, leftCoordinate, spanWidth, comparewidth, 
     const spanElement = document.createElement('span'); spanElement.setAttribute('class', 'last-extend');
     const charNum = Math.floor(calwidth / (spanWidth * multiplier));
 
-    spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
-    spanElement.innerHTML = '\\'.repeat(charNum); paraTag.appendChild(spanElement);
+    spanElement.style.width = calwidth + 'px';
+    spanElement.style.display = 'inline-block';
+    paraTag.appendChild(spanElement);
 }
 
 // Function to handle the second condition for paragraph processing scenarios 
@@ -303,8 +304,7 @@ function handleSecondCondition(paraTag, comparewidth, comparewidthtwo, spanWidth
     const charNum = Math.floor(calwidth / (spanWidth * multiplier));
 
     spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
-    spanElement.innerHTML = '\\'.repeat(charNum); spanElement.style.marginLeft = "0px";
-    paraTag.appendChild(spanElement);
+    spanElement.style.marginLeft = "0px"; paraTag.appendChild(spanElement);
 }
 
 // Function to handle the third additional condition for paragraph processing case 
@@ -315,8 +315,7 @@ function handleThirdCondition(paraTag, comparewidth, comparewidthtwo, spanWidth,
     const charNum = Math.floor(calwidth / (spanWidth * multiplier));
 
     spanElement.style.width = calwidth + 'px'; spanElement.style.display = 'inline-block';
-    spanElement.innerHTML = '\\'.repeat(charNum); spanElement.style.marginLeft = "0px";
-    paraTag.appendChild(spanElement);
+    spanElement.style.marginLeft = "0px"; paraTag.appendChild(spanElement);
 }
 
 // Function to parse words in paragraphs in article section 
