@@ -510,15 +510,11 @@
     .last-extend
     {
         position: relative;
-        font-size: 65px;
-        background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        letter-spacing: 10px;
-        margin-left: 30px;
-        display: none;
+        background-size: contain;
+        background-image: url('../old-images/span-check.png'), 
+        linear-gradient(to right, #b7b7b7, #808080);
+        margin-left: 30px; height: 90px;
+        top: 25px; display: none;
     }
 
     .scroll-clk-button
