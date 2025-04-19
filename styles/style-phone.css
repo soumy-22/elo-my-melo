@@ -511,10 +511,11 @@
     {
         position: relative;
         background-size: contain;
+        border: 1px rgba(0,0,0,1) solid;
         background-image: url('../old-images/span-check.png'), 
         linear-gradient(to right, #b7b7b7, #808080);
         margin-left: 30px; height: 90px;
-        top: 23px; display: none;
+        top: 22px; display: none;
     }
 
     .scroll-clk-button
