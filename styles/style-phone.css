@@ -510,9 +510,12 @@
     .last-extend
     {
         position: relative;
-        background-size: contain;
+        background-size: contain, 
+        calc(100% - 4px) calc(100% - 4px);
+        background-repeat: repeat, no-repeat;
         background-image: url('../old-images/span-check.png'), 
         linear-gradient(to right, #b7b7b7, #808080);
+        background-position: top left, center;
         margin-left: 30px; height: 90px;
         top: 22px; display: none;
     }
