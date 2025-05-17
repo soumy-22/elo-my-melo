@@ -570,17 +570,22 @@
     }
     .art-text-div p
     {
-        display: inline-block;
-    }
-    .last-extend
-    {
         position: relative;
-        height: 50px;
-        border: 0px transparent solid;
-        background: linear-gradient(to right, rgba(112,112,112,1), rgba(112,112,112,0.4));
-        border-radius: 40px;
-        margin-left: 30px;
-        display: none;
+        display: inline-block;
+        padding-right: 60px;
+    }
+    .art-text-div > p:nth-of-type(n+2)::before
+    {
+        position: absolute;
+        content: ""; inset: 0;
+        border-radius: 50px; padding: 10px; 
+        display: var(--before-display, block); 
+        background: linear-gradient(to left, #606060bf 10%, transparent 20%); 
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); 
+        -webkit-mask-composite: xor; width: 98.5%; 
+        margin-top: -15px; margin-bottom: -25px; 
+        mask-composite: exclude;
+        z-index: -10;
     }
 
     .aff-link-text
@@ -4982,11 +4987,10 @@ function updateLogo()
     // Call to update all elements at once
     getMoreAttributes();  
 
-    if (window.matchMedia("(min-width: 615px)").matches) 
-    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "none"; }); } 
     if (window.matchMedia("(max-width: 615px)").matches) 
-    { document.querySelectorAll(".last-extend").forEach(function(el) { el.style.display = "inline-block"; }); 
-    clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); } 
+    { clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); }
+    if (window.matchMedia("(min-width: 615px)").matches) 
+    { clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); }
 
     // some IOS changes
     var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
@@ -5061,55 +5065,48 @@ function updateLogo()
     observer.observe(checkv1, { attributes: true, attributeFilter: ['data-ad-status'] });
 }
 
+// for last-line balance
+function insertAndMeasureSpan(paraTag) 
+{
+    const spanElement = document.createElement('span');
+    paraTag.appendChild(spanElement); const spanRect = spanElement.getBoundingClientRect();
+    const leftCoordinate = spanRect.left + window.pageXOffset;
+
+    paraTag.removeChild(spanElement);
+    return { leftCoordinate };
+}
+
+function handleFirstCondition(paraTag, comparewidth, widthinner) 
+{
+    let index = 0; let leftCoordinate;
+    const paddings = ["80px", "120px", "160px", "200px", "240px"];
+
+    paraTag.style.paddingRight = paddings[index]; ({ leftCoordinate } = insertAndMeasureSpan(paraTag));
+    while (leftCoordinate < (comparewidth - (widthinner * 0.07)) && index < paddings.length - 1) 
+    { index++; paraTag.style.paddingRight = paddings[index]; // index switch 
+    ({ leftCoordinate } = insertAndMeasureSpan(paraTag)); }
+}
+
+function processParagraph(paraTag) 
+{
+    const { leftCoordinate } = insertAndMeasureSpan(paraTag);
+    const widthinner = window.innerWidth; const comparewidth = widthinner / 2;
+
+    if (leftCoordinate < (comparewidth - (widthinner * 0.07))) {
+    handleFirstCondition(paraTag, comparewidth, widthinner); }
+}
+
 function detectCharacter() 
 {
-    if (window.matchMedia("(max-width: 615px)").matches) 
-    {
-        const divElement = document.getElementById("article-text-div");
-        const pTags = divElement.querySelectorAll("p");
+    // the main function called first 
+    const divElement = document.getElementById("article-text-div");
+    const pTags = divElement.querySelectorAll("p"); // selects all p-tags 
+    if (window.matchMedia("(max-width: 615px)").matches) {
+    pTags.forEach(processParagraph); /* process */ }
 
-        // Loop through all the p tags and change span element's style using forEach method
-        pTags.forEach((paraTag) => {
-
-        // var lastCharacter = paraTag.textContent.trim().slice(-1);
-        var spanElement = document.createElement('span');
-        paraTag.appendChild(spanElement);
-
-        var spanRect = spanElement.getBoundingClientRect();
-        var leftCoordinate = spanRect.left + window.pageXOffset;
-        paraTag.removeChild(spanElement);
-
-        widthinner = window.innerWidth;
-        multiplier = 2358/widthinner;
-        comparewidth = widthinner/2;
-        comparewidthtwo = widthinner - (widthinner * 0.278); 
-
-        if(leftCoordinate < comparewidth)
-        {
-            var calwidth = (comparewidth - leftCoordinate + (widthinner * 0.1)) * multiplier; 
-            var spanElement = document.createElement('span');
-            spanElement.setAttribute("class", "last-extend");
-            paraTag.appendChild(spanElement);
-
-            // change some properties of each span element in loop
-            spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block"; 
-        }
-        if(leftCoordinate > comparewidthtwo)
-        {
-            var calwidth = comparewidth * multiplier; 
-            var spanElement = document.createElement('span');
-            spanElement.setAttribute("class", "last-extend");
-            paraTag.appendChild(spanElement);
-
-            spanElement.style.width = calwidth + "px";
-            spanElement.style.display = "inline-block";
-            spanElement.style.marginLeft = "0px";
-            
-        } });
-    }
+    if (window.matchMedia("(min-width: 615px)").matches) { pTags.forEach(pTag => {
+    pTag.style.paddingRight = ""; }); }
 }
-// setTimeout(detectCharacter, 2000); 
 
 </script>
 
