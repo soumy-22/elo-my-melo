@@ -1171,9 +1171,9 @@
     }
     #after-ft-phone
     {
+        border: 1px black solid;
         position: relative;
         width: 2058px;
-        border: 1px white solid;
     }
     #footer-phone
     {
