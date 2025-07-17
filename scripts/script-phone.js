@@ -10,8 +10,9 @@ function scrollmethod()
     if (document.documentElement.scrollTop < 200 && mediain) { mybutton.style.display = "none"; } 
 
     if(notitimer !== null) { clearTimeout(notitimer); }
-    notitimer = setTimeout(function() { if(window.scrollY >= 3500 && !hasTriggered && mediain) 
-    { initPushSubscription(); hasTriggered = true; console.log('3500px'); } }, 2000);
+    notitimer = setTimeout(function() { if(window.scrollY >= 3500 && !hasTriggered && mediain) { 
+    /* initPushSubscription(); */ hasTriggered = true; 
+    console.log('3500px'); } }, 2000);
 }
 function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } 
 
