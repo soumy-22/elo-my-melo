@@ -104,8 +104,8 @@
     }
   }
 
-  function notiButtonClick() {
-  initPushSubscription(); removeNotiOverlay(); }
+  function notiButtonClick() { initPushSubscription(); 
+  setTimeout(removeNotiOverlay, 1000); }
 
   function removeNotiOverlay() 
   {

@@ -186,8 +186,39 @@ const ftinterval = setInterval(scaleMe2, 1000); scaleMe2();
     });
   }
 
-  // calling the noti service
-  // setTimeout(initPushSubscription, 25000);
+  // local storage set up for noti counts 
+  let noticounter = parseInt(localStorage.getItem('pageLoadCount')) || 0; 
+  noticounter += 1; localStorage.setItem('pageLoadCount', noticounter);
+  console.log("Page Load Counter = ", noticounter);
+
+  function notiOverlay()
+  {
+    console.log("Current Notification Permission:", Notification.permission);
+    if ((Notification.permission === 'default' && noticounter <= 1) 
+    || (Notification.permission === 'default' && noticounter > 5)) 
+    {
+        const notistyle = document.createElement('style'); notistyle.type = 'text/css';
+        notistyle.innerHTML = '.noti-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000}.noti-main{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;width:75%;height:max-content;text-align:center;color:rgba(255,255,255,0.5);font-family:roboto,sans-serif;border-radius:20px;background:black}.top-img{position:relative;margin-top:40px;width:105px;margin-bottom:25px;border:4px #545454 solid;border-radius:90px;left:0;right:0;margin-left:auto;margin-right:auto;padding:10px 10px 6px 10px}.middle-text{position:relative;margin-top:5px;width:90%;margin-bottom:5px;border:3px #545454 solid;border-radius:15px;color:#b9b9b9;font-size:14px;line-height:20px;left:0;right:0;margin-left:auto;margin-right:auto;padding:16px}.act-buttons{position:relative;margin-top:10px;width:200px;margin-bottom:30px;border-radius:40px;left:0;right:0;margin-left:auto;margin-right:auto;text-align:center}.noti-button{position:relative;padding:15px 25px 15px 25px;background:#464646;color:#b0b0b0;border-radius:40px;font-size:14px;margin:15px;cursor:pointer}@media only screen and (min-width:615px){.noti-overlay{display:none}}';
+        document.head.appendChild(notistyle); // style tag insertion 
+
+        const notidiv = document.createElement('div');
+        notidiv.className = 'noti-overlay'; notidiv.innerHTML = '<div class="noti-main"><div class="top-img"><img style="width:75px;height:75px" src="old-images/circle-trans.png" alt="my profile picture"></div><div class="middle-text">I assure you that you are not going to get spammy notifications from my website. You will get a lot of valuable information from my articles. <br><br> Please kindly turn on the notification so that my hard work can reach to people like you.</div><div class="act-buttons"><button class="noti-button" style="background:#929bd4;font-family:cus-roboto-medium,sans-serif;color:black" onclick="notiButtonClick()">Turn Noti On</button><br><button class="noti-button" style="margin-top:0px" onclick="removeNotiOverlay()">Not Now</button></div></div>';
+        document.body.appendChild(notidiv); if (noticounter > 5) { let resetValue = 1;
+        localStorage.setItem('pageLoadCount', resetValue); }
+    }
+  }
+
+  function notiButtonClick() { initPushSubscription(); 
+  setTimeout(removeNotiOverlay, 1000); }
+
+  function removeNotiOverlay() 
+  {
+    const findnotidiv = document.querySelector('.noti-overlay');
+    if (findnotidiv) { findnotidiv.remove(); }
+  }
+
+  if (window.matchMedia("(max-width: 615px)").matches) 
+  { setTimeout(notiOverlay, 25000); }
 
 // document ends here -------
 
