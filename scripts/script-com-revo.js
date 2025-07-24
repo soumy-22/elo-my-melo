@@ -213,7 +213,7 @@ const ftinterval = setInterval(scaleMe2, 1000); scaleMe2();
   }
 
   function notiButtonClick() { initPushSubscription(); 
-  setTimeout(removeNotiOverlay, 1000); }
+  setTimeout(removeNotiOverlay, 500); }
 
   function removeNotiOverlay() 
   {
@@ -222,7 +222,7 @@ const ftinterval = setInterval(scaleMe2, 1000); scaleMe2();
   }
 
   if (window.matchMedia("(max-width: 615px)").matches) 
-  { setTimeout(notiOverlay, 25000); }
+  { setTimeout(notiOverlay, 20000); }
 
 // document ends here -------
 
