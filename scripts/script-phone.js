@@ -9,9 +9,14 @@ function scrollmethod()
     if (document.documentElement.scrollTop > 200 && mediain) { mybutton.style.display = "block"; } 
     if (document.documentElement.scrollTop < 200 && mediain) { mybutton.style.display = "none"; } 
 
-    if(notitimer !== null) { clearTimeout(notitimer); }
-    notitimer = setTimeout(function() { if(window.scrollY >= 3500 && !hasTriggered && mediain) { 
-    notiOverlay(); hasTriggered = true; console.log('3500px'); } }, 2000);
+    const element = document.querySelector('.art-text-div');
+    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
+    const eH = rect.height; if(notitimer !== null) { clearTimeout(notitimer); }
+    notitimer = setTimeout(function() { if (!hasTriggered && mediain) { let trig;
+
+    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
+    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); 
+    hasTriggered = true; console.log('Pop Up Trigger'); } } }, 2000);
 }
 function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } 
 
