@@ -79,8 +79,9 @@
     });
   }
 
-  if (window.matchMedia("(min-width: 615px)").matches) 
-  { setTimeout(notiOverlay, 25000); }
+  let notiDesk = false; 
+  if (window.matchMedia("(min-width: 615px)").matches) { 
+  setTimeout(notiOverlay, 25000); notiDesk = true; }
 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
