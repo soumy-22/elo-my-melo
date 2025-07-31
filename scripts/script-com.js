@@ -79,7 +79,28 @@
     });
   }
 
-  let com2 = false; 
+  var divTmr = null; 
+  let hasTr = false; let eleDiv = null; let com2 = false;
+  function artDivNoti() 
+  { 
+    if (divTmr !== null) { clearTimeout(divTmr); }
+    divTmr = setTimeout(function() { const element = document.querySelector('.art-text-div');
+    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
+    const eH = rect.height; if (!hasTr) { let trig;
+
+    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
+    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); hasTr = true; console.log('Pop Up Trigger');
+    eleDiv.removeEventListener('scroll', artDivNoti, false); } } }, 2000); 
+  }
+
+  function articleDiv()
+  {
+    eleDiv = document.querySelector('.articles-container');
+    if (window.matchMedia("(min-width: 615px)").matches && !isdesk) { com2 = true; 
+    eleDiv.addEventListener('scroll', artDivNoti, false); }
+  }
+  setTimeout(articleDiv, 5000);
+
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
   let noticounter = parseInt(localStorage.getItem('pageLoadCount')) || 0; 
