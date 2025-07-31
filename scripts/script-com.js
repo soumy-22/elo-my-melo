@@ -79,10 +79,7 @@
     });
   }
 
-  let notiDesk = false; 
-  if (window.matchMedia("(min-width: 615px)").matches) { 
-  setTimeout(notiOverlay, 25000); notiDesk = true; }
-
+  let com2 = false; 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
   let noticounter = parseInt(localStorage.getItem('pageLoadCount')) || 0; 

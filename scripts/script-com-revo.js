@@ -1,4 +1,16 @@
 
+  let hasTr = false;
+  function bottomCheck()
+  {
+    const element = document.querySelector('.art-text-div');
+    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
+    const eH = rect.height; if (!hasTr) { let trig;
+
+    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
+    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); 
+    hasTr = true; console.log('Pop Up Trigger'); } }
+  }
+
 let sizedetection;
 function scaleMe2()
 {
@@ -33,6 +45,7 @@ function scaleMe2()
     const hostElements = chromeEle.concat(edgeEle, safaEle); hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
 
     if (window.matchMedia("(min-width: 615px)").matches) { sizedetection = "desk"; }
+    if (!hasTr) { bottomCheck(); } // for noti pop up 
 
     function alldynamic(hostElement, annosa)
     {
@@ -222,9 +235,6 @@ const ftinterval = setInterval(scaleMe2, 1000); scaleMe2();
     if (findnotidiv) { findnotidiv.remove(); fstyle.remove();
     document.body.style.overflow = ""; }
   }
-
-  // calling notification pop up here --- 
-  setTimeout(notiOverlay, 25000);
 
 // document ends here -------
 

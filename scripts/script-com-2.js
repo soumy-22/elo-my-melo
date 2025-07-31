@@ -79,9 +79,27 @@
     });
   }
 
-  let notiDesk = false; 
-  if (window.matchMedia("(min-width: 615px)").matches) { 
-  setTimeout(notiOverlay, 25000); notiDesk = true; }
+  var divTmr = null; 
+  let hasTr = false; let com2 = false;
+  function artDivNoti() 
+  { 
+    if (divTmr !== null) { clearTimeout(divTmr); }
+    divTmr = setTimeout(function() { const element = document.querySelector('.art-text-div');
+    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
+    const eH = rect.height; if (!hasTr) { let trig;
+
+    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
+    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); 
+    hasTr = true; console.log('Pop Up Trigger'); } } }, 2000); 
+  }
+
+  function articleDiv()
+  {
+    const eleDiv = document.querySelector('.articles-container');
+    if (eleDiv && window.matchMedia("(min-width: 615px)").matches) { com2 = true; 
+    eleDiv.addEventListener('scroll', artDivNoti, false); }
+  }
+  setTimeout(articleDiv, 7000);
 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
