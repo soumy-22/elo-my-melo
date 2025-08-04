@@ -95,12 +95,12 @@
 
   function articleDiv()
   {
-    eleDiv = document.querySelector('.articles-container');
-    if (window.matchMedia("(min-width: 615px)").matches && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) { 
+    eleDiv = document.querySelector('.articles-container'); if (eleDiv) { 
     eleDiv.addEventListener('scroll', artDivNoti, false); }
   }
-  setTimeout(() => { com2 = true; // de-conflict phone.js 
-  setTimeout(articleDiv, 5000); }, 2000);
+  setTimeout(() => { if (window.matchMedia("(min-width: 615px)").matches && 
+  Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) { com2 = true;
+  setTimeout(articleDiv, 5000); } }, 2000);
 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
