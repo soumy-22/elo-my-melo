@@ -96,10 +96,11 @@
   function articleDiv()
   {
     eleDiv = document.querySelector('.articles-container');
-    if (eleDiv && window.matchMedia("(min-width: 615px)").matches) { com2 = true; 
+    if (window.matchMedia("(min-width: 615px)").matches && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) { 
     eleDiv.addEventListener('scroll', artDivNoti, false); }
   }
-  setTimeout(articleDiv, 7000);
+  setTimeout(() => { com2 = true; // de-conflict phone.js 
+  setTimeout(articleDiv, 5000); }, 2000);
 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 

@@ -7,18 +7,29 @@ function scrollmethod()
 	const mediain = window.matchMedia("(max-width: 615px)").matches; 
     if (window.matchMedia("(max-height: 496px)").matches) { mybutton.style.display = "none"; } 
     if (document.documentElement.scrollTop > 200 && mediain) { mybutton.style.display = "block"; } 
-    if (document.documentElement.scrollTop < 200 && mediain) { mybutton.style.display = "none"; } 
-
-    const element = document.querySelector('.art-text-div');
-    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
-    const eH = rect.height; if(notitimer !== null) { clearTimeout(notitimer); }
-    notitimer = setTimeout(function() { if (!hasTriggered && !com2) { let trig;
-
-    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
-    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); 
-    hasTriggered = true; console.log('Pop Up Trigger'); } } }, 2000);
+    if (document.documentElement.scrollTop < 200 && mediain) { 
+    mybutton.style.display = "none"; }
 }
 function scrolltotop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } 
+
+function artDivNotiPhn() 
+{ 
+    if (notitimer !== null) { clearTimeout(notitimer); }
+    notitimer = setTimeout(function() { const element = document.querySelector('.art-text-div');
+    const rect = element.getBoundingClientRect(); const inner = window.innerHeight;
+    const eH = rect.height; if (!hasTriggered) { let trig;
+
+    if (eH < 8500) { trig = 3; } else if (eH < 12500) { trig = 5; } else if (eH < 16500) { 
+    trig = 6; } else { trig = 7; } if (rect.bottom <= (inner * trig)) { notiOverlay(); hasTriggered = true; console.log('Pop Up Trigger');
+    window.removeEventListener('scroll', artDivNotiPhn, false); } } }, 2000); 
+}
+
+function articleDivPhn()
+{
+    if (!com2 && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) {
+    window.addEventListener('scroll', artDivNotiPhn, false); }
+}
+setTimeout(articleDivPhn, 5000);
 
 function buttonfxd()
 { 	   

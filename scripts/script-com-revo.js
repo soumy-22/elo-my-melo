@@ -161,7 +161,8 @@ function scaleMe2()
     const hostElements = chromeEle.concat(edgeEle, safaEle); hostElements.forEach(hostElement => { alldynamic(hostElement, annosa); });
 
     if (window.matchMedia("(min-width: 615px)").matches) { sizedetection = "desk"; }
-    if (!hasTr) { bottomCheck(); } // for noti pop up 
+    if (!hasTr && Notification.permission === 'default' && (noticounter <= 1 || 
+    noticounter > 5)) { bottomCheck(); } // for noti pop up 
 
     function alldynamic(hostElement, annosa)
     {

@@ -96,7 +96,7 @@
   function articleDiv()
   {
     eleDiv = document.querySelector('.articles-container');
-    if (window.matchMedia("(min-width: 615px)").matches && !isdesk) { com2 = true; 
+    if (window.matchMedia("(min-width: 615px)").matches && !isdesk && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) { com2 = true; 
     eleDiv.addEventListener('scroll', artDivNoti, false); }
   }
   setTimeout(articleDiv, 5000);
