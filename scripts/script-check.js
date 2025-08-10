@@ -144,9 +144,9 @@ function updateLogo()
     {
            document.querySelectorAll(".dis-com").forEach(function(el) {
            el.style.left = "617px"; el.style.transform = "scale(2.25, 2.25)"; });
+           document.getElementById("ads-v1-in").style.transform = "scale(2.72, 2.72)";
            document.querySelectorAll(".feed-com").forEach(function(el) {
            el.style.transform = "scale(2.45, 2.45)"; });
-           document.getElementById("ads-v1-in").style.transform = "scale(2.72, 2.72)"; 
     }
     if (window.matchMedia("(max-width: 615px)").matches) 
     {
@@ -155,6 +155,11 @@ function updateLogo()
            document.querySelectorAll(".feed-com").forEach(function(el) {
            el.style.transform = "scale(4.34, 4.34)"; });
     }
+
+    // for changing the cross icon and pointer element's color
+    const crossEle = document.querySelectorAll('[stroke="#FF7777"]'); crossEle.forEach(el => { el.setAttribute('stroke', '#A27A7A'); });
+    const pointerEle = document.querySelectorAll('#menu-pointer, #menu-pointer-review, #menu-pointer-about');
+    pointerEle.forEach(el => { el.style.backgroundColor = '#a27a7ad1'; });
 
     if (window.matchMedia("(min-width: 615px)").matches) 
     { clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); deskT = false; } 
