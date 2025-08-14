@@ -376,6 +376,42 @@
         filter: drop-shadow(0px 15px 40px rgba(255,119,119,0.60));
         background: rgba(0,0,0,1);
     }
+    #article-header
+    {
+        position: relative;
+        font-family: roboto, cus-roboto, sans-serif; 
+        padding: 0px 34px 0px 34px; 
+        text-align: center;
+    }
+    #h1-header
+    {
+        color: rgba(146,155,212,1); 
+        font-family: cus-roboto-medium, cus-roboto, sans-serif; 
+        padding-bottom: 40px;
+        font-weight: normal;
+        line-height: 170px;
+        font-size: 122px; 
+    }
+    #short-verdicts
+    {
+        font-size: 74px; 
+        color: rgba(255,255,255,0.57); 
+        display: inline-block;
+        margin-top: -20px;
+    }
+    #publication-details
+    {
+        font-size: 64px; 
+        margin: 15px 0px 40px 0px; 
+        color: rgba(255,255,255,0.57); 
+        border-inline: 15px rgba(255,255,255,0.32) solid;
+        padding: 0px 34px 0px 34px; 
+        display: inline-block;
+    }
+    #nillkin-glass-extra
+    {
+        display: none;
+    }
     #main-art-header-phone
     {
     	position: relative;
@@ -624,6 +660,18 @@
         margin-top: calc(var(--set-margin)*2.05);
         --set-margin: 256px;
     }
+    .sections-new
+    {
+        font-size: 104px;
+        width: max-content;
+        font-weight: normal; max-width: 90%;
+        border-inline: 15px rgba(236,96,202,0.55) solid;
+        font-family: cus-roboto-medium, sans-serif;
+        padding: 20px 65px 20px 58px;
+        color: rgba(146,155,212,1);
+        margin: 16px auto 0 auto;
+        text-align: center;
+    }
     .sections
     {
         display: inline-block; 
@@ -650,11 +698,40 @@
         padding-right: 65px; 
         font-size: 95px; 
     }
+    .mentions-new
+    {
+        width: 99.5%;
+        border-radius: 50px;
+        border: 10px #606060bf solid;
+        padding: 35px 72px 35px 72px;
+        display: inline-block;
+        text-align: center;
+    }
     .mentions
     {
         border-left: 15px rgba(112,112,112,0.75) solid; 
         display: inline-block;
         padding-left: 72px; 
+    }
+    .end-links-con
+    {
+        width: 100%;
+        padding: 0 50px 0 50px;
+        text-align: center;
+    }
+    .end-links
+    {
+        display: inline-block;
+        margin: 30px 20px 30px 20px;
+        border-inline: 15px rgba(236,96,202,0.55) solid;
+        color: rgba(255,255,255,0.60);
+        padding: 0 40px 0 40px;
+    }
+    .end-links:hover
+    {       
+        transition: 0.5s;
+        border-inline: 15px rgba(146,155,212,1) solid;
+        color: rgba(238,99,122,0.80);
     }
     #design-span-1::selection
     {
@@ -673,6 +750,58 @@
     .inside-article-div
     {
     	display: none;
+        position: relative;
+        margin: 400px 46px 0px 46px;
+        padding-top: 100px;
+        width: 2156px;
+        height: auto;
+    }
+    .latest_articles
+    {
+        position: absolute;
+        left: 520px; top: -175px;
+        border-radius: 110px; font-size: 60px;
+        font-family: cus-roboto-light, sans-serif;
+        filter: drop-shadow(0px 15px 40px rgba(255,119,119,0.60));
+        padding: 56px 112px 52px 140px; letter-spacing: 30px;
+        color: rgba(255,255,255,0.65);
+        background: rgba(0,0,0,1);
+    }
+    .latest-art-pic-common
+    {
+        width: 2156px; height: auto;
+        border-radius: 90px;
+    } 
+    .art-head-common
+    {
+        width: 90%;
+        text-align: center;
+        margin: 40px 5% 100px 5%;
+        font-family: cus-roboto-medium, sans-serif;
+        border: 15px rgba(112,112,112,0.7) solid;
+        border-radius: 40px 40px 90px 90px;
+        font-size: 95px;
+        padding: 50px;
+    }
+    .art-head-common a
+    {
+        color: #929bd4 !important;
+    }
+    .art-description-common
+    {
+        display: none;
+    }
+    .articles-common-lt-style
+    {
+        height: auto;
+    }
+    #more-info-after-2
+    {
+        display: none;
+    }
+    #more-info-after
+    {
+        display: none;
     }
 
     #big-intro-char
