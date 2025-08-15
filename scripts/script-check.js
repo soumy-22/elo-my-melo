@@ -276,9 +276,9 @@ function updateLogo()
 updateLogo(); 
 // Call the function 
 
+// for detecting new news articles, h2 tags 
 const artCon = document.querySelector('.articles-container');
-const secNew = document.querySelector('.sections-new'); if(secNew) {
-console.log("secNew here =", secNew); }
+const secNew = document.querySelector('.sections-new');
 
 // for last-line balance
 function insertAndMeasureSpan(paraTag) 
