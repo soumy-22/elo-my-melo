@@ -395,6 +395,19 @@ br
     z-index: -10;
 }
 
+.fixed-dis-phone
+{
+    display: none;
+}
+.fixed-dis-desk
+{
+    position: relative;
+    width: 982px; height: 262px;
+    border: 6px transparent solid;
+    background: #EAEAEA; transform: scale(2.25, 2.25);
+    border-radius: 7px; left: 685px;
+    margin: 205px 0 200px 0;
+}
 .dis-com
 {
     position: relative;
