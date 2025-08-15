@@ -99,7 +99,7 @@
     if (window.matchMedia("(min-width: 615px)").matches && !isdesk && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) { com2 = true; 
     eleDiv.addEventListener('scroll', artDivNoti, false); }
   }
-  setTimeout(articleDiv, 5000);
+  setTimeout(articleDiv, 2000);
 
   // local storage set up for noti counts 
   let countcheck = parseInt(localStorage.getItem('checkView')) || 0; 
