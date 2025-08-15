@@ -402,11 +402,12 @@ br
 .fixed-dis-desk
 {
     position: relative;
-    width: 982px; height: 262px;
+    width: 982px; height: 282px;
     border: 6px transparent solid;
     background: #EAEAEA; transform: scale(2.25, 2.25);
-    border-radius: 7px; left: 685px;
-    margin: 205px 0 200px 0;
+    border-radius: 12px; left: 685px;
+    margin: 220px 0 220px 0;
+    padding: 10px 0 10px 0;
 }
 .dis-com
 {
@@ -1598,7 +1599,7 @@ textarea
     animation: fadein 2.5s;
 }
 #Rectangle_7 {
-    fill: rgba(0,0,0,0.65);
+    fill: rgba(0,0,0,0.55);
     animation: fadein 2.5s;
 }
 .Rectangle_7 {
@@ -1625,7 +1626,7 @@ textarea
     border-radius: 100px;
 }
 #Rectangle_8 {
-    fill: rgba(0,0,0,0.65);
+    fill: rgba(0,0,0,0.55);
     animation: fadein 2.5s;
 }
 .Rectangle_8 {
@@ -1652,7 +1653,7 @@ textarea
     border-radius: 100px;
 }
 #Rectangle_9 {
-    fill: rgba(0,0,0,0.65);
+    fill: rgba(0,0,0,0.55);
     animation: fadein 2.5s;
 }
 .Rectangle_9 {
@@ -1931,7 +1932,7 @@ textarea
     font-style: normal;
     font-weight: normal;
     font-size: 39px;
-    color: rgba(255,255,255,0.749);
+    color: rgba(255,255,255,0.85);
 }
 #REVIEWS {
     left: 887px;
@@ -1945,7 +1946,7 @@ textarea
     font-style: normal;
     font-weight: normal;
     font-size: 39px;
-    color: rgba(255,255,255,0.749);
+    color: rgba(255,255,255,0.85);
 }
 #reviews-main
 {
@@ -2072,7 +2073,7 @@ textarea
     font-style: normal;
     font-weight: normal;
     font-size: 39px;
-    color: rgba(255,255,255,0.749);
+    color: rgba(255,255,255,0.85);
 }
 #about-me-main
 {
