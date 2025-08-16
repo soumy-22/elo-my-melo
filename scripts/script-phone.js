@@ -29,7 +29,7 @@ function articleDivPhn()
     if (!com2 && Notification.permission === 'default' && (noticounter <= 1 || noticounter > 5)) {
     window.addEventListener('scroll', artDivNotiPhn, false); }
 }
-setTimeout(articleDivPhn, 5000);
+setTimeout(articleDivPhn, 5500);
 
 function buttonfxd()
 { 	   
