@@ -320,6 +320,20 @@ br
     display: inline-block;
 }
 
+.fixed-dis-phone
+{
+    display: none;
+}
+.fixed-dis-desk
+{
+    position: relative;
+    width: 982px; height: 282px;
+    border: 6px transparent solid;
+    background: #EAEAEA; transform: scale(2.25, 2.25);
+    border-radius: 12px; left: 685px;
+    margin: 220px 0 220px 0;
+    padding: 10px 0 10px 0;
+}
 .dis-com
 {
     position: relative;

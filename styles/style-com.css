@@ -530,7 +530,7 @@
         position: absolute;
         left: 503px;
         top: 12px;
-        width: 1500px;
+        width: 1540px;
         height: 120px;
         text-align: left;
         font-family: 'Roboto', cus-roboto, sans-serif;
@@ -541,6 +541,11 @@
         padding-top: 15px;
         color: rgba(112,112,112,1);
         border: 0px grey solid;
+    }
+    .art-head-common a
+    {
+        text-decoration: none;
+        color: rgba(28,117,121,0.92);
     }
     .art-description-common
     {

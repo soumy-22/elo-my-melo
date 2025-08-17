@@ -801,6 +801,7 @@
     .art-head-common a
     {
         color: #929bd4 !important;
+        text-decoration: none;
     }
     .art-description-common
     {
