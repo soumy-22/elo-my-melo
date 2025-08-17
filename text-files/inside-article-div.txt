@@ -1,0 +1,141 @@
+
+    <div class="latest_articles">
+        <span> LATEST ARTICLES </span>
+    </div><br>
+
+    <div id="before-article-01"></div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="jbl-flip-7-vs-flip-6.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/flip-7-vs-design.jpg" style="object-fit: cover" alt="photo of jbl flip 7 vs flip 6 speaker comparison" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="jbl-flip-7-vs-flip-6.html"> JBL Flip 7 vs JBL Flip 6 - Twice Louder </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		The new JBL Flip 7 gets 2 times louder than the old JBL Flip 6 at max volume. So, in terms of absolute loudness, the Flip 7 might feel like an upgrade. However, overall, the sound quality <a href="jbl-flip-7-vs-flip-6.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="jbl-charge-6-vs-charge-5.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/charge-6-vs-main.jpg" style="object-fit: cover" alt="photo of jbl charge 6 and charge 5 comparison" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="jbl-charge-6-vs-charge-5.html"> JBL Charge 6 vs JBL Charge 5 | don't upgrade </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		There're definitely some upgrades on the new Charge 6 when compared to the JBL Charge 5. The new handle strap, refined design, more beefy and curvy-looking passive radiators <a href="jbl-charge-6-vs-charge-5.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="motion-boom-vs-boom-2.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/boom-2-vs-mb-low.webp" alt="photo of soundcore boom 2 vs motion boom" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="motion-boom-vs-boom-2.html"> Soundcore Boom 2 vs the Motion Boom </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		The Boom 2 can sound very bass-heavy at lower volumes. But the boosted bass helps at higher vol­umes. The power is massive over the old Motion Boom. New Boom 2 is signi­ficantly louder <a href="motion-boom-vs-boom-2.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+    <div class="fixed-dis-phone">
+         <div class="ad-details-5"> <span> AD </span> </div>
+         <!-- Display F phone -->
+         <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-3654432220074510"
+             data-ad-slot="2279364505">                         
+         </ins>
+    </div>
+    <div class="fixed-dis-desk">
+         <div class="ad-details-5"> <span> AD </span> </div>
+         <!-- display-Fixed-3 -->
+         <ins class="adsbygoogle"
+              style="display:inline-block;width:970px;height:250px"
+              data-ad-client="ca-pub-3654432220074510"
+              data-ad-slot="4754904823">                        
+         </ins>
+    </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="boom-2-vs-motion-boom-plus.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/boom-2-vs-mbplus-low.webp" alt="photo of soundcore boom 2 vs motion boom plus" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="boom-2-vs-motion-boom-plus.html"> Soundcore Boom 2 vs the Motion Boom Plus </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		New Boom 2 packs the same 80 watts of power as the Motion Boom Plus but in a much smaller body. The single racetrack woofer produces massive power to hang out with the big boys <a href="boom-2-vs-motion-boom-plus.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="motion-300-vs-bose-flex.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/m-300-low.jpg" style="object-position: center; object-fit: cover" alt="photo of soundcore motion 300 vs bose soundlink flex" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="motion-300-vs-bose-flex.html"> Soundcore Motion 300 vs Bose SoundLink Flex </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Motion 300 has decent bass but becomes bass-light and way louder than Flex at higher volumes. Bose holds onto its bass by the cost of loudness. This makes the Bose more pleasant to listen to at higher <a href="motion-300-vs-bose-flex.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="soundcore-space-one-vs-sony-wh-ch720n.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/space-one-main.png" style="object-position: center; object-fit: cover" alt="photo of soundcore space one vs sony wh-ch720n" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="soundcore-space-one-vs-sony-wh-ch720n.html"> Soundcore Space One vs Sony wh-ch720n </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		In this detailed comparison, Sony wh-ch720n has a more mature sound. But the Space One has better Noise Cancellation. The ambient mode is more natural on the Sony. Soundcore looks <a href="soundcore-space-one-vs-sony-wh-ch720n.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="galaxy-a14-5g-review.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/a14-latest.jpg" alt="photo of samsung galaxy a14 5g smartphone" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="galaxy-a14-5g-review.html"> Samsung Galaxy A14 5G long-term review </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		In my long-term review, the main camera on the Galaxy A14 is pretty good. Battery life is also very good. But the performance is mediocre. Apps opening and closing animations <a href="galaxy-a14-5g-review.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div id="more-info-after-2">
+       <span> For any suggestion you should submit feedback using the comment section. Thank you so much for visiting my website. </span>
+   </div><br>
