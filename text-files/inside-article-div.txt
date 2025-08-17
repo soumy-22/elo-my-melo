@@ -39,16 +39,16 @@
 
    <div class="articles-common-lt-style">
 
-	<a href="motion-boom-vs-boom-2.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/boom-2-vs-mb-low.webp" alt="photo of soundcore boom 2 vs motion boom" loading="lazy">
+	<a href="jbl-xtreme-4-vs-xtreme-3.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/docs-images/x4-vs-x3-main.jpg" style="object-fit: cover" alt="photo of jbl xtreme 4 vs jbl xtreme 3 speakers" loading="lazy">
     </a>
 
 	<div class="art-head-common">
-		<span> <a href="motion-boom-vs-boom-2.html"> Soundcore Boom 2 vs the Motion Boom </a> </span>
+		<span> <a href="jbl-xtreme-4-vs-xtreme-3.html"> JBL Xtreme 4 vs JBL Xtreme 3 speaker </a> </span>
 	</div>
 
 	<div class="art-description-common">		
-		The Boom 2 can sound very bass-heavy at lower volumes. But the boosted bass helps at higher vol­umes. The power is massive over the old Motion Boom. New Boom 2 is signi­ficantly louder <a href="motion-boom-vs-boom-2.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+		Xtreme 4's 68 Wh battery is the biggest upgrade vs smaller 36 Wh on the X3. Xtreme 3 sounds fuller with more upper bass at lower volumes, but the Xtreme 4 starts to sound fuller at higher <a href="jbl-xtreme-4-vs-xtreme-3.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
 	</div>
 
    </div><br>
