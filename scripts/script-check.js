@@ -335,9 +335,9 @@ function handleFirstCondition(paraTag, comparewidth, modWidth)
 function processParagraph(paraTag, rectAC) 
 {
     let modWidth, comparewidth; paraTag.style.paddingRight = "";
-    const { leftCoordinate } = insertAndMeasureSpan(paraTag); var widthIn = window.innerWidth;
-    if (widthIn <= 615) { modWidth = widthIn * 0.07; comparewidth = widthIn / 2; }
-    if (widthIn > 615 && secNew) { modWidth = rectAC.width * 0.22; 
+    const { leftCoordinate } = insertAndMeasureSpan(paraTag); var widthIn = window.matchMedia("(max-width: 615px)").matches;
+    if (widthIn) { modWidth = window.innerWidth * 0.07; comparewidth = window.innerWidth / 2; }
+    if (!widthIn && secNew) { modWidth = rectAC.width * 0.22; 
     comparewidth = (rectAC.width / 2) + rectAC.left; }
 
     if (leftCoordinate < (comparewidth - modWidth)) {
@@ -352,7 +352,7 @@ function detectCharacter()
     const pTags = divElement.querySelectorAll("p"); pTags.forEach(p => { if (secNew) { 
     p.classList.add("art-para-new"); } processParagraph(p, rectAC); });
 
-    if (!secNew && window.innerWidth > 615) { pTags.forEach(pTag => {
+    if (!secNew && window.matchMedia("(min-width: 615px)").matches) { pTags.forEach(pTag => {
     pTag.style.paddingRight = ""; }); }
 }
 
