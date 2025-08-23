@@ -785,16 +785,16 @@
     .latest-art-pic-common
     {
         width: 2156px; height: auto;
-        border-radius: 90px;
+        border-radius: 90px 90px 20px 20px;
     } 
     .art-head-common
     {
-        width: 90%;
+        width: 2156px;
         text-align: center;
-        margin: 40px 5% 100px 5%;
+        margin: 20px auto 100px auto;
         font-family: cus-roboto-medium, sans-serif;
         border: 15px rgba(112,112,112,0.7) solid;
-        border-radius: 40px 40px 90px 90px;
+        border-radius: 20px 20px 90px 90px;
         font-size: 95px;
         padding: 50px;
     }
