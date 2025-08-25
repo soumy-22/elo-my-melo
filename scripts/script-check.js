@@ -356,7 +356,7 @@ function detectCharacter()
     pTag.style.paddingRight = ""; }); }
 }
 
-    document.fonts.load('1em Roboto').then(function() {
+    document.fonts.load('1em cus-roboto').then(function() {
     fontload = true; console.log('Roboto font has loaded');
     setTimeout(detectCharacter, 200); }).catch(function(error) {
     console.error('Failed to load Roboto', error); });
