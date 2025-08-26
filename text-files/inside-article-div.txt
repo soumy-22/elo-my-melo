@@ -57,18 +57,19 @@
          <div class="ad-details-5"> <span> AD </span> </div>
          <!-- Display F phone -->
          <ins class="adsbygoogle"
-             style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-3654432220074510"
-             data-ad-slot="2279364505">                         
+              style="display:inline-block;width:300px;height:250px"
+              data-ad-client="ca-pub-3654432220074510"
+              data-ad-slot="2279364505">                         
          </ins>
     </div>
     <div class="fixed-dis-desk">
          <div class="ad-details-5"> <span> AD </span> </div>
-         <!-- display-Fixed-3 -->
+         <!-- Display horizontal -->
          <ins class="adsbygoogle"
-              style="display:inline-block;width:970px;height:250px"
+              style="display:block;width:100%;min-height:240px;height:250px;max-height:260px"
               data-ad-client="ca-pub-3654432220074510"
-              data-ad-slot="4754904823">                        
+              data-ad-slot="6958590511"
+              data-full-width-responsive="true">                         
          </ins>
     </div><br>
 
