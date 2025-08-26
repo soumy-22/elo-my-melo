@@ -558,6 +558,31 @@
         mask-composite: exclude;
         z-index: -10;
     }
+    .phone-specs
+    {
+        height: auto; text-align: center;
+        width: 2156px; border: 10px #606060bf solid;
+        border-radius: 45px; margin-block: 50px;
+        padding: 50px 0 60px 0; 
+    }
+    .phn-spec-head
+    {
+        position: relative; 
+        font-weight: normal; font-size: 90px;
+        border-radius: 15px 15px 135px 135px; top: -35px;
+        padding: 15px 110px 30px 120px; background: #2c2c2c; 
+        color: #949fe6e8; display: inline-block;
+        font-family: cus-roboto-medium;
+    }
+    .specs-para
+    {
+        padding: 0 60px 0 60px; font-size: 85px;
+    }
+    .spec-vs
+    {
+        display: inline-block; color: #ec60ca9e;
+        font-weight: bold; margin-block: 35px;
+    }
 
     .scroll-clk-button
     {
@@ -678,12 +703,11 @@
     .sections-new
     {
         font-size: 104px;
-        width: max-content;
+        width: max-content; left: -20px;
         font-weight: normal; max-width: 90%;
         border-inline: 15px rgba(236,96,202,0.55) solid;
-        font-family: cus-roboto-medium, sans-serif;
-        padding: 20px 65px 20px 58px;
-        color: rgba(146,155,212,1);
+        font-family: cus-roboto-medium, sans-serif; position: relative;
+        padding: 20px 65px 20px 58px; color: rgba(146,155,212,1);
         margin: 16px auto 0 auto;
         text-align: center;
     }

@@ -394,6 +394,31 @@ br
     mask-composite: exclude;
     z-index: -10;
 }
+.phone-specs
+{
+    height: auto; text-align: center;
+    width: 2215px; border: 8px #EAEAEA solid;
+    border-radius: 45px; margin-block: 30px;
+    padding: 50px 0 60px 0; 
+}
+.phn-spec-head
+{
+    position: relative;
+    font-weight: normal; font-size: 65px;
+    border-radius: 15px 15px 135px 135px; top: -40px;
+    padding: 15px 110px 30px 120px; background: #eaeaeaba;
+    color: #1c7579cf; display: inline-block;
+    font-family: cus-roboto-medium;
+}
+.specs-para
+{
+    padding: 0 35px 0 35px; font-size: 52px;
+}
+.spec-vs
+{
+    display: inline-block; color: #ec60cab8;
+    font-weight: bold; margin-block: 35px;
+}
 
 .fixed-dis-phone
 {
@@ -402,7 +427,7 @@ br
 .fixed-dis-desk
 {
     position: relative;
-    width: 982px; height: 282px;
+    width: 982px; height: auto;
     border: 6px transparent solid;
     background: #EAEAEA; transform: scale(2.25, 2.25);
     border-radius: 12px; left: 685px;
