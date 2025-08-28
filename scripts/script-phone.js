@@ -74,14 +74,14 @@ function buttonfxd()
     // setTimeout(buttonfxd, 1000); setTimeout(buttonfxd, 3000); 
     // window.addEventListener('resize', buttonfxd, false); 
 
-    function adsheights() {  
+    function adsheights() {
     // var checkh = window.innerWidth; 
     const feedAds = document.querySelectorAll('.feed-com');
-    const displayAds = document.querySelectorAll('.dis-com'); 
     const media1 = window.matchMedia("(max-width: 615px)").matches; 
     const media2 = window.matchMedia("(min-width: 615px)").matches; 
+    const displayAds = document.querySelectorAll('.dis-com');
 
-    feedAds.forEach((feedAd, index) => { 
+    feedAds.forEach((feedAd, index) => {
     const feedAdHeight = feedAd.clientHeight;
     const nextbrele = feedAd.nextElementSibling;
     if (media1) { feedAd.style.setProperty('--set-margin', feedAdHeight + "px"); }
@@ -93,10 +93,12 @@ function buttonfxd()
     const displayAdHeight = displayAd.clientHeight; 
     const nextelement = displayAd.nextElementSibling; 
     if (media1) { displayAd.style.setProperty('--set-margin', displayAdHeight + "px"); }
-    if (media2) { displayAd.style.removeProperty('--set-margin'); }
-    if (displayAdHeight > 10 && media1) { nextelement.style.display = 'none'; }
-    if (displayAdHeight < 10) { nextelement.style.display = 'block'; } }); 
-    /* console.log("here here"); */ } 
+    if (media2) { displayAd.style.removeProperty('--set-margin'); } 
+
+    if (displayAdHeight > 10 && media1 && nextelement.tagName === "BR") { 
+    nextelement.style.display = 'none'; } if (displayAdHeight < 10) { nextelement.style.display = 'block'; 
+    if (nextelement.id === "phone-specs") { nextelement.removeAttribute("id"); 
+    nextelement.classList.add("phone-specs"); } } }); } 
 
     timer3 = setInterval(adsheights, 0);
     setTimeout(() => { clearInterval(timer3); }, 5000);
