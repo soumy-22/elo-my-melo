@@ -394,6 +394,13 @@ br
     mask-composite: exclude;
     z-index: -10;
 }
+#phone-specs
+{
+    height: auto; text-align: center;
+    border-radius: 45px; margin: 245px 0 30px 0;
+    width: 2215px; border: 8px #EAEAEA solid;
+    padding: 50px 0 60px 0; 
+}
 .phone-specs
 {
     height: auto; text-align: center;

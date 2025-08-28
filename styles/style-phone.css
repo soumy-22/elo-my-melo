@@ -558,12 +558,19 @@
         mask-composite: exclude;
         z-index: -10;
     }
+    #phone-specs
+    {
+        height: auto; text-align: center;
+        width: 2156px; border: 10px #60606085 solid;
+        border-radius: 45px; margin-block: 50px;
+        padding: 50px 0 60px 0;
+    }
     .phone-specs
     {
         height: auto; text-align: center;
-        width: 2156px; border: 10px #606060bf solid;
+        width: 2156px; border: 10px #60606085 solid;
         border-radius: 45px; margin-block: 50px;
-        padding: 50px 0 60px 0; 
+        padding: 50px 0 60px 0;
     }
     .phn-spec-head
     {
