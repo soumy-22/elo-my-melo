@@ -349,7 +349,7 @@ function detectCharacter()
     // the main function called first 
     const rectAC = artCon.getBoundingClientRect();
     const divElement = document.getElementById("article-text-div");
-    const pTags = divElement.querySelectorAll("p"); pTags.forEach(p => { if (secNew) { 
+    const pTags = divElement.querySelectorAll(":scope > p"); pTags.forEach(p => { if (secNew) { 
     p.classList.add("art-para-new"); } processParagraph(p, rectAC); });
 
     if (!secNew && window.matchMedia("(min-width: 615px)").matches) { pTags.forEach(pTag => {
