@@ -307,9 +307,14 @@ function replaceInsideArticleDiv()
     .catch(error => console.error("Fetch error:", error));
 }
 
-// Run the function after 5 seconds
-if (secNew || (!secNew && window.innerWidth > 615)) {
-setTimeout(replaceInsideArticleDiv, 5000); }
+// Run the function before intersection 
+if (secNew || (!secNew && window.innerWidth > 615)) 
+{
+    const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
+    if (entry.isIntersecting) { replaceInsideArticleDiv(); intObserver.disconnect(); } }); },
+    { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
+    intObserver.observe(insideArticleDiv);
+}
 
 // for last-line balance
 function insertAndMeasureSpan(paraTag) 
