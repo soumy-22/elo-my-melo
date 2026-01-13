@@ -546,15 +546,6 @@ function outscale()
             if (mediain && isdesk) { tran4.style.display = "none"; tran6.style.display = "none"; } 
         }
 
-        if (footerDiv) 
-        {
-            const secondPTag = footerDiv.querySelector('p:nth-child(2)');
-            if (secondPTag) 
-            {
-                secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.';
-            }
-        }
-
         function hideA() {
         tran1.style.visibility = "hidden"; tran2.style.visibility = "hidden"; 
         tran3.style.visibility = "hidden"; tran4.style.display = "none"; 

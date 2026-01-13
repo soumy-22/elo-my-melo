@@ -144,13 +144,6 @@ function scaleMe2()
     }
     else { document.body.style.overflow = "visible"; document.body.style.transform = ""; }
 
-    if (footerDiv) {
-        const secondPTag = footerDiv.querySelector('p:nth-child(2)');
-        if (secondPTag) {
-            secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.';
-        }
-    }
-
     // console.log("interval check"); 
     const annosa = document.getElementById('google-anno-sa');
     const mediain = window.matchMedia("(max-width: 615px)").matches;

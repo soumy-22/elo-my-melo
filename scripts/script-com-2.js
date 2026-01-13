@@ -551,13 +551,6 @@ function outscale()
             checkscale = "absent"; document.body.style.transform = "";
         }
 
-        if (footerDiv) {
-            const secondPTag = footerDiv.querySelector('p:nth-child(2)');
-            if (secondPTag) {
-                secondPTag.innerText = 'Some vendors may process your personal data on the basis of legitimate interest, which you can object to by managing your options below. Look for a link at the bottom of this page or in our privacy policy where you can withdraw consent at anytime.';
-            }
-        }
-
         if (window.matchMedia("(min-width: 615px)").matches) {
         sizedetection = "desk"; topButton.style.display = 'none'; }
         if (window.matchMedia("(max-width: 615px)").matches && sizedetection === "desk") { var shadow = window.innerWidth * 0.05;
