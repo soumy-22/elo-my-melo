@@ -16,7 +16,7 @@
   function doso()
   {
     // console.log("scroll event here");
-    const ouCo = document.getElementById("out-cmnt");
+    const ouCo = document.getElementById("out-cmnt"); if(!ouCo) return;
     const coCo = window.getComputedStyle(ouCo); const tV = parseFloat(coCo.top);
     const hV = parseFloat(coCo.height); const cV = tV + hV;
 
