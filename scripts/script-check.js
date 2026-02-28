@@ -1,6 +1,6 @@
 
 let deskT = false;
-let fontload = false;
+let fontload = false; let htmlMess = false;
 console.log("defer-script-check"); 
 function updateAdsAttributes() 
 {
@@ -136,6 +136,14 @@ function updateAdsAttributes()
 }
 updateAdsAttributes(); 
 
+// change cross & pointer color
+function changeCrossColor()
+{
+    const crossEle = document.querySelectorAll('[stroke="#FF7777"]'); crossEle.forEach(el => { el.setAttribute('stroke', '#A27A7A'); });
+    const pointerEle = document.querySelectorAll('#menu-pointer, #menu-pointer-review, #menu-pointer-about');
+    pointerEle.forEach(el => { el.style.backgroundColor = '#a27a7ad1'; });
+}
+
 // setTimeout(updateLogo, 500); 
 window.addEventListener('resize', updateLogo); 
 function updateLogo() 
@@ -156,13 +164,11 @@ function updateLogo()
            el.style.transform = "scale(4.34, 4.34)"; });
     }
 
-    // for changing the cross icon and pointer element's color
-    const crossEle = document.querySelectorAll('[stroke="#FF7777"]'); crossEle.forEach(el => { el.setAttribute('stroke', '#A27A7A'); });
-    const pointerEle = document.querySelectorAll('#menu-pointer, #menu-pointer-review, #menu-pointer-about');
-    pointerEle.forEach(el => { el.style.backgroundColor = '#a27a7ad1'; });
+    // change cross & pointer color
+    changeCrossColor();
 
     if (window.matchMedia("(min-width: 615px)").matches && deskT) 
-    { clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); deskT = false; } 
+    { clearTimeout(window.resized); window.resized = setTimeout(detectCharacter, 1700); deskT = false; if(!subMenuSP && !htmlMess) { messEles(); htmlMess = true; } } 
     if (window.matchMedia("(max-width: 615px)").matches && !deskT) 
     { clearTimeout(window.resized); window.resized = setTimeout(() => { if(fontload) 
     { detectCharacter(); } }, 1700); deskT = true; } 
@@ -283,28 +289,12 @@ const secNew = document.querySelector('.sections-new');
 
 function replaceInsideArticleDiv() 
 {
-  console.log("fetch has started");
-  fetch("https://elomymelo.com/text-files/inside-article-div.txt")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok " + response.statusText);
-      }
-      return response.text();
-    })
-    .then(data => {
-      if (insideArticleDiv) {
-        insideArticleDiv.innerHTML = data;
-        const fixedDisEls = document.querySelectorAll(".fixed-dis-phone, .fixed-dis-desk");
-        fixedDisEls.forEach(el => {
-          const script = document.createElement("script");
-          script.innerHTML = "(adsbygoogle = window.adsbygoogle || []).push({});";
-          el.appendChild(script);
-        });
-      } else {
-        console.error("Div with class 'inside-article-div' not found");
-      }
-    })
-    .catch(error => console.error("Fetch error:", error));
+    fetch("https://elomymelo.com/text-files/inside-article-div.txt")
+    .then(response => response.text()).then(data => { if(insideArticleDiv) { insideArticleDiv.innerHTML = data; 
+    const fixedDisEls = insideArticleDiv.querySelectorAll(".fixed-dis-phone, .fixed-dis-desk");
+    fixedDisEls.forEach(el => { const script = document.createElement("script");
+    script.innerHTML = "(adsbygoogle = window.adsbygoogle || []).push({});";
+    el.appendChild(script); }); } });
 }
 
 // Run the function before intersection 
@@ -315,6 +305,22 @@ if (secNew || (!secNew && window.innerWidth > 615))
     { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
     intObserver.observe(insideArticleDiv);
 }
+
+// for inserting messy elements
+const subMenuSP = document.getElementById("submenu-speakers");
+const div1920 = document.getElementById("Web_1920__1");
+
+function messEles() {
+  fetch("https://elomymelo.com/text-files/body-html-mess.txt")
+    .then(response => response.text())
+    .then(html => {
+      div1920.insertAdjacentHTML("beforeend", html);
+      changeCrossColor();
+    });
+}
+
+// run conditionally
+if (!subMenuSP && window.innerWidth > 615) { messEles(); htmlMess = true; }
 
 // for last-line balance
 function insertAndMeasureSpan(paraTag) 
