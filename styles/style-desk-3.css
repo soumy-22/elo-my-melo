@@ -308,6 +308,7 @@ br
     border: 1px rgba(112,112,112,0.450) solid;
     background: transparent;
     border-radius: 46px;
+    display: none;
 }
 .footer a
 {
