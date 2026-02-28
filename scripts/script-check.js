@@ -315,7 +315,7 @@ function messEles() {
     .then(response => response.text())
     .then(html => {
       div1920.insertAdjacentHTML("beforeend", html);
-      changeCrossColor();
+      changeCrossColor(); upme();
     });
 }
 
