@@ -191,8 +191,9 @@ function upme()
     } 
     if(window.matchMedia("(max-width: 615px)").matches) 
     {
+        const ftDesk = document.getElementById("footer-id");
         document.getElementById("arts-con-id").style.overflow = "visible";
-        document.getElementById("footer-id").style.display = "none";
+        if (ftDesk) { ftDesk.style.display = "none"; }
     }
 }
 if(isdesk) { window.removeEventListener('resize', upme); } 
