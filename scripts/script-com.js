@@ -542,7 +542,7 @@ function outscale()
             document.body.style.overflow = "visible"; 
             if (tran1 && tran2 && tran3) { tran1.style.visibility = "visible"; 
             tran2.style.visibility = "visible"; tran3.style.visibility = "visible"; }
-            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); tran5.style.visibility = "visible"; }, 2000); fcone = true; } 
+            if (!fcone && isdesk) { visHide = setTimeout(() => { doso(); if(tran5) { tran5.style.visibility = "visible"; } }, 2000); fcone = true; } 
             if (mediain && isdesk) { tran4.style.display = "none"; if(tran6) { tran6.style.display = "none"; } } 
             if (mediaout && isdesk) { tran4.style.display = "block"; tran6.style.display = "block"; } 
         }
