@@ -290,11 +290,11 @@ const secNew = document.querySelector('.sections-new');
 function replaceInsideArticleDiv() 
 {
     fetch("https://elomymelo.com/text-files/inside-article-div.txt")
-    .then(response => response.text()).then(data => { if(insideArticleDiv) { insideArticleDiv.innerHTML = data; 
-    const fixedDisEls = insideArticleDiv.querySelectorAll(".fixed-dis-phone, .fixed-dis-desk");
-    fixedDisEls.forEach(el => { const script = document.createElement("script");
-    script.innerHTML = "(adsbygoogle = window.adsbygoogle || []).push({});";
-    el.appendChild(script); }); } });
+    .then(response => response.text()).then(data => { if(insideArticleDiv) { insideArticleDiv.innerHTML = data; const w = window.innerWidth;
+    const phoneAd = insideArticleDiv.querySelector(".fixed-dis-phone"); const deskAd = insideArticleDiv.querySelector(".fixed-dis-desk");
+    const script = document.createElement("script"); script.innerHTML = "(adsbygoogle = window.adsbygoogle || []).push({});";
+    if (w < 615) { deskAd?.querySelector("ins.adsbygoogle")?.remove(); phoneAd?.appendChild(script); } else {
+    phoneAd?.querySelector("ins.adsbygoogle")?.remove(); deskAd?.appendChild(script); } } });
 }
 
 // Run the function before intersection 
