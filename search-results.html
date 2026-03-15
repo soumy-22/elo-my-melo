@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preload" href="fonts/segoeui.ttf" as="font" crossorigin="anonymous" />
+<link rel="preload" href="fonts/arial-round.ttf" as="font" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="old-images/circle-trans.png">
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -61,18 +54,6 @@
 
     @font-face
     {
-        src: url("fonts/segoeui.ttf");
-        font-family: cus-segoe;
-    }
-
-    @font-face
-    {
-        src: url("fonts/arial.ttf");
-        font-family: cus-arial;
-    }
-
-    @font-face
-    {
         src: url("fonts/arial-round.ttf");
         font-family: cus-arial-round;
     }
@@ -81,12 +62,6 @@
     {
         src: url("fonts/Roboto-Regular.ttf");
         font-family: cus-roboto;
-    }
-
-    @font-face
-    {
-        src: url("fonts/Lato-Regular.ttf");
-        font-family: cus-lato;
     }
 
 	#search-box
@@ -153,6 +128,10 @@
     {
         background-size: 85% 2%;
         animation: mooveme 0.4s;
+    }
+    .gs-web-image-box
+    {
+        display: none !important;
     }
     }
 
@@ -227,7 +206,11 @@
     }
     .gs-web-image-box
     {
-        display: none !important;
+        /* display: none !important; */
+    }
+    .gsc-wrapper
+    {
+        max-width: none !important;
     }
     .gsc-control-cse .gsc-table-result
     {
@@ -258,6 +241,10 @@
         border: 1px solid #eee;
         padding: 20px;
         padding-left: 22px !important;
+    }
+    .gsc-webResult-divider
+    {
+        display: none !important;
     }
     .gsc-webResult.gsc-result
     {
