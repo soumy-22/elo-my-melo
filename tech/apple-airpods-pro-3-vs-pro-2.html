@@ -59,6 +59,28 @@
 	{dataLayer.push(arguments);} gtag('js', new Date());
 	gtag('config', 'G-XSLQ12LN5S'); </script>
 
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", inObs);
+        var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
+        function iosView()
+        {
+          // console.log('sending');
+          const timestamp = new Date().toISOString();
+          const pageUrl = window.location.href; const formData = new FormData();
+          formData.append('timestamp', timestamp); formData.append('notificationurl', pageUrl);
+          fetch('https://script.google.com/macros/s/AKfycbz5_cu4YWF1G4Vq3Q0iYHYEHEVBmK7nlUrME_VEcx-Yi1t_9TUIIYsLclGf96erbV2jIg/exec', { method: 'POST', body: formData }).then(() => console.log('Successful view from ios')).catch(err => console.error('Failed view on ios =', err));
+        }
+
+        function inObs() {
+        if (isios) { const target = document.getElementById("check-inter");
+        if (target) { const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => { if (entry.isIntersecting) {
+        iosView(); obs.disconnect(); } }); }, { threshold: 0.1 });
+        observer.observe(target); } } }
+
+    </script>
+
 </head>
 <body>
 	<div id="big-out">
@@ -156,7 +178,7 @@
 
 	            <p>Same thing with the Transparency mode, which is best-in-class performance. There is auto switching of ANC and Transparency mode depending on whether or not you started talking or someone talking close to you. The buds will switch to Transparency mode if it detects speech above certain loudness. This auto switching works well in real-life scenarios. And the sound quality that you get from transparency mode is very natural. It is even more smooth and natural with this new AirPods Pro 3. So, this is like God-Tier <a href="https://www.soundguys.com/noise-canceling-anc-explained-28344/" target="_blank" rel="nofollow noopener">ANC</a> and Transparency in the AirPods Pro 3.</p>
 
-	            <div class="sections-new"> Mic Quality and Battery </div>
+	            <div class="sections-new" id="check-inter"> Mic Quality and Battery </div>
 
 	            <p>There is a significant improvement in the mic quality too. In average scenarios where there isn't a lot of noise present, the mic on the new AirPods Pro 3 delivers a more detailed and less compressed sound. This shows a very good improvement over the previous AirPods Pro 2's mic. Check out <a href="https://youtu.be/L2uXAC8vBnU?list=TLPQMTYxMTIwMjX5fx_sGkjAZg&t=311" target="_blank" rel="nofollow noopener">this video</a> from Dave2D that demonstrates the improvements in the mic quality. Even though the mics do a great job at sounding good as well as canceling some noise, but loud noise like a hair dryer can make it perform poorly. There are 3 mics in each bud that serves multiple purposes.</p> 
 
