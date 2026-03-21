@@ -107,8 +107,8 @@ function updateAdsAttributes()
                     fids.forEach(function(id) {  
                     var element = document.getElementById(id); 
                     if(element) { var parentDiv = element.parentNode; 
-                    var childDivs = parentDiv.querySelectorAll('div'); } 
-                    if(idname === id && attrvalue === "filled") { childDivs[1].style.display = "none"; } 
+                    var lbDiv = parentDiv.querySelector('.ad-details-5'); } 
+                    if(idname === id && attrvalue === "filled") { lbDiv.style.display = "none"; } 
                     if(idname === id && attrvalue === "unfilled") 
                     { parentDiv.style.display = "none"; } }); 
 
