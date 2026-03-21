@@ -159,13 +159,39 @@ function ltrplsSec()
     phoneAd?.querySelector("ins.adsbygoogle")?.remove(); deskAd?.appendChild(script); } } });
 }
 
-// Run the function before intersection 
+let elFound = false;
 if (window.innerWidth < 615) 
 {
     const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
-    if (entry.isIntersecting) { ltrplsSec(); intObserver.disconnect(); } }); },
+    if (entry.isIntersecting) { ltrplsSec(); setInterval(() => { if (!elFound) 
+    { removeTool(); } }, 2000); intObserver.disconnect(); } }); },
     { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
     intObserver.observe(rplsSec);
+}
+
+function removeTool()
+{
+    console.log("checking the pop tool by google");
+    const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
+    const safaEle = Array.from(document.querySelectorAll('div[style*="font-feature-settings: initial"][style*="font-kerning: initial"][style*="font-optical-sizing: initial"][style*="font-stretch: initial"]'));
+    const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
+    const hostElements = chromeEle.concat(edgeEle, safaEle); hostElements.forEach(hostElement => { alldynamic(hostElement); });
+
+    function alldynamic(hostElement)
+    {
+       if (hostElement.shadowRoot) 
+       {
+           const shadowdom = hostElement.shadowRoot;
+           const toolbar = shadowdom.getElementById('ft-floating-toolbar'); 
+           const contain = shadowdom.querySelector('.ipr-container'); 
+
+           if (toolbar || contain)
+           {
+               shadowdom.innerHTML = ''; shadowdom.host.remove();
+               elFound = true; console.log("removed");
+           }
+        }
+    }
 }
 
 // for go to top or bottom
