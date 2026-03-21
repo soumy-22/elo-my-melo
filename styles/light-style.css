@@ -207,7 +207,7 @@
 	}
 	.feed-com
 	{
-	    position: relative;
+	    position: relative; padding: 10px 0px;
 	    height: auto; min-height: 200px;
 	    border: 4px #EAEAEA solid;
 	    border-radius: 10px;
