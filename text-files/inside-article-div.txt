@@ -138,5 +138,5 @@
    </div><br>
 
    <div id="more-info-after-2">
-       <span> For any suggestion you should submit feedback using the comment section. Thank you so much for visiting my website. </span>
+       <span> For any suggestion you should submit feedback using the comment section from home page. Thank you so much for visiting my website. </span>
    </div><br>
