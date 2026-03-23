@@ -5,8 +5,8 @@
 	}
 	#big-out
 	{ 
-		position: relative; width: 100%; height: auto;
-		padding-bottom: 92px;
+		position: relative; width: auto; height: auto;
+		padding: 0px 15px 92px 15px;
 	}
 	.fxd-eles
 	{
@@ -30,10 +30,16 @@
 	}
 	#lt-art-sec
 	{
-		width: auto; max-width: 1000px;
+		display: flex; width: 65%; margin: auto;
+    	gap: 17px; justify-content: center;
+    	padding-bottom: 20px;
+	}
+	#add-article-html
+	{
+		padding: 0px 20px;
+		width: auto; flex: 1;
 		min-height: 300px; position: relative;
-		min-width: 500px; height: auto;
-		margin: 20px auto 20px auto;
+		min-width: 250px; height: auto;
 		background-color: white;
 		border-radius: 20px;
 	}
@@ -79,13 +85,34 @@
 		content: "•"; color: #8baac7;
 		margin-inline-start: 10px;
 	}
+	#bars-rows
+    {
+    	display: flex; width: 100%;
+    	gap: 17px; justify-content: center;
+    	padding-bottom: 20px;
+    }
+	.side-bars
+    {
+    	min-width: 126px; max-width: 310px; margin: -10px 0 500px 0;
+    	border-radius: 20px; width: 20%; height: 3000px;
+    }
+    .sidebar-ads
+    {
+    	position: sticky; top: 20px; padding: 20px 3px;
+    	margin: 10px 3px; background-color: white; min-height: 604px;
+    	border-radius: 20px; width: auto; height: auto;
+    }
+    .bar-smack
+    {
+    	height: auto; margin: -10px 0 0px 0;
+    }
 	.art-out
 	{
-		position: relative; z-index: 2;
+		z-index: 2;
+		position: relative;
 		width: 75%; max-width: 1000px;
 		min-width: 500px; height: auto;
 		padding: 20px 20px 40px 20px;
-		margin: 20px auto 20px auto;
 		background-color: white;
 		border-radius: 20px;
 	}
@@ -278,6 +305,7 @@
 	.ft-out
 	{
 		padding: 25px 50px 20px 50px;
+		max-width: 45%;
 	}
 
 	@media only screen and (min-width: 615px)
@@ -286,14 +314,34 @@
     {
     	display: none;
     }
+    }
+
+    @media only screen and (max-width: 940px)
+    {
+    .side-bars
+    {
+    	display: none;
+    }
+    .bar-smack
+    {
+    	display: block;
+    }
     #lt-art-sec
 	{
-		display: none;
+		width: 80%;
 	}
     }
 
 	@media only screen and (max-width: 615px)
     {
+    .sidebar-ads
+    {
+    	display: none;
+    }
+    .bar-smack
+    {
+    	display: none;
+    }
     #dlabel
     {
     	display: none;
@@ -306,6 +354,10 @@
     {
     	display: none;
     }
+    #big-out
+	{ 
+		padding: 0px 0px 92px 0px;
+	}
 	#site-logo
 	{
 		font-size: 20px;
@@ -332,8 +384,13 @@
 	}
 	#lt-art-sec
 	{
-		min-width: 200px; width: 97%;
+		min-width: 200px; width: 100%;
+		margin: 20px auto 0px auto;
 	}
+	#bars-rows
+    {
+    	padding-bottom: 0px;
+    }
 	.art-out
 	{
 		max-width: 615px; width: 88.5%;
@@ -351,19 +408,20 @@
 	.ft-out
 	{
 		padding: 17px 20px 15px 20px;
+		max-width: 75%;
 	}
 	#short-verdicts
 	{
-	    font-size: 18px;
+	    font-size: 17px;
 	}
 	#publication-details
 	{
 		padding: 0px 5px 0px 5px; border: none;
-		font-size: 17px;
+		font-size: 16px;
 	}
 	.mk-cen
 	{
-		inset-inline: 0; margin: 3px auto;
+		inset-inline: 0; margin: 5px auto;
 		max-width: 70%;
 	}
 	#art-h1
@@ -397,6 +455,10 @@
 		position: relative;
         display: inline-block;
         padding-right: 10px;
+	}
+	#add-article-html
+	{
+		width: 88.5%; flex: none;
 	}
     #pros-cons
     {
