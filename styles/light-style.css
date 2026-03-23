@@ -30,16 +30,14 @@
 	}
 	#lt-art-sec
 	{
-		display: flex; width: 65%; margin: auto;
-    	gap: 17px; justify-content: center;
-    	padding-bottom: 20px;
+		display: flex; width: auto; margin: 40px auto 0px;
+    	gap: 10px; justify-content: center;
 	}
 	#add-article-html
 	{
-		padding: 0px 20px;
 		width: auto; flex: 1;
 		min-height: 300px; position: relative;
-		min-width: 250px; height: auto;
+		min-width: 200px; height: auto;
 		background-color: white;
 		border-radius: 20px;
 	}
@@ -93,26 +91,30 @@
     }
 	.side-bars
     {
-    	min-width: 126px; max-width: 310px; margin: -10px 0 500px 0;
-    	border-radius: 20px; width: 20%; height: 3000px;
+    	min-width: 136px; max-width: 310px; margin: -10px 0 500px 0;
+    	border-radius: 20px; width: 20%; max-height: 4000px;
     }
     .sidebar-ads
     {
     	position: sticky; top: 20px; padding: 20px 3px;
-    	margin: 10px 3px; background-color: white; min-height: 604px;
-    	border-radius: 20px; width: auto; height: auto;
+    	margin: 10px 3px; background-color: white; min-height: 210px;
+    	border-radius: 14px; width: auto; height: auto;
     }
     .bar-smack
     {
-    	height: auto; margin: -10px 0 0px 0;
+    	height: auto; margin: 74px 0 10px;
+    }
+    .bar-color
+    {
+    	background-color: #f0f4f8;
     }
 	.art-out
 	{
 		z-index: 2;
 		position: relative;
 		width: 75%; max-width: 1000px;
-		min-width: 500px; height: auto;
-		padding: 20px 20px 40px 20px;
+		min-width: 540px; height: auto;
+		padding: 20px 20px 0px 20px;
 		background-color: white;
 		border-radius: 20px;
 	}
@@ -326,10 +328,6 @@
     {
     	display: block;
     }
-    #lt-art-sec
-	{
-		width: 80%;
-	}
     }
 
 	@media only screen and (max-width: 615px)
@@ -385,7 +383,7 @@
 	#lt-art-sec
 	{
 		min-width: 200px; width: 100%;
-		margin: 20px auto 0px auto;
+		margin: 40px auto 0px auto;
 	}
 	#bars-rows
     {
@@ -393,8 +391,8 @@
     }
 	.art-out
 	{
-		max-width: 615px; width: 88.5%;
-		min-width: 200px;
+		min-width: 200px; margin: 0px 0px 20px;
+		width: 88.5%; max-width: 615px;
 	}
 	.nav-out
 	{
@@ -458,7 +456,7 @@
 	}
 	#add-article-html
 	{
-		width: 88.5%; flex: none;
+		width: 100%; flex: none;
 	}
     #pros-cons
     {
