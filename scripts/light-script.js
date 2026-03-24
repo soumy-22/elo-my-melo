@@ -182,7 +182,7 @@ let elFound = false;
 if (rplsSec) 
 {
     const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
-    if (entry.isIntersecting) { ltrplsSec(); setInterval(() => { if (!elFound) 
+    if (entry.isIntersecting) { ltrplsSec(); notiOverlay(); setInterval(() => { if (!elFound) 
     { removeTool(); } }, 2000); intObserver.disconnect(); } }); },
     { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
     intObserver.observe(rplsSec);
