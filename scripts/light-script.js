@@ -29,7 +29,7 @@ function updateAdsAttributes()
 
     updateClassOne();
 
-    var ids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four'];
+    var ids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four', 'ins-dis-five', 'ins-dis-six'];
     function updateAttributes() {
     ids.forEach(function(id) {
     var element = document.getElementById(id);
@@ -78,8 +78,8 @@ function updateAdsAttributes()
               const idname = record.target.id; 
               const attrname = record.attributeName;
               const attrvalue = record.target.getAttribute(attrname);
-              var fids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four']; 
-              var dids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four']; 
+              var dids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four', 'ins-dis-five', 'ins-dis-six'];
+              var fids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four'];
 
               if (smmd)
               {
@@ -118,7 +118,7 @@ function updateAdsAttributes()
         });
     });
 
-    var aids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four', 'ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four', 'ins-dis-v1']; 
+    var aids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four', 'ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four', 'ins-dis-five', 'ins-dis-six', 'ins-dis-v1'];
     function updatemute() {
     aids.forEach(function(id) {
     var element = document.getElementById(id);
