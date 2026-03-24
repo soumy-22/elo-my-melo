@@ -178,19 +178,19 @@ function ltrplsSec()
     if (bgmd) { loadSideBars(); } }); // late call ok 
 }
 
-let elFound = false;
+let storeInterval;
 if (rplsSec) 
 {
     const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
-    if (entry.isIntersecting) { ltrplsSec(); notiOverlay(); setInterval(() => { if (!elFound) 
-    { removeTool(); } }, 2000); intObserver.disconnect(); } }); },
+    if (entry.isIntersecting) { ltrplsSec(); notiOverlay(); storeInterval = setInterval(removeTool, 2000);
+    if (adsLock) { adsLock = false; } intObserver.disconnect(); } }); },
     { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
     intObserver.observe(rplsSec);
 }
 
 function removeTool()
 {
-    // console.log("checking the pop tool by google");
+    console.log("checking the pop tool by google");
     const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
     const safaEle = Array.from(document.querySelectorAll('div[style*="font-feature-settings: initial"][style*="font-kerning: initial"][style*="font-optical-sizing: initial"][style*="font-stretch: initial"]'));
     const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
@@ -207,7 +207,7 @@ function removeTool()
            if (toolbar || contain)
            {
                shadowdom.innerHTML = ''; shadowdom.host.remove();
-               elFound = true; console.log("removed");
+               clearInterval(storeInterval); console.log("rmvd");
            }
         }
     }
@@ -259,10 +259,20 @@ function detectCharacter()
     p.classList.add("art-para-new"); processParagraph(p, rectAC); });
 }
 detectCharacter();
+// to add dynamic paddings
 
+let adsLock = false;
+const loadWidth = window.innerWidth;
 window.addEventListener('resize', trigPad); 
 function trigPad()
 {
 	clearTimeout(window.resized); window.resized = setTimeout(() => {
 	detectCharacter(); }, 1700);
+
+    if (adsLock) return;
+    const nowWidth = window.innerWidth; if (Math.abs(nowWidth - loadWidth) > 20) {
+    const adsdtp1 = document.querySelectorAll('.dis-com, .fixed-dis-phone'); adsdtp1.forEach(el => { el.remove(); });
+    const leftel = document.querySelector('.fixed-dis-desk'); if (leftel) { const next = leftel.nextElementSibling;
+    leftel.remove(); if (next && next.tagName === 'BR') {
+    next.remove(); } } adsLock = true; }
 }
