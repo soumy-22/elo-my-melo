@@ -130,7 +130,7 @@ updateAdsAttributes();
 // call the important function
 
 const adsCode = `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3654432220074510" data-ad-slot="5979513854" data-ad-format="auto" data-full-width-responsive="true"></ins>`
-const ltArtStyle = '.latest_articles{inset-inline:0;width:max-content;position:relative;margin:0 auto;top:30px;padding:16px 35px 14px 35px;font-family:monospace;font-size:15px;border-radius:55px;background-color:#f0f4f8;color:#567ea7;font-weight:bolder}#before-article-01{position:relative;margin:5px;height:2px}.articles-common-lt-style{height:auto}.latest-art-pic-common{width:100%;height:auto;border-radius:14px 14px 5px 5px;aspect-ratio:auto 16/9}.art-head-common{text-align:center;margin:0 auto;font-weight:bolder;font-family:sans-serif;padding:10px 20px;border-radius:5px 5px 14px 14px;background-color:#f0f4f8;font-size:16px}.art-head-common a{color:#6487ab!important;text-decoration:none}.fixed-dis-phone{position:relative;height:auto;min-height:200px;display:flex;justify-content:center;padding:12px 4px;background:#EAEAEA;border-radius:14px;width:auto}.fixed-dis-desk{position:relative;height:auto;min-height:200px;display:flex;justify-content:center;padding:12px 4px;background:#EAEAEA;border-radius:14px;width:auto}#more-info-after-2{border:3px #EAEAEA solid;padding:10px 13px 12px;text-align:center;font-family:sans-serif;width:73%;color:#6f6f6f;margin:0 auto 20px;font-size:15px;line-height:23px;border-radius:14px}.art-description-common{display:none}@media only screen and (max-width:615px){.fixed-dis-desk{display:none}}@media only screen and (min-width:615px){#more-info-after-2{width:fit-content;display:inline-block;border:7px #f0f4f8 solid;font-size:17px}.latest_articles{top:20px}#before-article-01{margin:0px;height:0px}.fixed-dis-phone{display:none}}';
+const ltArtStyle = '.latest_articles{inset-inline:0;width:max-content;position:relative;margin:0 auto;top:30px;padding:16px 35px 14px 35px;font-family:monospace;font-size:15px;border-radius:55px;background-color:#f0f4f8;color:#567ea7;font-weight:bolder}#before-article-01{position:relative;margin:5px;height:2px}.articles-common-lt-style{height:auto}.latest-art-pic-common{width:100%;height:auto;border-radius:14px 14px 5px 5px;aspect-ratio:auto 16/9}.art-head-common{text-align:center;margin:0 auto;font-weight:bolder;font-family:sans-serif;padding:10px 20px;border-radius:5px 5px 14px 14px;background-color:#f0f4f8;font-size:16px}.art-head-common a{color:#5881aa!important;text-decoration:none}.fixed-dis-phone{position:relative;height:auto;min-height:200px;display:flex;justify-content:center;padding:12px 4px;background:#EAEAEA;border-radius:14px;width:auto}.fixed-dis-desk{position:relative;height:auto;min-height:200px;display:flex;justify-content:center;padding:12px 4px;background:#EAEAEA;border-radius:14px;width:auto}#more-info-after-2{border:3px #EAEAEA solid;padding:10px 13px 12px;text-align:center;font-family:sans-serif;width:73%;color:#6f6f6f;margin:0 auto 20px;font-size:15px;line-height:23px;border-radius:14px}.art-description-common{display:none}@media only screen and (max-width:615px){.fixed-dis-desk{display:none}}@media only screen and (min-width:615px){#more-info-after-2{width:fit-content;display:inline-block;border:7px #f0f4f8 solid;font-size:17px}.latest_articles{top:20px}#before-article-01{margin:0px;height:0px}.fixed-dis-phone{display:none}}';
 const ldrStyle = '@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.loader-container{width:64px;height:64px;position:absolute;top:80px;inset-inline:0;margin:auto}.spinner-anim{animation:spin 0.6s linear infinite;transform-origin:center}.svg-arc{stroke:#68ABD4;stroke-width:6;fill:none;stroke-linecap:round}'
 
 // for sidebar ads loading process
@@ -183,9 +183,8 @@ if (rplsSec)
 {
     const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
     if (entry.isIntersecting) { ltrplsSec(); notiOverlay(); storeInterval = setInterval(removeTool, 2000);
-    if (adsLock) { adsLock = false; } intObserver.disconnect(); } }); },
-    { rootMargin: '0px 0px 500px 0px', threshold: 0 } );
-    intObserver.observe(rplsSec);
+    if (adlk1) { adlk1 = false; } if (adlkk2) { adlkk2 = false; } intObserver.disconnect(); } }); },
+    { rootMargin: '0px 0px 500px 0px', threshold: 0 } ); intObserver.observe(rplsSec);
 }
 
 function removeTool()
@@ -261,18 +260,27 @@ function detectCharacter()
 detectCharacter();
 // to add dynamic paddings
 
-let adsLock = false;
-const loadWidth = window.innerWidth;
+let adlk1 = false, adlkk2 = false;
+const loadWidth = window.innerWidth; let szck, rzszck;
+if (loadWidth > 615) { szck = 'desk'; } else { szck = 'phone'; }
 window.addEventListener('resize', trigPad); 
 function trigPad()
 {
 	clearTimeout(window.resized); window.resized = setTimeout(() => {
 	detectCharacter(); }, 1700);
 
-    if (adsLock) return;
-    const nowWidth = window.innerWidth; if (Math.abs(nowWidth - loadWidth) > 20) {
-    const adsdtp1 = document.querySelectorAll('.dis-com, .fixed-dis-phone'); adsdtp1.forEach(el => { el.remove(); });
+    const nowWidth = window.innerWidth;
+    if (nowWidth > 615) { rzszck = 'desk'; } else { rzszck = 'phone'; }
+
+    if (!adlk1 && ((nowWidth < loadWidth && Math.abs(nowWidth - loadWidth) > 20) || (nowWidth > loadWidth && szck !== rzszck))) {
+    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads, .fixed-dis-phone'); adsdtp1.forEach(el => { el.style.display = 'none'; });
     const leftel = document.querySelector('.fixed-dis-desk'); if (leftel) { const next = leftel.nextElementSibling;
-    leftel.remove(); if (next && next.tagName === 'BR') {
-    next.remove(); } } adsLock = true; }
+    leftel.style.display = 'none'; if (next && next.tagName === 'BR') {
+    next.style.display = 'none'; } } adlk1 = true; adlkk2 = false; }
+
+    if (nowWidth >= loadWidth && szck === rzszck && !adlkk2) {
+    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads, .fixed-dis-phone'); adsdtp1.forEach(el => { el.style.display = ''; });
+    const leftel = document.querySelector('.fixed-dis-desk'); if (leftel) { const next = leftel.nextElementSibling;
+    leftel.style.display = ''; if (next && next.tagName === 'BR') {
+    next.style.display = ''; } } adlkk2 = true; adlk1 = false; }
 }
