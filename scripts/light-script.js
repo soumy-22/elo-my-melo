@@ -266,22 +266,18 @@ if (loadWidth > 615) { szck = 'desk'; } else { szck = 'phone'; }
 window.addEventListener('resize', trigPad); 
 function trigPad()
 {
-	clearTimeout(window.resized); window.resized = setTimeout(() => {
-	detectCharacter(); }, 1700);
+	clearTimeout(window.resized);
+    window.resized = setTimeout(() => { detectCharacter(); }, 1700);
 
     const nowWidth = window.innerWidth;
     if (nowWidth > 615) { rzszck = 'desk'; } else { rzszck = 'phone'; }
 
     if (!adlk1 && ((nowWidth < loadWidth && Math.abs(nowWidth - loadWidth) > 20) || (nowWidth > loadWidth && szck !== rzszck))) {
-    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads, .fixed-dis-phone'); adsdtp1.forEach(el => {
-    el.style.display = 'none'; }); const leftel = document.querySelector('.fixed-dis-desk'); if (leftel) {
-    const next = leftel.nextElementSibling; leftel.style.display = 'none'; if (next && next.tagName === 'BR') {
-    next.style.display = 'none'; } } adlk1 = true; adlkk2 = false; }
+    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads'); adsdtp1.forEach(el => {
+    el.style.display = 'none'; }); adlk1 = true; adlkk2 = false; }
 
     if (nowWidth >= loadWidth && szck === rzszck && !adlkk2) {
-    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads, .fixed-dis-phone'); adsdtp1.forEach(el => {
-    const insTag = el.querySelector('ins[data-ad-status="filled"]'); if (insTag) { el.style.display = ''; } });
-    const leftel = document.querySelector('.fixed-dis-desk'); if (leftel) { // check child br 
-    const next = leftel.nextElementSibling; leftel.style.display = ''; if (next && next.tagName === 'BR') {
-    next.style.display = ''; } } adlkk2 = true; adlk1 = false; }
+    const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads'); adsdtp1.forEach(el => {
+    const insTag = el.querySelector('ins[data-ad-status="filled"]'); if (insTag) {
+    el.style.display = ''; } }); adlkk2 = true; adlk1 = false; }
 }
