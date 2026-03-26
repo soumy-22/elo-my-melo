@@ -7,16 +7,116 @@
 
    <div class="articles-common-lt-style">
 
-	<a href="jbl-flip-7-vs-flip-6.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/flip-7-vs-design.jpg" style="object-fit: cover" alt="photo of jbl flip 7 vs flip 6 speaker comparison" loading="lazy">
+	<a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/sony-XM6-VS-XM5-buds-main.jpg" style="object-fit: cover" alt="Sony WF-1000XM6 vs WF-1000XM5 buds comparison" loading="lazy">
     </a>
 
 	<div class="art-head-common">
-		<span> <a href="jbl-flip-7-vs-flip-6.html"> JBL Flip 7 vs JBL Flip 6 - Twice Louder </a> </span>
+		<span> <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html"> Sony WF-1000XM6 vs WF-1000XM5 buds </a> </span>
 	</div>
 
 	<div class="art-description-common">		
-		The new JBL Flip 7 gets 2 times louder than the old JBL Flip 6 at max volume. So, in terms of absolute loudness, the Flip 7 might feel like an upgrade. However, overall, the sound quality <a href="jbl-flip-7-vs-flip-6.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+		There are slight improvements in terms of sound quality, ANC, transparency and call quality. The old WF-1000XM5 buds were already good enough and these slight <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/flip-7-vs-bose-flex-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Bose SoundLink Flex Gen 2" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html"> JBL Flip 7 vs Bose Flex Gen 2 speaker </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		The JBL Flip 7 sounds slightly better for low to mid-level listening for its detailed mids. However, the pushed mids becomes harsh at higher volumes on the Flip 7 speaker. So, the Bose <a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/boombox-4-vs-3-main.jpg" style="object-fit: cover" alt="JBL Boombox 4 vs JBL Boombox 3 speaker" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html"> JBL Boombox 4 vs Boombox 3, louder BB4 </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Even though downgrading to a 2-way design from previous Boombox 3's 3-way design, the power and bass-impact is there delivered by high-quality big woofers. In my opinion, the JBL <a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/galaxy-S26-ultra-vs-plateaus.jpg" style="object-fit: cover" alt="Galaxy S26 Ultra Camera Plateau Design" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html"> Galaxy S26 Ultra's New Camera Plateau Design </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Samsung Galaxy S26 Ultra's camera island looks very clean, simple and refined. But if you look closely, there are many elements in play, like an architectural approach. The base <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+    <div class="fixed-dis-phone">
+         <div class="ad-details-5"> <span> AD </span> </div>
+         <!-- Display F phone -->
+         <ins class="adsbygoogle"
+              style="display:inline-block;width:300px;height:250px"
+              data-ad-client="ca-pub-3654432220074510"
+              data-ad-slot="2279364505">                         
+         </ins>
+    </div>
+    <div class="fixed-dis-desk">
+         <div class="ad-details-5"> <span> AD </span> </div>
+         <!-- Display horizontal -->
+         <ins class="adsbygoogle"
+              style="display:block;width:100%;min-height:240px;height:250px;max-height:260px"
+              data-ad-client="ca-pub-3654432220074510"
+              data-ad-slot="6958590511"
+              data-full-width-responsive="true">                         
+         </ins>
+    </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/jbl-flip-7-vs-xiaomi-sound-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Xiaomi Sound Outdoor 30W speaker" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html"> JBL Flip 7 vs Xiaomi Sound Outdoor 30W </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Get 2 units of Xiaomi Sound Outdoor instead of a JBL Flip 7. Xiaomi in TWS will easily outperform Flip 7 and you will still have $50 left in your pocket. The price difference is huge <a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/apple-airpods-pro-3-vs-pro-2.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/airpods-pro-3-vs-2-main.jpg" style="object-fit: cover" alt="" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/apple-airpods-pro-3-vs-pro-2.html"> AirPods Pro 3 vs Pro 2, downgraded sound </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		The over-cooked v-shaped sound signature makes the AirPods Pro 3 sounding more artificial and processed than natural and tasteful. They still sound good but the AirPods Pro 2 sounded <a href="https://elomymelo.com/tech/apple-airpods-pro-3-vs-pro-2.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
 	</div>
 
    </div><br>
@@ -49,90 +149,6 @@
 
 	<div class="art-description-common">		
 		Xtreme 4's 68 Wh battery is the biggest upgrade vs smaller 36 Wh on the X3. Xtreme 3 sounds fuller with more upper bass at lower volumes, but the Xtreme 4 starts to sound fuller at higher <a href="jbl-xtreme-4-vs-xtreme-3.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-    <div class="fixed-dis-phone">
-         <div class="ad-details-5"> <span> AD </span> </div>
-         <!-- Display F phone -->
-         <ins class="adsbygoogle"
-              style="display:inline-block;width:300px;height:250px"
-              data-ad-client="ca-pub-3654432220074510"
-              data-ad-slot="2279364505">                         
-         </ins>
-    </div>
-    <div class="fixed-dis-desk">
-         <div class="ad-details-5"> <span> AD </span> </div>
-         <!-- Display horizontal -->
-         <ins class="adsbygoogle"
-              style="display:block;width:100%;min-height:240px;height:250px;max-height:260px"
-              data-ad-client="ca-pub-3654432220074510"
-              data-ad-slot="6958590511"
-              data-full-width-responsive="true">                         
-         </ins>
-    </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="boom-2-vs-motion-boom-plus.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/boom-2-vs-mbplus-low.webp" alt="photo of soundcore boom 2 vs motion boom plus" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="boom-2-vs-motion-boom-plus.html"> Soundcore Boom 2 vs the Motion Boom Plus </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		New Boom 2 packs the same 80 watts of power as the Motion Boom Plus but in a much smaller body. The single racetrack woofer produces massive power to hang out with the big boys <a href="boom-2-vs-motion-boom-plus.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="motion-300-vs-bose-flex.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/scaled-down/m-300-low.jpg" style="object-position: center; object-fit: cover" alt="photo of soundcore motion 300 vs bose soundlink flex" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="motion-300-vs-bose-flex.html"> Soundcore Motion 300 vs Bose SoundLink Flex </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		Motion 300 has decent bass but becomes bass-light and way louder than Flex at higher volumes. Bose holds onto its bass by the cost of loudness. This makes the Bose more pleasant to listen to at higher <a href="motion-300-vs-bose-flex.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="soundcore-space-one-vs-sony-wh-ch720n.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/space-one-main.png" style="object-position: center; object-fit: cover" alt="photo of soundcore space one vs sony wh-ch720n" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="soundcore-space-one-vs-sony-wh-ch720n.html"> Soundcore Space One vs Sony wh-ch720n </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		In this detailed comparison, Sony wh-ch720n has a more mature sound. But the Space One has better Noise Cancellation. The ambient mode is more natural on the Sony. Soundcore looks <a href="soundcore-space-one-vs-sony-wh-ch720n.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="galaxy-a14-5g-review.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/a14-latest.jpg" alt="photo of samsung galaxy a14 5g smartphone" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="galaxy-a14-5g-review.html"> Samsung Galaxy A14 5G long-term review </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		In my long-term review, the main camera on the Galaxy A14 is pretty good. Battery life is also very good. But the performance is mediocre. Apps opening and closing animations <a href="galaxy-a14-5g-review.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
 	</div>
 
    </div><br>
