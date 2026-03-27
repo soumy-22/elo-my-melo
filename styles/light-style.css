@@ -75,7 +75,7 @@
 	.nav-out a 
 	{
 		text-decoration: none; padding-inline: 6px; font-size: 18px;
-		color: #434343; position: relative;
+		color: #595959; position: relative;
 		white-space: nowrap;
 	}
 	.nav-out a:not(:last-child)::after 
