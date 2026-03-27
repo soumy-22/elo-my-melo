@@ -191,7 +191,7 @@ if (rplsSec)
 
 function removeTool()
 {
-    console.log("checking the pop tool by google");
+    // console.log("checking the pop tool by google");
     const chromeEle = Array.from(document.querySelectorAll('div[style*="color-scheme: initial"][style*="forced-color-adjust: initial"][style*="mask: initial"][style*="math-depth: initial"]'));
     const safaEle = Array.from(document.querySelectorAll('div[style*="font-feature-settings: initial"][style*="font-kerning: initial"][style*="font-optical-sizing: initial"][style*="font-stretch: initial"]'));
     const edgeEle = Array.from(document.querySelectorAll('div[style*="animation-delay: 0s !important"][style*="animation-direction: normal !important"][style*="animation-duration: 0s !important"][style*="animation-fill-mode: none !important"]'));
@@ -280,6 +280,6 @@ function trigPad()
 
     if (nowWidth >= loadWidth && szck === rzszck && !adlkk2) {
     const adsdtp1 = document.querySelectorAll('.dis-com, .sidebar-ads'); adsdtp1.forEach(el => {
-    const insTag = el.querySelector('ins[data-ad-status="filled"]'); if (insTag) {
+    const insTag = el.querySelector('ins'); if (!insTag || insTag.getAttribute('data-ad-status') !== 'unfilled') {
     el.style.display = ''; } }); adlkk2 = true; adlk1 = false; }
 }
