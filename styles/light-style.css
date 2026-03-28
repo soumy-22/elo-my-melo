@@ -352,7 +352,7 @@
     }
     #big-out
 	{ 
-		padding: 0px 0px 92px 0px;
+		padding: 0px 0px 85px 0px;
 	}
 	#site-logo
 	{
@@ -390,7 +390,7 @@
 	.art-out
 	{
 		padding: 10px 10px 0px;
-		min-width: 200px; margin: 0px 0px 20px;
+		min-width: 200px; margin: 0px 0px 10px;
 		width: 92%; max-width: 615px;
 	}
 	.nav-out
@@ -455,7 +455,7 @@
 	}
 	#add-article-html
 	{
-		width: 100%; flex: none;
+		width: 98%; flex: none;
 	}
     #pros-cons
     {
