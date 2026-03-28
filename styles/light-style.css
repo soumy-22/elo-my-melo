@@ -356,7 +356,7 @@
 	}
 	#site-logo
 	{
-		font-size: 20px;
+		font-size: 20px; margin: 40px auto 10px;
 		border-radius: 15px;
 	}
     .label-text
@@ -375,8 +375,8 @@
 	}
     .top-sec
 	{
+		min-width: 200px; margin: 20px auto 10px;
 		max-width: 615px; width: 85%;
-		min-width: 200px;
 	}
 	#lt-art-sec
 	{
@@ -389,8 +389,9 @@
     }
 	.art-out
 	{
+		padding: 10px 10px 0px;
 		min-width: 200px; margin: 0px 0px 20px;
-		width: 88.5%; max-width: 615px;
+		width: 92%; max-width: 615px;
 	}
 	.nav-out
 	{
