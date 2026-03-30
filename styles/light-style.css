@@ -44,7 +44,7 @@
 	.top-sec
 	{
 		position: relative;
-		width: 75%; max-width: 1000px;
+		width: 55%; max-width: 800px;
 		min-width: 500px; height: auto;
 		margin: 20px auto 20px auto;
 	}
@@ -112,7 +112,7 @@
 	{
 		z-index: 2;
 		position: relative;
-		width: 75%; max-width: 1000px;
+		width: 75%; max-width: 800px;
 		min-width: 540px; height: auto;
 		padding: 20px 20px 0px 20px;
 		background-color: white;
@@ -316,7 +316,7 @@
     }
     }
 
-    @media only screen and (max-width: 940px)
+    @media only screen and (max-width: 1010px)
     {
     .side-bars
     {
@@ -423,7 +423,7 @@
 	}
 	#art-h1
 	{
-		font-size: 23px;
+		font-size: 20px;
 	}
 	.first-para::before
 	{
