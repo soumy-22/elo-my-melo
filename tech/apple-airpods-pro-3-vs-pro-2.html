@@ -61,28 +61,6 @@
 	{dataLayer.push(arguments);} gtag('js', new Date());
 	gtag('config', 'G-XSLQ12LN5S'); </script>
 
-    <script type="text/javascript">
-
-        document.addEventListener("DOMContentLoaded", inObs);
-        var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
-        function iosView()
-        {
-          // console.log('sending');
-          const timestamp = new Date().toISOString();
-          const pageUrl = window.location.href; const formData = new FormData();
-          formData.append('timestamp', timestamp); formData.append('notificationurl', pageUrl);
-          fetch('https://script.google.com/macros/s/AKfycbz5_cu4YWF1G4Vq3Q0iYHYEHEVBmK7nlUrME_VEcx-Yi1t_9TUIIYsLclGf96erbV2jIg/exec', { method: 'POST', body: formData }).then(() => console.log('Successful view from ios')).catch(err => console.error('Failed view on ios =', err));
-        }
-
-        function inObs() {
-        if (isios) { const target = document.getElementById("check-inter");
-        if (target) { const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => { if (entry.isIntersecting) {
-        iosView(); obs.disconnect(); } }); }, { threshold: 0.1 });
-        observer.observe(target); } } }
-
-    </script>
-
 </head>
 <body>
     <div class="fxd-eles">
