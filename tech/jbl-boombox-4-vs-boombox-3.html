@@ -125,28 +125,6 @@
   	{dataLayer.push(arguments);} gtag('js', new Date());
   	gtag('config', 'G-XSLQ12LN5S'); </script>
 
-    <script type="text/javascript">
-
-        document.addEventListener("DOMContentLoaded", inObs);
-        var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
-        function iosView()
-        {
-          // console.log('sending');
-          const timestamp = new Date().toISOString();
-          const pageUrl = window.location.href; const formData = new FormData();
-          formData.append('timestamp', timestamp); formData.append('notificationurl', pageUrl);
-          fetch('https://script.google.com/macros/s/AKfycbz5_cu4YWF1G4Vq3Q0iYHYEHEVBmK7nlUrME_VEcx-Yi1t_9TUIIYsLclGf96erbV2jIg/exec', { method: 'POST', body: formData }).then(() => console.log('Successful view from ios')).catch(err => console.error('Failed view on ios =', err));
-        }
-
-        function inObs() {
-        if (isios) { const target = document.getElementById("check-inter");
-        if (target) { const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => { if (entry.isIntersecting) {
-        iosView(); obs.disconnect(); } }); }, { threshold: 0.1 });
-        observer.observe(target); } } }
-
-    </script>
-
 </head>
 <body>
   <div class="fxd-eles">
@@ -167,20 +145,21 @@
     		</nav>
     	</header>
         <section id="bars-rows">
-            <div class="side-bars"><div class="sidebar-ads"></div></div>
+          <div class="side-bars"><div class="sidebar-ads"></div></div>
         	<article class="art-out">
+            <div class="top-cen">
         		<div class="top-label">
-        			<div id="plabel" class="label-text lt-top">SPEAKER</div>
-        			<div id="dlabel" class="label-text lt-top">SPEAKER COMPARISON</div>
+              <div class="label-text lt-top">
+        			<span id="plabel">SPEAKER</span><span id="dlabel">SPEAKER COMPARISON</span>
+              </div>
         		</div>
         		<h1 id="art-h1"> JBL Boombox 4 vs Boombox 3, crazy louder Boombox 4 </h1>
-        		<span id="short-verdicts"> The big woofers are doing a good job of making powerful sound </span>
-        		<div class="mk-cen">
-    	            <span id="publication-details"> Friday, December 26, 2025 - by 
-                    	<a href="https://www.facebook.com/profile.php?id=100022991028680">Soumya Roy</a>
-                    </span>
-                </div>
-                <div id="art-text">
+        		<p class="verdict"> The big woofers are doing a good job of making powerful sound </p>
+    	      <p class="verdict date"> Friday, December 26, 2025 - by 
+               <a href="https://www.facebook.com/profile.php?id=100022991028680">Soumya Roy</a>
+            </p>
+            </div>
+            <div id="art-text">
 
                 	<img id="img-1" src="https://elomymelo.com/images/boombox-4-vs-3-main.jpg" alt="photo of jbl boombox 4 vs boombox 3 speaker">
 
@@ -317,16 +296,16 @@
 
                   <span class="mentions-new">IF you're interested in mid-sized portable speakers, check my JBL Charge 6 vs Bose SoundLink Plus <a href="https://elomymelo.com/soundlink-plus-vs-jbl-charge-6.html" target="_blank">article</a>. The JBL Charge 6 did better in the head-to-head comparison.</span> 
 
-    	            <div class="end-links-con">
-    	            <a href="soundcore motion plus review.html" style="text-decoration:none">
-    	            <span class="end-links">motion+ review article</span></a>
-    	    	    <a href="tech/soundlink-flex-2-units-vs-sl-plus.html" style="text-decoration:none">
-    	            <span class="end-links">2 soundlink flex vs 1 soundlink plus</span></a><br>
-    	    	    <a href="nillkin frosted case review for nord.html" style="text-decoration:none">
-    	            <span class="end-links">nillkin super frosted case review</span></a><br>
-    	    	    <a href="jbl-boombox-4-design-specs.html" style="text-decoration:none">
-    	            <span class="end-links">downgrade in boombox 4</span></a>
-    	            </div>
+                  <div class="end-links-con">
+                  <a href="soundcore motion plus review.html">
+                  <span class="end-links">motion+ review article</span></a>
+                <a href="tech/soundlink-flex-2-units-vs-sl-plus.html">
+                  <span class="end-links">2 soundlink flex vs 1 soundlink plus</span></a><br>
+                <a href="nillkin frosted case review for nord.html">
+                  <span class="end-links">nillkin super frosted case review</span></a><br>
+                <a href="jbl-boombox-4-design-specs.html">
+                  <span class="end-links">downgrade in boombox 4</span></a>
+                  </div>
 
                 </div>
                 <aside id="lt-art-sec">
