@@ -108,11 +108,11 @@
     }
 	.art-out
 	{
+		padding: 20px 20px 0px 20px;
 		position: relative; font-family: sans-serif;
 		z-index: 2; color: #6f6f6f; background-color: white;
 		min-width: 540px; height: auto; border-radius: 20px;
-		width: 75%; max-width: 800px; font-size: 20px;
-		padding: 20px 20px 0px 20px;
+		width: 75%; max-width: 800px;
 	}
 	.top-cen
 	{
@@ -160,8 +160,8 @@
 	}
 	#art-text
 	{
-		padding: 10px; display: block;
-		width: 98%; margin: auto;
+		padding: 10px; width: 98%; margin: auto;
+		display: block; font-size: 20px;
 	}
 	.art-para-new
 	{
