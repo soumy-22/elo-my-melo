@@ -234,12 +234,23 @@ as="style" onload="this.rel='stylesheet'">
 var isdesk = (navigator.userAgent.match(/Win32|Win64|Windows|Macintosh|MacIntel|MacPPC|Mac68K/i)); 
 document.addEventListener('DOMContentLoaded', upme); 
 window.addEventListener('resize', upme); 
+
+let AView = false;
+function iosView()
+{
+  const timestamp = new Date().toISOString();
+  const pageUrl = window.location.href; const formData = new FormData();
+  formData.append('timestamp', timestamp); formData.append('notificationurl', pageUrl);
+  fetch('https://script.google.com/macros/s/AKfycbz5_cu4YWF1G4Vq3Q0iYHYEHEVBmK7nlUrME_VEcx-Yi1t_9TUIIYsLclGf96erbV2jIg/exec', { method: 'POST', body: formData }).then(() => console.log('Successful view from ios')).catch(err => console.error('Failed view on ios =', err));
+}
+
 function upme()
 {
     // some IOS changes --------------
     if(isios) { // console.log("check-here"); 
     document.querySelectorAll(".dis-com").forEach(function(el) { el.style.display = "none"; });
     document.querySelectorAll(".feed-com").forEach(function(el) { el.style.display = "none"; }); } 
+    if(isios && !AView) { iosView(); AView = true; }
 
     // checks if user is on a desktop device 
     if(window.matchMedia("(min-width: 615px)").matches && !isdesk)
@@ -305,7 +316,7 @@ if(isdesk) { window.removeEventListener('resize', upme); }
     }
   },
   "datePublished": "2025-05-07T02:20:10+00:00",
-  "dateModified": "2025-09-03T08:50:10+00:00",
+  "dateModified": "2026-04-24T14:40:10+00:00",
   "product": {
     "@type": "Product",
     "name": "JBL Flip 7",
