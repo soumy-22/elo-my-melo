@@ -1,4 +1,7 @@
 
+  // for scrl debounce
+  var scrollTrack = null;
+
   // Function to handle the subscription logic
   function initPushSubscription() {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -103,6 +106,12 @@
         document.body.appendChild(notidiv); if (noticounter > 5) { let resetValue = 1;
         localStorage.setItem('pageLoadCount', resetValue); }
     }
+  }
+
+  function scrlDebounce() 
+  { 
+    if (scrollTrack !== null) { clearTimeout(scrollTrack); } scrollTrack = setTimeout(()=> { notiOverlay();
+    window.removeEventListener('scroll', scrlDebounce, false); }, 2000); 
   }
 
   function notiButtonClick() { initPushSubscription(); 

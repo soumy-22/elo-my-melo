@@ -4,15 +4,13 @@ const bgmd = window.matchMedia("(min-width: 615px)").matches;
 const smmd = window.matchMedia("(max-width: 615px)").matches;
 function updateAdsAttributes() 
 {
-    // Array of IDs
-    var ids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four']; 
-    // Function to update the attributes for multiple elements 
+    // Array of IDs 
+    var ids = ['ins-feed-one', 'ins-feed-two', 'ins-feed-three', 'ins-feed-four'];
     function updateElementsAttributes() {
     ids.forEach(function(id) {
     var element = document.getElementById(id);
     if (element) 
         {
-           // Add the attributes now -----------
            element.setAttribute('data-ad-layout-key', '-co-n+45-2o+yn');
            element.setAttribute('data-ad-slot', '5190331789');
         }
@@ -24,9 +22,8 @@ function updateAdsAttributes()
     var element = document.getElementById(id);
     if (element) { element.setAttribute('class', 'adsbygoogle'); } }); }
 
-    // Call function to update all elements at once
+    // Call function to update all 
     if (bgmd) { updateElementsAttributes(); }
-
     updateClassOne();
 
     var ids = ['ins-dis-one', 'ins-dis-two', 'ins-dis-three', 'ins-dis-four', 'ins-dis-five', 'ins-dis-six'];
@@ -50,11 +47,10 @@ function updateAdsAttributes()
     if (bgmd) { updateAttributes(); }
     updateClassTwo();
 
-    // Find all elements with class ------- 
+    // Find all elements with class --- 
     var elementsWithClassTwo = document.querySelectorAll('.feed-com');
     var elementsWithClassOne = document.querySelectorAll('.dis-com');
 
-    // Add the script tag to each ele ---
     function addScriptTagToElement(element) {
     var scriptElement = document.createElement('script');
     scriptElement.type = 'text/javascript';
@@ -70,7 +66,6 @@ function updateAdsAttributes()
     // mutation observer code
     const observer = new MutationObserver( mutations => 
     {
-        // console.log(mutations); 
         mutations.forEach(record => 
         {
             if(record.type === 'attributes')
@@ -184,7 +179,7 @@ let storeInterval;
 if (rplsSec) 
 {
     const intObserver = new IntersectionObserver((entries) => { entries.forEach(entry => {
-    if (entry.isIntersecting) { ltrplsSec(); notiOverlay(); storeInterval = setInterval(removeTool, 2000);
+    if (entry.isIntersecting) { ltrplsSec(); window.addEventListener('scroll', scrlDebounce, false); storeInterval = setInterval(removeTool, 2000);
     if (adlk1) { adlk1 = false; } if (adlkk2) { adlkk2 = false; } intObserver.disconnect(); } }); },
     { rootMargin: '0px 0px 500px 0px', threshold: 0 } ); intObserver.observe(rplsSec);
 }
