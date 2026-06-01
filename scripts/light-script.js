@@ -138,7 +138,7 @@ function loadSideBars()
     script.textContent = '(adsbygoogle = window.adsbygoogle || []).push({});';
     el.appendChild(script); }); // ads name Thin-bar-ads
 }
-if (bgmd) 
+if (bgmd && window.innerWidth > 1010) 
 {
     const sideAds = document.querySelectorAll('.side-bars:not(.bar-smack) > .sidebar-ads');
     sideAds.forEach(el => { el.innerHTML = adsCode; const script = document.createElement('script');
