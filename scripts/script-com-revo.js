@@ -136,7 +136,7 @@ function scaleMe2()
     const bodyOverflow = window.getComputedStyle(document.body).overflow;
     const footerDiv = document.querySelector('.fc-footer.fc-dialog-restricted-content');
 
-    if (parentElementNew || bodyOverflow === "hidden" || notiEle) 
+    if (bodyOverflow === "hidden" || notiEle) 
     {
         if (parentElementNew) { window.scrollTo(0, 0); }
         document.body.style.overflow = "hidden";
