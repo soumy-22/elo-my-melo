@@ -522,7 +522,7 @@ function outscale()
         const topButton = document.querySelector('#scroll-top-button');
         const topArrow = document.querySelector('#Path_1');
 
-        if (parentElementNew || bodyOverflow === "hidden" || notiEle) 
+        if (bodyOverflow === "hidden" || notiEle) 
         {
             if (parentElementNew) { window.scrollTo(0, 0); }
             document.body.style.overflow = "hidden";
