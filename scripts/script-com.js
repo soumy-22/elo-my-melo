@@ -531,7 +531,7 @@ function outscale()
         const tran6 = document.getElementById("footer-id");
         const tran5 = document.getElementById("top-pos");
 
-        if (parentElementNew || bodyOverflow === "hidden") 
+        if (bodyOverflow === "hidden") 
         {
             if (parentElementNew) { window.scrollTo(0, 0); }
             document.body.style.overflow = "hidden"; if (fcone) {
