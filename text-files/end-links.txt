@@ -1,0 +1,9 @@
+
+    <a href="soundcore motion plus review.html">
+    <span class="end-links">motion+ review article</span></a>
+    <a href="tech/soundlink-flex-2-units-vs-sl-plus.html">
+    <span class="end-links">2 soundlink flex vs 1 soundlink plus</span></a><br>
+    <a href="nillkin frosted case review for nord.html">
+    <span class="end-links">nillkin super frosted case review</span></a><br>
+    <a href="jbl-boombox-4-design-specs.html">
+    <span class="end-links">downgrade in boombox 4</span></a>

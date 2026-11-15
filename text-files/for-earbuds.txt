@@ -1,0 +1,48 @@
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/apple-airpods-pro-3-vs-pro-2.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/airpods-pro-3-vs-2-main.jpg" style="object-fit: cover" alt="AirPods Pro 3 vs Pro 2" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/apple-airpods-pro-3-vs-pro-2.html"> AirPods Pro 3 vs Pro 2, downgraded sound </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-airpods-pro-3-buds.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/airpods-pro-3-vs-sony-XM6-main.jpg" style="object-fit: cover" alt="AirPods Pro 3 vs Sony WF-1000XM6" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-airpods-pro-3-buds.html"> AirPods Pro 3 vs Sony WF-1000XM6 Buds </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/sony-XM6-VS-XM5-buds-main.jpg" style="object-fit: cover" alt="Sony WF-1000XM6 vs WF-1000XM5 buds comparison" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html"> Sony WF-1000XM6 vs WF-1000XM5 buds </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/samsung-akg-type-c-earphones-review.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/akg-wired-design.jpg" style="object-fit: cover" alt="SamsunG AKG Type-C Earphones" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/samsung-akg-type-c-earphones-review.html"> Samsung AKG Tuned Type-C Earbuds Review </a> </span>
+	</div>
+
+   </div><br>

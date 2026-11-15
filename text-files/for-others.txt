@@ -1,0 +1,25 @@
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/google-pixel-10-launch-design.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/pixel-10-launch-main.jpg" style="object-fit: cover" alt="Pixel 10 launch event" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/google-pixel-10-launch-design.html"> Pixel 10 launch event was game-changing </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/my-insights-on-ios-26-liquid-glass.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/liquid-glass-main.jpg" style="object-fit: cover" alt="iOS 26 Liquid Glass design" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/my-insights-on-ios-26-liquid-glass.html"> My insights on iOS 26 Liquid Glass design </a> </span>
+	</div>
+
+   </div><br>
+
