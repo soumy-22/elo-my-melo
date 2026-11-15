@@ -1,90 +1,6 @@
 
    <div class="articles-common-lt-style">
 
-	<a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/sony-XM6-VS-XM5-buds-main.jpg" style="object-fit: cover" alt="Sony WF-1000XM6 vs WF-1000XM5 buds comparison" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html"> Sony WF-1000XM6 vs WF-1000XM5 buds </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		There are slight improvements in terms of sound quality, ANC, transparency and call quality. The old WF-1000XM5 buds were already good enough and these slight <a href="https://elomymelo.com/tech/sony-WF-1000XM6-vs-WF-1000XM5-buds.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/flip-7-vs-bose-flex-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Bose SoundLink Flex Gen 2" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html"> JBL Flip 7 vs Bose Flex Gen 2 speaker </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		The JBL Flip 7 sounds slightly better for low to mid-level listening for its detailed mids. However, the pushed mids becomes harsh at higher volumes on the Flip 7 speaker. So, the Bose <a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/boombox-4-vs-3-main.jpg" style="object-fit: cover" alt="JBL Boombox 4 vs JBL Boombox 3 speaker" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html"> JBL Boombox 4 vs Boombox 3, louder BB4 </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		Even though downgrading to a 2-way design from previous Boombox 3's 3-way design, the power and bass-impact is there delivered by high-quality big woofers. In my opinion, the JBL <a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
-	<a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/galaxy-S26-ultra-vs-plateaus.jpg" style="object-fit: cover" alt="Galaxy S26 Ultra Camera Plateau Design" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html"> Galaxy S26 Ultra's New Camera Plateau Design </a> </span>
-	</div>
-
-	<div class="art-description-common">		
-		Samsung Galaxy S26 Ultra's camera island looks very clean, simple and refined. But if you look closely, there are many elements in play, like an architectural approach. The base <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
-	</div>
-
-   </div><br>
-
-    <div class="fixed-dis-phone">
-         <div class="ad-details-5"> <span> AD </span> </div>
-         <!-- Display F phone -->
-         <ins class="adsbygoogle"
-              style="display:inline-block;width:300px;height:250px"
-              data-ad-client="ca-pub-3654432220074510"
-              data-ad-slot="2279364505">                         
-         </ins>
-    </div>
-    <div class="fixed-dis-desk">
-         <div class="ad-details-5"> <span> AD </span> </div>
-         <!-- Display horizontal -->
-         <ins class="adsbygoogle"
-              style="display:block;width:100%;min-height:240px;height:250px;max-height:260px"
-              data-ad-client="ca-pub-3654432220074510"
-              data-ad-slot="6958590511"
-              data-full-width-responsive="true">                         
-         </ins>
-    </div><br>
-
-   <div class="articles-common-lt-style">
-
 	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html">
 	<img class="latest-art-pic-common" src="https://elomymelo.com/images/jbl-flip-7-vs-xiaomi-sound-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Xiaomi Sound Outdoor 30W speaker" loading="lazy">
     </a>
@@ -122,7 +38,7 @@
     </a>
 
 	<div class="art-head-common">
-		<span> <a href="jbl-charge-6-vs-charge-5.html"> JBL Charge 6 vs JBL Charge 5 | don't upgrade </a> </span>
+		<span> <a href="jbl-charge-6-vs-charge-5.html"> JBL Charge 6 vs JBL Charge 5, don't upgrade </a> </span>
 	</div>
 
 	<div class="art-description-common">		
@@ -147,6 +63,18 @@
 
    </div><br>
 
-   <div id="more-info-after-2">
-       <span> For any suggestion you should submit feedback using the comment section from home page. Thank you so much for visiting my website. </span>
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/galaxy-S26-ultra-vs-plateaus.jpg" style="object-fit: cover" alt="Galaxy S26 Ultra Camera Plateau Design" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html"> Galaxy S26 Ultra's New Camera Plateau Design </a> </span>
+	</div>
+
+	<div class="art-description-common">		
+		Samsung Galaxy S26 Ultra's camera island looks very clean, simple and refined. But if you look closely, there are many elements in play, like an architectural approach. The base <a href="https://elomymelo.com/tech/samsung-galaxy-S26-ultra-camera-design.html" style="text-decoration: none; color: rgba(238,99,122,1);"> &nbsp;more ... </a>		
+	</div>
+
    </div><br>
