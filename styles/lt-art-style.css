@@ -33,7 +33,7 @@
 
 .art-head-common {
     margin: 0 auto;
-    padding: 15px 20px 17px;
+    padding: 10px 20px 12px;
     text-align: center;
     font-size: calc(var(--base-fnt) - 4px);
     font-weight: bold;
@@ -44,6 +44,7 @@
 
 #add-article-html .art-head-common {
     font-size: calc(var(--base-fnt) - 3px);
+    padding: 15px 20px 17px;
 }
 
 .art-head-common a {
