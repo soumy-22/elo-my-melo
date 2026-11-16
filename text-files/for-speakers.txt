@@ -1,0 +1,60 @@
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/flip-7-vs-bose-flex-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Bose SoundLink Flex Gen 2" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-bose-soundlink-flex-gen-2.html"> JBL Flip 7 vs Bose Flex Gen 2 speaker </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/boombox-4-vs-3-main.jpg" style="object-fit: cover" alt="JBL Boombox 4 vs JBL Boombox 3 speaker" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-boombox-4-vs-boombox-3.html"> JBL Boombox 4 vs Boombox 3, louder BB4 </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/jbl-flip-7-vs-xiaomi-sound-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Xiaomi Sound Outdoor 30W speaker" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html"> JBL Flip 7 vs Xiaomi Sound Outdoor 30W </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="jbl-charge-6-vs-charge-5.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/charge-6-vs-main.jpg" style="object-fit: cover" alt="photo of jbl charge 6 and charge 5 comparison" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="jbl-charge-6-vs-charge-5.html"> JBL Charge 6 vs JBL Charge 5 | don't upgrade </a> </span>
+	</div>
+
+   </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="jbl-xtreme-4-vs-xtreme-3.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/docs-images/x4-vs-x3-main.jpg" style="object-fit: cover" alt="photo of jbl xtreme 4 vs jbl xtreme 3 speakers" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="jbl-xtreme-4-vs-xtreme-3.html"> JBL Xtreme 4 vs JBL Xtreme 3 speaker </a> </span>
+	</div>
+
+   </div><br>
