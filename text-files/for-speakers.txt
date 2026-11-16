@@ -25,18 +25,6 @@
 
    <div class="articles-common-lt-style">
 
-	<a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html">
-	<img class="latest-art-pic-common" src="https://elomymelo.com/images/jbl-flip-7-vs-xiaomi-sound-main.jpg" style="object-fit: cover" alt="JBL Flip 7 vs Xiaomi Sound Outdoor 30W speaker" loading="lazy">
-    </a>
-
-	<div class="art-head-common">
-		<span> <a href="https://elomymelo.com/tech/jbl-flip-7-vs-xiaomi-sound-outdoor-30W.html"> JBL Flip 7 vs Xiaomi Sound Outdoor 30W </a> </span>
-	</div>
-
-   </div><br>
-
-   <div class="articles-common-lt-style">
-
 	<a href="jbl-charge-6-vs-charge-5.html">
 	<img class="latest-art-pic-common" src="https://elomymelo.com/images/charge-6-vs-main.jpg" style="object-fit: cover" alt="photo of jbl charge 6 and charge 5 comparison" loading="lazy">
     </a>
