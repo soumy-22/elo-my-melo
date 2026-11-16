@@ -46,3 +46,15 @@
 	</div>
 
    </div><br>
+
+   <div class="articles-common-lt-style">
+
+	<a href="https://elomymelo.com/tech/xiaomi-sound-party-50-watts-speaker.html">
+	<img class="latest-art-pic-common" src="https://elomymelo.com/images/boombox-4-vs-3-main.jpg" style="object-fit: cover" alt="Xiaomi Sound Party 50-watt speaker" loading="lazy">
+    </a>
+
+	<div class="art-head-common">
+		<span> <a href="https://elomymelo.com/tech/xiaomi-sound-party-50-watts-speaker.html"> Xiaomi Sound Party 50W vs JBL Charge 6 </a> </span>
+	</div>
+
+   </div><br>
