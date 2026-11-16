@@ -184,57 +184,24 @@ async function run(url, processor, section)
 async function loadSection(id, url, processor)
 {
     const section = document.getElementById(id);
-    if (!section) return;
-
-    const style = document.createElement("style");
+    if (!section) return; const style = document.createElement("style");
     style.textContent = ldrStyle; section.appendChild(style);
     section.insertAdjacentHTML("beforeend", loadersvg);
 
-    for (let i = 0; i < 2; i++) {
-    try { return await run(url, processor, section); }
-    catch (err) { console.error(`Attempt ${i + 1} failed:`, err);
-
-    if (i === 0) {
-    await new Promise(res => setTimeout(res, 5000)); }
+    for (let i = 0; i < 2; i++) { try { return await run(url, processor, section); }
+    catch (err) { console.error(`Attempt ${i + 1} failed:`, err); if (i === 0) { await new Promise(res => setTimeout(res, 5000)); }
     else { section.innerHTML = `<div class="error-state" style="text-align:center;display:block">
-    Sorry, the content you are looking for has failed to load
-    </div>`; } } }
+    Sorry, the content you are looking for has failed to load </div>`; } } }
 }
 
-function loadFeatured()
-{
-    return loadSection(
-        "featured",
-        URL_FEATURED,
-        async (temp) =>
-        {
-            return temp.innerHTML;
-        }
-    );
-}
-
-function loadPopular()
-{
-    return loadSection(
-        "popular",
-        URL_POPULAR,
-        cleanHtml
-    );
-}
+function loadFeatured() { return loadSection("featured", URL_FEATURED, cleanHtml); }
+function loadPopular() { return loadSection("popular", URL_POPULAR, cleanHtml); }
 
 function loadRelated()
 {
     const rltdText = document.getElementById("rltd-text");
-    if (rltdurl === other)
-    {
-        rltdText.textContent = "CONTENT";
-    }
-
-    return loadSection(
-        "related",
-        rltdurl,
-        cleanHtml
-    );
+    if (rltdurl === other) { rltdText.textContent = "CONTENT"; }
+    return loadSection("related", rltdurl, cleanHtml);
 }
 
 function createAdDiv(parent) 
