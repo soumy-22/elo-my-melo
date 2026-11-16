@@ -42,6 +42,10 @@
     line-height: 20px;
 }
 
+#add-article-html .art-head-common {
+    font-size: calc(var(--base-fnt) - 3px);
+}
+
 .art-head-common a {
     color: var(--hdr-clr) !important;
     text-decoration: none;
