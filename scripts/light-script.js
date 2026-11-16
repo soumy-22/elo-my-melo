@@ -138,7 +138,7 @@ const URL_POPULAR = "https://elomymelo.com/text-files/inside-article-div-po.txt"
 const dlabel = document.getElementById("label").textContent.toLowerCase();
 const earbud = "https://elomymelo.com/text-files/for-earbuds.txt";
 const smartphone = "https://elomymelo.com/text-files/for-others.txt";
-const speaker = "https://elomymelo.com/text-files/for-others.txt";
+const speaker = "https://elomymelo.com/text-files/for-speakers.txt";
 const other = "https://elomymelo.com/text-files/for-others.txt";
 
 let rltdurl = other;
