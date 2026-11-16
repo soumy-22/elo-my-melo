@@ -184,7 +184,7 @@
     .sdbar-contnt, .sidebar-ads
     {
     	position: relative; padding: 20px 20px;
-    	margin: 10px 3px 20px; background: var(--bg-clr); min-height: 210px;
+    	margin: 10px 3px 20px; background: var(--bg-clr); min-height: 270px;
     	border-radius: 20px; width: auto;
     }
     .sd-sticky
@@ -238,8 +238,8 @@
 	}
     .error-state
     {
-    	width: 90%; display: none; line-height: 20px;
-    	font-size: calc(var(--base-fnt) - 4px); margin: 40px auto 0;
+    	width: 90%; display: none; line-height: 24px;
+    	font-size: calc(var(--base-fnt) - 2px); margin: 40px auto 0;
     	color: var(--txt-clr); inset: 0;
     }
 	.art-out
@@ -502,7 +502,7 @@
     }
 	.date
 	{
-        border: none;
+        border: none; padding: 0px 55px;
 	}
     }
 
@@ -725,7 +725,6 @@
 	.date
 	{
 		font-size: var(--base-fnt); margin-bottom: 10px;
-		padding: 0px 55px; border: none;
 	}
 	#art-h1
 	{
