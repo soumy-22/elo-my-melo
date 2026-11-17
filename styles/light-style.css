@@ -184,8 +184,12 @@
     .sdbar-contnt, .sidebar-ads
     {
     	position: relative; padding: 20px 20px;
-    	margin: 10px 3px 20px; background: var(--bg-clr); min-height: 270px;
+    	margin: 10px 3px 20px; background: var(--bg-clr); min-height: 220px;
     	border-radius: 20px; width: auto;
+    }
+    .sdbar-contnt:has(#featured, #popular, #related) 
+    {
+        min-height: 270px;
     }
     .sd-sticky
     {
