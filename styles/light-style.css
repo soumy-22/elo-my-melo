@@ -230,7 +230,7 @@
     .bar-color img
     {
     	transform: rotate(90deg); width: 349.48%; max-width: none;
-    	border-radius: 17px 0 0 17px;
+    	border-radius: 17px 0 0 17px; flex-shrink: 0;
     }
     .lt-art-contnr > .bar-smack:last-child .bar-color img
 	{
