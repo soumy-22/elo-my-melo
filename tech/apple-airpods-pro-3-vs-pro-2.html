@@ -53,7 +53,7 @@
 	    }
 	  },
 	  "datePublished": "2025-11-16T11:57:10+00:00",
-	  "dateModified": "2026-03-20T15:45:10+00:00"
+	  "dateModified": "2026-11-18T15:45:10+00:00"
 	}
 	</script>
 
@@ -62,6 +62,28 @@
 	<script> window.dataLayer = window.dataLayer || []; function gtag()
 	{dataLayer.push(arguments);} gtag('js', new Date());
 	gtag('config', 'G-XSLQ12LN5S'); </script>
+
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", inObs);
+        var isios = (navigator.userAgent.match(/iPad|iPhone|iPod/i));
+        function iosView()
+        {
+          // console.log('sending');
+          const timestamp = new Date().toISOString();
+          const pageUrl = window.location.href; const formData = new FormData();
+          formData.append('timestamp', timestamp); formData.append('notificationurl', pageUrl);
+          fetch('https://script.google.com/macros/s/AKfycbz5_cu4YWF1G4Vq3Q0iYHYEHEVBmK7nlUrME_VEcx-Yi1t_9TUIIYsLclGf96erbV2jIg/exec', { method: 'POST', body: formData }).then(() => console.log('Successful view from ios')).catch(err => console.error('Failed view on ios =', err));
+        }
+
+        function inObs() {
+        if (isios) { const target = document.getElementById("check-inter");
+        if (target) { const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => { if (entry.isIntersecting) {
+        iosView(); obs.disconnect(); } }); }, { threshold: 0.1 });
+        observer.observe(target); } } }
+
+    </script>
 
 </head>
 <body>
@@ -101,7 +123,7 @@
                 </div>
                 <div id="art-text">
 
-                	<img id="img-1" src="https://elomymelo.com/images/airpods-pro-3-vs-2-main.jpg" alt="photo of apple airpods pro 3 vs airpods pro 2">
+                	<img id="img-1" src="https://elomymelo.com/images/airpods-pro-3-vs-2-main.jpg" alt="photo of apple airpods pro 3 vs airpods pro 2" onerror="this.onerror=null;this.src+='?retry'">
 
                 	<p id="intro-para" class="first-para"><span id="big-intro-char">A</span>pple AirPods never caught my attention until they released AirPods with new updated design that had eartips. In 2019, Apple released AirPods Pro 1st generation with the "PRO" title that had the eartips. However, the regular AirPods 4, which is the current version, doesn't have eartips. I like the seal and isolation that we get from earbuds that have eartips. Recently Apple released the latest <a href="https://www.apple.com/airpods-pro/" target="_blank" rel="nofollow noopener">AirPods Pro 3</a> in the "PRO" lineup. There are a lot of mixed opinions about the Sound Quality of the new AirPods Pro 3 compared to <a href="https://www.apple.com/airpods/compare/?modelList=airpods-4,airpods-pro,airpods-pro-3" target="_blank" rel="nofollow noopener">AirPods pro 2</a>. In this article, I will discuss about the sound quality, ANC and transparency in detail. Also, I will answer - which one should you buy or should you upgrade or not ..?</p> 
 
