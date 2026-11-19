@@ -24,6 +24,12 @@
 	{ 
 		background: var(--bdy-clr); font-family: system-ui, sans-serif;
 	}
+	@font-face
+    {
+        src: url("../fonts/Roboto-Regular.ttf");
+        font-family: cus-roboto;
+        font-display: swap;
+    }
 	@keyframes ftpop
 	{
 	    0% { transform: translateY(24px); } 55% { transform: translateY(-8px); } 75% { transform: translateY(4px); }
@@ -36,7 +42,7 @@
 	}
 	.icn-con
 	{
-		font-family: Arial, sans-serif;
+		font-family: cus-roboto, sans-serif;
 		padding: 10px 5px 7px 9px; color: var(--lbl-clr);
 		border-radius: 7px; box-sizing: content-box;
 		width: 20px; height: 20px; cursor: pointer;
