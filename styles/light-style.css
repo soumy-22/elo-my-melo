@@ -235,7 +235,7 @@
     }
     .bar-color
     {
-    	display: flex; justify-content: center; 
+    	display: flex; justify-content: center; cursor: pointer;
     	align-items: center; position: sticky; padding: 0px; box-sizing: content-box;
     	margin: 10px 3px 20px; top: 20px; aspect-ratio: 287/1003;
     }
@@ -411,7 +411,7 @@
 	    position: absolute; margin: auto; text-align: center;
 	    font-size: calc(var(--base-fnt) + 10px); background: var(--bg-clr);
 	    line-height: 67px; width: 130px; height: 67px; inset: 0;
-	    color: #a1a1a1; border-radius: 10px;
+	    color: #bcbcbc; border-radius: 10px;
 	}
 	.mentions-new
 	{
@@ -499,6 +499,10 @@
 	{
 	    background: var(--hdr-clr); color: black;
 	    border: 3px solid var(--hdr-clr);
+	}
+	.ad-details-5
+	{
+		color: #737373;
 	}
 	}
 
