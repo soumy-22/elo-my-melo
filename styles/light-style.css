@@ -502,7 +502,7 @@
 	}
 	.ad-details-5
 	{
-		color: #737373;
+		color: #586676;
 	}
 	}
 
@@ -814,3 +814,221 @@
 		margin: 0px auto 0;
 	}
     }
+
+/* lt-art-style.css codes */
+
+.latest_articles {
+    position: relative;
+    inset-inline: 0;
+    width: max-content;
+    margin: 0 auto;
+    top: 30px;
+    padding: 16px 35px 14px;
+    font-family: ui-monospace, monospace;
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--lbl-clr);
+    background: var(--bg-ads);
+    border-radius: 55px;
+}
+
+#before-article-01 {
+    position: relative;
+    margin: 5px;
+    height: 2px;
+}
+
+.articles-common-lt-style {
+    height: auto;
+}
+
+.latest-art-pic-common {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto 16/9;
+    border-radius: 14px 14px 5px 5px;
+}
+
+.art-head-common {
+    margin: 0 auto;
+    padding: 10px 20px 12px;
+    text-align: center;
+    font-size: calc(var(--base-fnt) - 4px);
+    font-weight: bold;
+    background: var(--hdr-bg);
+    border-radius: 5px 5px 14px 14px;
+    line-height: 20px;
+}
+
+#add-article-html .art-head-common {
+    font-size: calc(var(--base-fnt) - 3px);
+    padding: 15px 20px 17px;
+}
+
+.art-head-common a {
+    color: var(--hdr-clr) !important;
+    text-decoration: none;
+}
+
+.fixed-dis-phone,
+.fixed-dis-desk {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    min-height: 200px;
+    padding: 12px 4px;
+    background: var(--bg-ads);
+    border-radius: 14px;
+}
+
+#more-info-after-2 {
+    margin: 0 auto 20px;
+    padding: 10px 13px 12px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--txt-clr);
+    border: 3px rgb(from var(--hlt-clr2) r g b / 50%) solid;
+    border-radius: 14px;
+}
+
+.art-description-common {
+    display: none;
+}
+
+@media only screen and (max-width: 615px) {
+    .fixed-dis-desk {
+        display: none;
+    }
+    .art-head-common {
+        padding: 12px 20px;
+    }
+    #more-info-after-2 {
+        margin: 0 auto 14px;
+    }
+}
+
+@media only screen and (min-width: 615px) {
+    #more-info-after-2 {
+        display: inline-block;
+        width: fit-content;
+        font-size: 16px;
+    }
+
+    .latest_articles {
+        top: 20px;
+    }
+
+    #before-article-01 {
+        margin: 0;
+        height: 0;
+    }
+
+    .fixed-dis-phone {
+        display: none;
+    }
+}
+
+/* Notification */
+
+.noti-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgb(from var(--bg-clr) r g b / 90%);
+}
+
+.noti-main {
+    position: absolute;
+    inset: 0;
+    width: 90%;
+    height: max-content;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+    background: var(--bdy-clr);
+    border-radius: 20px;
+}
+
+.top-img {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: max-content;
+    margin: 40px auto 25px;
+    padding: 10px 10px 6px;
+    border: 4px var(--hlt-clr2) solid;
+    border-radius: 90px;
+}
+
+.middle-text {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 5px auto;
+    padding: 16px;
+    font-size: var(--base-fnt);
+    line-height: 25px;
+    color: var(--txt-clr);
+    border: 3px var(--hlt-clr2) solid;
+    border-radius: 15px;
+}
+
+.act-buttons {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 240px;
+    margin: 10px auto 30px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.noti-button {
+    position: relative;
+    margin: 15px;
+    padding: 15px 25px;
+    font-size: 16px !important;
+    color: var(--txt-clr);
+    background: var(--bg-clr);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.noti-button:nth-of-type(1) {
+    color: var(--bg-clr) !important;
+    background: var(--lbl-clr) !important;
+}
+
+.noti-button:nth-of-type(2) {
+    color: var(--txt-clr);
+    background: var(--bg-clr);
+}
+
+@media only screen and (min-width: 615px) and (max-width: 1095px) {
+    .middle-text {
+        line-height: 25px !important;
+    }
+}
+
+@media only screen and (min-width: 615px) {
+    .noti-main {
+        width: 580px;
+    }
+
+    .middle-text {
+        line-height: 30px;
+    }
+
+    .act-buttons {
+        width: 250px;
+    }
+}
