@@ -188,7 +188,7 @@ async function loadSection(id, url, processor)
     section.insertAdjacentHTML("beforeend", loadersvg);
 
     for (let i = 0; i < 2; i++) { try { return await run(url, processor, section); }
-    catch (err) { console.error(`Attempt ${i + 1} failed:`, err); if (i === 0) { await new Promise(res => setTimeout(res, 5000)); }
+    catch (err) { console.error(`Attempt ${i + 1} failed:`, err); if (i === 0) { await new Promise(res => setTimeout(res, 2500)); }
     else { section.innerHTML = `<div class="error-state" style="text-align:center;display:block">
     Sorry, the content you are looking for has failed to load </div>`; } } }
 }
@@ -248,6 +248,21 @@ function rltdHeight()
     rltdOut.style.height = newHeight + "px"; } }
 }
 
+function loadScripts() 
+{
+    const pushScript = document.createElement("script");
+    pushScript.src = "scripts/push-script.js"; pushScript.async = false;
+    document.head.appendChild(pushScript);
+
+    const gtagScript = document.createElement("script");
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XSLQ12LN5S";
+    gtagScript.async = false; document.head.appendChild(gtagScript);
+
+    const gtagInit = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XSLQ12LN5S');`;
+    const inlineScript = document.createElement("script");inlineScript.textContent = gtagInit;
+    document.head.appendChild(inlineScript);
+}
+
 async function startLoads()
 {
     const featuredPromise = loadFeatured(); const popularPromise = loadPopular();
@@ -268,7 +283,7 @@ async function startLoads()
     sdBar2.appendChild(stickyDiv2); createAdDiv(stickyDiv2); commentDiv(stickyDiv2); } });
 
     await Promise.allSettled([featuredDone, popularDone]);
-    observeSidebarAds();
+    observeSidebarAds(); loadScripts();
 }
 let obsrvr; if (bgmd) { startLoads(); obsrvr = true; }
 
